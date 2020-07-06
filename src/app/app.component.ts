@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-modo-app';
+  title = 'Modo App';
+  sidenavLinks = [
+    { name: 'My Profile', path: '/' },
+    { name: 'Diet info', path: '/' },
+    { name: 'Diet Plan', path: '/' },
+    { name: 'Overview', path: '/' },
+    { name: 'Shopping', path: '/' },
+    { name: 'Foods', path: '/' },
+    { name: 'Restaurants', path: '/' },
+    { name: 'Chat', path: '/' },
+    { name: 'Subscription', path: '/subscription' },
+    { name: 'Sign out', path: '/' },
+  ];
 }

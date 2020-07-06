@@ -1,0 +1,68 @@
+$modo-primary: (
+  50: #e3f2fe,
+  100: #bcdefd,
+  200: #91cbfc,
+  300: #65b6fb,
+  400: #44a6fa,
+  500: #2697f9,
+  600: #2588eb,
+  700: #2176d7,
+  800: #1e65c5,
+  900: #1947a6,
+  //A100: #7faedd,
+  //A200: #7faedd,
+  //A400: #7faedd,
+  //A700: #7faedd,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$modo-accent: (
+  50: #e3fff1,
+  100: #bbffdc,
+  200: #86ffc6,
+  300: #13ffac,
+  400: #00fb96,
+  500: #00f584,
+  600: #00e377,
+  700: #00ce68,
+  800: #00bc5b,
+  900: #009944,
+  //A100: #7faedd,
+  //A200: #7faedd,
+  //A400: #7faedd,
+  //A700: #7faedd,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$primary-color: map-get($modo-primary, 500);
+$accent-color: map-get($modo-accent, 500);

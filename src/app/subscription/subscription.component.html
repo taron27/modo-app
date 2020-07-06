@@ -1,0 +1,20 @@
+<h1 class="title">Choose Your Plan</h1>
+<div class="current-subscription">current subscription exp: 12/12/20</div>
+<div class="subscription-plans">
+  <div
+    class="subscription-plan"
+    [class.active]="plan.active"
+    (click)="changeActivePlan(plan.id)"
+    matRipple
+    matRippleCentered="centered"
+    *ngFor="let plan of plans"
+  >
+    {{ plan.name }}
+  </div>
+</div>
+<div>
+  <button mat-flat-button class="btn-submit">subscribe</button>
+</div>
+<div class="cancel-subscription-section">
+  <button mat-button>Cancel subscription</button>
+</div>

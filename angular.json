@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-modo-app"
+    }
+  },
+  "defaultProject": "my-modo-app",
+  "cli": {
+    "analytics": false
+  }
 }
