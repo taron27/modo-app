@@ -1,0 +1,5 @@
+<h2>LOGIN</h2>
+<p>{{message}}</p>
+<div><a routerLink="/forgot-password">Forgot your password?</a></div>
+<button (click)="login()"  *ngIf="!authService.isLoggedIn">Login</button>
+<div>Or <a routerLink="/register">Sign up</a> now</div>
