@@ -17,19 +17,14 @@ const routes: Routes = [
     component: DashboardComponent,
     canActivate: [AuthGuard],
     children: [
-      {
-        path: '',
-        children: [
-          { path: 'user-info', component: UserInfoComponent },
-          { path: 'diet-info', component: DietInfoComponent },
-          { path: 'diet-plan', component: DietPlanComponent },
-          { path: 'shopping', component: ShoppingListComponent },
-          { path: 'foods', component: FoodsComponent },
-          { path: 'restaurants', component: RestaurantsComponent },
-          { path: 'chat', component: ChatComponent },
-          { path: 'subscription', component: SubscriptionComponent },
-        ],
-      }
+      { path: 'user-info', component: UserInfoComponent },
+      { path: 'diet-info', component: DietInfoComponent },
+      { path: 'diet-plan', component: DietPlanComponent },
+      { path: 'shopping', component: ShoppingListComponent },
+      { path: 'foods', component: FoodsComponent },
+      { path: 'restaurants', component: RestaurantsComponent },
+      { path: 'chat', component: ChatComponent },
+      { path: 'subscription', component: SubscriptionComponent },
     ]
   }
 ];

@@ -12,14 +12,9 @@ const authRoutes: Routes = [
     component: AuthComponent,
     canActivate: [GuestGuard],
     children: [
-      {
-        path: '',
-        children: [
-          { path: '', component: LoginComponent },
-          { path: 'register', component: RegisterComponent },
-          { path: 'forgot-password', component: ForgotPasswordComponent }
-        ]
-      }
+      { path: '', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: 'forgot-password', component: ForgotPasswordComponent }
     ]
   }
 ];

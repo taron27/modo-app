@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface Plan {
-  id: number;
-  name: string;
-  active: boolean;
-}
+import { Plan } from './shared/plan.model';
+import { SubscriptionService } from './shared/subscription.service';
 
 @Component({
   selector: 'app-subscription',
@@ -12,16 +8,13 @@ export interface Plan {
   styleUrls: ['./subscription.component.scss']
 })
 export class SubscriptionComponent implements OnInit {
+  plans: Plan[] = [];
 
-  plans: Plan[] = [
-    {id: 1, name: '1 Month', active: true},
-    {id: 2, name: '3 Months', active: false},
-    {id: 3, name: '1 Year', active: false},
-  ];
-
-  constructor() { }
+  constructor(private subscriptionService: SubscriptionService) { }
 
   ngOnInit(): void {
+    this.subscriptionService.getPlans()
+      .then(plans => this.plans = plans);
   }
 
   private changeActivePlan = (id: number) => {

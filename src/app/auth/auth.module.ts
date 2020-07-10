@@ -7,12 +7,22 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth/auth.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   declarations: [
     LoginComponent,
