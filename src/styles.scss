@@ -21,11 +21,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .justify-flex-end {
-  justify-content: flex-end;
+  justify-content: flex-end !important;
+}
+
+.justify-space-around {
+  justify-content: space-around !important;
+}
+
+.align-center {
+  text-align: center;
 }
 
 .full-width {
   width: 100% !important;
+}
+
+.w-50 {
+  max-width: 50%;
 }
 
 .mt-150 {
@@ -33,12 +45,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .title {
+  text-align: center;
   font-size: 45px;
   color: #1D1D1B;
   margin-bottom: 91px !important;
   line-height: 50px;
 }
 
+.mat-drawer-content {
+  background: #ffffff;
+}
+
+.page-sub-title {
+  color: $modo-gray;
+}
 
 .btn-submit {
   //padding: 10px 108px;
@@ -54,11 +74,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   cursor: pointer;
 }
 
+.main-content {
+  width: 302px;
+}
+
 .auth-main-form {
   width: 100%;
-  .main-content {
-    width: 302px;
-  }
+
   .form-height {
 
     .auth-form {
@@ -104,7 +126,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         font-size: 17px;
         line-height: 26px;
         min-width: 26px;
-        background-color: #8B8B8B;
+        background-color: $modo-gray;
         color: #fff;
         cursor: pointer;
         transition: all 0.5s ease;
@@ -116,7 +138,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
 
     .sign-in-tool {
-      color: #8B8B8B;
+      color: $modo-gray;
       line-height: 26px;
 
       label {
@@ -136,10 +158,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .auth-btn {
   margin-top: 20px;
+  text-align: center;
 }
 
 .form-footer {
   margin-top: 13px;
+  text-align: center;
 
   .auth-url {
     font-size: 17px;
@@ -166,7 +190,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
   }
 
-  .content {
+  .auth-content {
     padding-top: 95px !important;
   }
 
@@ -175,15 +199,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
   .form-buttons {
-    margin-top: 60px;
+    margin-top: 110px;
   }
 
   .register-form-buttons {
-    margin-top: 80.64px;
+    margin-top: 130.64px;
   }
 
   .forgot-password-buttons {
-    margin-top: 240.64px;
+    margin-top: 291.64px;
   }
 
   .mat-list-base .mat-list-item,
@@ -199,4 +223,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       width: 280px;
     }
   }
+}
+
+// TODO: change drawer backdrop color with angular material variable
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: rgba($modo-gray, 0.3);
 }

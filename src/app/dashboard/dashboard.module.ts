@@ -21,6 +21,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { FoodsComponent } from './foods/foods.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { ChatComponent } from './chat/chat.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ChatComponent } from './chat/chat.component';
     MatGridListModule,
     MatListModule,
     MatToolbarModule,
+    MatInputModule,
   ]
 })
 export class DashboardModule { }

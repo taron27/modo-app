@@ -1,1 +1,86 @@
-<p>user-info works!</p>
+<section class="d-flex justify-center main-user-info-section">
+  <div class="main-profile-content">
+    <div class="d-flex justify-center">
+      <div class="profile-picture">
+        <div class="circle">
+          <img src="../../../assets/public/images/profile-picture.png" alt="profile picture" width="100%" />
+        </div>
+        <div class="sub-circle">
+          <mat-icon>camera_alt</mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-username">
+      <h2>
+        Susan Young
+      </h2>
+    </div>
+
+    <div>
+
+      <div class="d-flex justify-space-between profile-info">
+        <div>
+          <label for="email">
+            Email
+          </label>
+        </div>
+        <div class="w-50 user-info-section">
+          <input type="email" matInput id="email" placeholder="susan@me.com" />
+        </div>
+      </div>
+
+      <div class="d-flex justify-space-between profile-info">
+        <div>
+          <label for="age">
+            Age
+          </label>
+        </div>
+        <div class="w-50 user-info-section">
+          <input type="text" matInput id="age" placeholder="27" />
+        </div>
+      </div>
+
+      <div class="d-flex justify-space-between profile-info">
+        <div>
+          <label for="gender">
+            Gender
+          </label>
+        </div>
+        <div class="w-50 user-info-section">
+          <input type="text" matInput id="gender" placeholder="gender" />
+        </div>
+      </div>
+
+      <div class="d-flex justify-space-between profile-info">
+        <div>
+          <label for="measurement-system">
+            Measurement system
+          </label>
+        </div>
+        <div class="w-50 user-info-section">
+          <select name="measurement-system" id="measurement-system" class="measurement-system">
+            <option value="cm" selected>cm</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="d-flex justify-space-between profile-info">
+        <div>
+          <label for="height">
+            Height
+          </label>
+        </div>
+        <div class="w-50 user-info-section">
+          <input type="text" matInput id="height" placeholder="165cm" />
+        </div>
+      </div>
+
+      <div class="profile-picture-btn">
+        <button class="btn-submit">
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

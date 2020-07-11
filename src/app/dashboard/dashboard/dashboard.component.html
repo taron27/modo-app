@@ -1,12 +1,12 @@
 <mat-drawer-container class="container" [hasBackdrop]="true">
-  <mat-toolbar>
-    <a routerLink="/" class="logo">
+  <mat-toolbar class="top-sidebar">
+    <span class="page-sub-title">
       {{ title }}
-    </a>
+    </span>
     <span class="spacer"></span>
-    <button mat-mini-fab color="primary" aria-label="Open the sidenav" (click)="drawer.toggle()">
+    <div class="menu-icon" (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
-    </button>
+    </div>
   </mat-toolbar>
 
   <mat-drawer #drawer mode="over" position="end" class="sidenav">
@@ -29,8 +29,7 @@
       <a
         mat-list-item
         *ngFor="let sidenavLink of sidenavLinks"
-        [routerLink]="sidenavLink.path"
-        (click)="drawer.toggle()"
+        (click)="changePage(sidenavLink.title, sidenavLink.path); drawer.toggle();"
       >
         {{ sidenavLink.name }}
       </a>

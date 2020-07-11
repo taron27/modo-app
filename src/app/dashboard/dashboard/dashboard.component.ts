@@ -8,17 +8,17 @@ import { AuthService } from '../../auth/auth.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  title = 'Modo App';
+  title = 'user info';
   sidenavLinks = [
-    { name: 'My Profile', path: '/user-info' },
-    { name: 'Diet info', path: '/diet-info' },
-    { name: 'Diet Plan', path: '/diet-plan' },
-    { name: 'Overview', path: '/' },
-    { name: 'Shopping', path: '/shopping' },
-    { name: 'Foods', path: '/foods' },
-    { name: 'Restaurants', path: '/restaurants' },
-    { name: 'Chat', path: '/chat' },
-    { name: 'Subscription', path: '/subscription' },
+    { name: 'My Profile', path: '/user-info', title: 'user info' },
+    { name: 'Diet info', path: '/diet-info', title: 'diet info' },
+    { name: 'Diet Plan', path: '/diet-plan', title: 'diet plan' },
+    { name: 'Overview', path: '/', title: 'overview' },
+    { name: 'Shopping', path: '/shopping', title: 'shopping' },
+    { name: 'Foods', path: '/foods', title: 'food' },
+    { name: 'Restaurants', path: '/restaurants', title: 'restaurants' },
+    { name: 'Chat', path: '/chat', title: 'chat' },
+    { name: 'Subscription', path: '/subscription', title: 'Subscribe' },
   ];
 
   constructor(
@@ -34,4 +34,10 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  changePage(title, path): void {
+    this.router.navigate([path])
+      .then(() => {
+        this.title = title;
+      });
+  }
 }

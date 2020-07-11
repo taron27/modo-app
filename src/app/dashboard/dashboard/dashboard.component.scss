@@ -20,6 +20,19 @@
   }
 }
 
+.mat-toolbar-single-row {
+  height: auto;
+  background: #ffffff;
+}
+
+.top-sidebar {
+  padding: 32px 36px 0;
+
+  @media only screen and (max-width: 420px) {
+    padding: 32px 36px;
+  }
+}
+
 .logo {
   text-decoration: none;
   color: $primary-color;
@@ -30,8 +43,26 @@
 }
 
 .content {
-  padding: 30px 20px;
-  text-align: center;
+  background: #fff;
+  padding: 0 20px 10px 20px;
+}
+
+.menu-icon {
+  width: 36.46px;
+  height: 36.46px;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #ffffff;
+  background-color: #C6C6C6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .sidenav {
@@ -47,10 +78,15 @@
 
 .nav-bar-header {
   border-bottom: 0.5px solid #fff;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 
   .user-info {
     padding-right: 24px;
     text-align: right;
   }
+}
+
+.page-sub-title {
+  color: $modo-gray;
+  font-size: 13px;
 }

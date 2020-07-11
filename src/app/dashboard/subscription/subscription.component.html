@@ -1,20 +1,34 @@
-<h1 class="title">Choose Your Plan</h1>
-<div class="current-subscription">current subscription exp: 12/12/20</div>
-<div class="subscription-plans">
-  <div
-    class="subscription-plan"
-    [class.active]="plan.active"
-    (click)="changeActivePlan(plan.id)"
-    matRipple
-    matRippleCentered="centered"
-    *ngFor="let plan of plans"
-  >
-    {{ plan.name }}
-  </div>
-</div>
-<div>
-  <button class="btn-submit">subscribe</button>
-</div>
-<div class="cancel-subscription-section">
-  <button mat-button>Cancel subscription</button>
-</div>
+<section>
+  <section class="subscription-header">
+    <div class="align-center">
+      <p class="title">Choose Your Plan</p>
+    </div>
+    <div class="current-subscription align-center">current subscription exp: 12/12/20</div>
+  </section>
+
+  <section class="subscription-plans">
+    <div
+      class="subscription-plan"
+      [class.active]="plan.active"
+      (click)="changeActivePlan(plan.id)"
+      matRipple
+      matRippleCentered="centered"
+      *ngFor="let plan of plans"
+    >
+      {{ plan.name }}
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <div class="d-flex justify-center subscription-btn-parent">
+        <button class="btn-submit subscription-btn">subscribe</button>
+      </div>
+      <div class="cancel-subscription-section align-center">
+        <button mat-button>Cancel subscription</button>
+      </div>
+    </div>
+  </section>
+</section>
+
+

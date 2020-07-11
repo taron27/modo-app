@@ -3,7 +3,7 @@
 .current-subscription {
   font-size: 17px;
   line-height: 20px;
-  color: #8B8B8B;
+  color: $modo-gray;
   margin-top: 82px;
 
   @media only screen and (max-width: 600px) {
@@ -11,23 +11,21 @@
   }
 }
 
+.subscription-btn {
+  width: 288.98px !important;
+}
+
 .subscription-plans {
-  margin-bottom: 146px;
+  margin-top: 80px;
+  margin-bottom: 125px;
   font-size: 26px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  @media only screen and (max-width: 600px) {
-    flex-direction: column;
-    font-size: 15px;
-    margin-bottom: 65px;
-  }
-
   .subscription-plan {
-    margin-top: 95px;
-    width: 154px;
-    height: 154px;
+    width: 160px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,23 +41,34 @@
       width: 90px;
       height: 90px;
       margin-top: 22px;
+      flex-direction: column;
+      font-size: 15px;
+      margin-bottom: 65px;
     }
   }
 }
 
-//.btn-submit {
-//  padding: 5px 108px;
-//  border-radius: 50px;
-//  color: white;
-//  background: $primary-color;
-//  background: linear-gradient(45deg, $primary-color 0%, rgba(5,160,231,1) 35%, $accent-color 100%);
-//  box-shadow: 6px 6px 20px rgba(124, 124, 124, 0.25);
-//
-//  @media only screen and (max-width: 600px) {
-//    padding: 5px 80px;
-//  }
-//}
-
 .cancel-subscription-section {
-  margin-top: 18px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 420px) {
+  .subscription-btn-parent {
+    margin-top: 68px;
+  }
+
+  .title {
+    margin-bottom: 0 !important;;
+  }
+
+  .subscription-plans {
+    margin: 6.5px auto;
+    display: block;
+    width: 30%;
+
+    .subscription-plan {
+      margin-bottom: 0;
+      margin-top: 27.8px;
+    }
+  }
 }
