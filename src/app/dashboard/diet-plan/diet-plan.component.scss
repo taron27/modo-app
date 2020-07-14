@@ -1,0 +1,180 @@
+@import '../../../variables';
+
+.week-days {
+  width: 358px;
+  font-size: 18px;
+
+  .current-week-day {
+    color: #707070;
+    font-weight: bold;
+  }
+
+  .week-day {
+    color: $modo-gray;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 620px) {
+    width: 273px;
+    font-size: 15px;
+  }
+}
+
+.diet-is-done {
+  width: 28%;
+
+  @media only screen and (max-width: 900px) {
+    margin-top: 30px;
+    width: 100%;
+
+    .diet-plan {
+      padding-bottom: 30px;
+      border-bottom: 1px solid $modo-gray;
+    }
+  }
+}
+
+
+.diet-plan {
+  min-width: 370px;
+  opacity: 0.5;
+  transition: all 1s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.current-plan {
+    opacity: 1;
+  }
+
+  .plan-title {
+    font-size: 18px;
+    padding-left: 14px;
+  }
+
+  .plan-buttons {
+
+    .share-circle {
+      margin-right: 14px;
+    }
+  }
+
+  .background-image {
+    width: 100%;
+    height: 159.89px;
+    position: relative;
+    margin: 12px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .circle {
+      width: 40px;
+      height: 40px;
+      background-color: #ffffff;
+      position: absolute;
+      right: -20px;
+      top: 40%;
+      box-shadow: 0 3px 6px rgba(167, 167, 167, 0.86);
+      border-radius: 50%;
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+    margin-top: 20px;
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+.diet-plan-slider {
+  padding-right: 82px;
+  transition: all 0.5s ease;
+
+  @media only screen and (max-width: 700px) {
+    padding: 0;
+  }
+}
+
+.diet-ingredients {
+  padding-bottom: 28px;
+  background-color: #ECECEC;
+  position: relative;
+
+  .diet-ingredient {
+    margin-top: 40px;
+  }
+}
+
+.plan-bottom-buttons {
+  position: absolute;
+  bottom: -20px;
+
+  .plan-sub-buttons {
+    width: 241px;
+
+    .plan-button {
+      width: 104px;
+      height: 34.12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      color: #ffffff;
+    }
+
+    .gray-button {
+      background-color: #C6C6C5;
+    }
+  }
+}
+
+.diet-plans {
+  overflow: auto;
+  width: auto;
+  padding: 66px 36px 30px;
+  margin-bottom: 46px;
+  display: flex;
+  transition: all 0.5s ease;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 5px;
+    background-color: #ffffff
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #D5D5D5;
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 1223px) {
+    padding: 30px 20px;
+    margin-bottom: 0;
+    .diet-plan {
+      padding-bottom: 30px;
+      border-bottom: 1px solid $modo-gray;
+    }
+  }
+}
+
+.diet-plan-submit {
+  width: 288px;
+}

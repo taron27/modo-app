@@ -1,1 +1,41 @@
-<p>diet-info works!</p>
+<section class="d-flex justify-center">
+  <div class="main-container">
+    <mat-accordion>
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+        *ngFor="let info of dietInfos"
+        class="diet-info-container"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <div class="diet-info d-flex">
+              <div class="diet-info-icon">
+                <img [src]="info.image" [alt]="info.name">
+              </div>
+              <div>
+                <div class="diet-info-title">
+                  {{ info.title }}
+                </div>
+                <div>
+                  {{ info.name }}
+                </div>
+              </div>
+            </div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div>
+          {{ info.description }}
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <div class="d-flex justify-center">
+      <div class="btn-submit-parent">
+        <button class="btn-submit">
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -22,6 +22,7 @@ import { FoodsComponent } from './foods/foods.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { ChatComponent } from './chat/chat.component';
 import { MatInputModule } from '@angular/material/input';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { MatInputModule } from '@angular/material/input';
     MatListModule,
     MatToolbarModule,
     MatInputModule,
+    MatExpansionModule,
   ]
 })
 export class DashboardModule { }
