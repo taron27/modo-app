@@ -9,6 +9,10 @@ import { AuthService } from '../../auth/auth.service';
 })
 export class DashboardComponent implements OnInit {
   title = 'user info';
+
+  showTrialPopUp = false;
+  showSomeWindowPopUp = false;
+
   sidenavLinks = [
     { name: 'My Profile', path: '/user-info', title: 'user info' },
     { name: 'Diet info', path: '/diet-info', title: 'diet info' },

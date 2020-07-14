@@ -4,6 +4,81 @@
   height: 100%;
 }
 
+.trial-modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  z-index: 99;
+  padding: 0;
+  background-color: $primary-color;
+
+  .title {
+    margin-top: 95px;
+    color: #ffffff;
+  }
+
+  .suggestion-section {
+    text-align: center;
+    color: #ffffff;
+    margin: 320px 0 27px;
+    font-size: 20px;
+    line-height: 30px;
+
+    @media only screen and (max-width: 620px) {
+      margin-top: 172px;
+    }
+  }
+
+  .window-suggestion {
+    margin-top: 200px;
+  }
+
+  .some-input {
+    /* Border */
+    &.mat-form-field-appearance-outline {
+      color: #ffffff;
+    }
+    /* Font color */
+    &.mat-input-element {
+      color: white;
+    }
+
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+
+  .type-text {
+    margin-bottom: 80px;
+
+    @media only screen and (max-width: 620px) {
+      margin-bottom: 115px;
+    }
+  }
+
+  .subscribe-btn-parent {
+
+    .subscribe-btn {
+      width: 290px;
+      height: 46px;
+      background-color: #ffffff;
+      border: 2px solid #13FFAD;
+      border-radius: 50px;
+    }
+  }
+
+  .close-btn-parent {
+    position: absolute;
+    right: 36px;
+    bottom: 30px;
+
+    .close-btn {
+      background-color: #C6C6C6;
+    }
+  }
+}
+
 .sidenav {
   background-color: $primary-color;
   color: white;

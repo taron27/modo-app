@@ -1,4 +1,52 @@
 <mat-drawer-container class="container" [hasBackdrop]="true">
+
+  <div class="trial-modal" *ngIf="showTrialPopUp">
+    <div class="align-center">
+      <p class="title">
+        Your free trial<br /> period has expired!
+      </p>
+    </div>
+    <div class="align-center">
+      <div class="suggestion-section">
+        You can continue using <br /> our app by subscribing
+      </div>
+      <div class="subscribe-btn-parent align-center">
+        <button mat-raised-button class="subscribe-btn">Subscribe</button>
+      </div>
+    </div>
+    <div class="close-btn-parent">
+      <button mat-mini-fab aria-label="Close icon" class="close-btn" (click)="showTrialPopUp = false">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="trial-modal" *ngIf="showSomeWindowPopUp">
+    <div class="align-center">
+      <p class="title">
+        Some pop up <br /> Window
+      </p>
+    </div>
+    <div class="align-center">
+      <div class="suggestion-section window-suggestion">
+        A nice subtitle should <br /> take this space
+      </div>
+      <div class="type-text">
+        <mat-form-field>
+          <input class="some-input" matInput placeholder="Type Here">
+        </mat-form-field>
+      </div>
+      <div class="subscribe-btn-parent align-center">
+        <button mat-raised-button class="subscribe-btn">Subscribe</button>
+      </div>
+    </div>
+    <div class="close-btn-parent">
+      <button mat-mini-fab aria-label="Close icon" class="close-btn" (click)="showSomeWindowPopUp = false">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+
   <mat-toolbar class="top-sidebar">
     <span class="page-sub-title">
       {{ title }}
