@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { DietInfoComponent } from './diet-info/diet-info.component';
 import { DietPlanComponent } from './diet-plan/diet-plan.component';
+import { DialogOverviewComponent } from './diet-plan/dialog-overview/dialog-overview.component';
 import { CheatMealsComponent } from './cheat-meals/cheat-meals.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { SelectMealsComponent } from './select-meals/select-meals.component';
@@ -23,6 +24,10 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { ChatComponent } from './chat/chat.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -37,6 +42,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     ShoppingListComponent,
     FoodsComponent,
     RestaurantsComponent,
+    DialogOverviewComponent,
     ChatComponent
   ],
   imports: [
@@ -51,6 +57,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatToolbarModule,
     MatInputModule,
     MatExpansionModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    FormsModule,
+    MatSlideToggleModule,
   ]
 })
 export class DashboardModule { }

@@ -31,7 +31,7 @@
                       <button mat-mini-fab color="primary" class="share-circle">
                         <mat-icon>share</mat-icon>
                       </button>
-                      <button mat-mini-fab color="primary">
+                      <button (click)="openCheatMeals(doneDiet)" mat-mini-fab color="primary" >
                         <img src="../../../assets/public/icons/hamburger.svg" alt="">
                       </button>
                     </div>
@@ -44,7 +44,7 @@
                   </div>
 
                   <div class="diet-ingredients d-flex justify-center">
-                    <div class="w-75">
+                    <div class="w-75 diet-sub-ingredients">
                       <div *ngFor="let ingredient of doneDiet.ingredients" class="d-flex justify-space-between diet-ingredient">
                         <div>
                           {{ ingredient.name }}
@@ -73,7 +73,7 @@
                 <button mat-mini-fab color="primary" class="share-circle">
                   <mat-icon>share</mat-icon>
                 </button>
-                <button mat-mini-fab color="primary">
+                <button mat-mini-fab color="primary" (click)="openCheatMeals(dietPlan)">
                   <img src="../../../assets/public/icons/hamburger.svg" alt="">
                 </button>
               </div>
@@ -86,7 +86,7 @@
             </div>
 
             <div class="diet-ingredients d-flex justify-center">
-              <div class="w-75">
+              <div class="w-75 diet-sub-ingredients">
                 <div *ngFor="let ingredient of dietPlan.ingredients" class="d-flex justify-space-between diet-ingredient">
                   <div>
                     {{ ingredient.name }}
@@ -100,16 +100,19 @@
 
               <div class="plan-bottom-buttons d-flex justify-center">
                 <div class="plan-sub-buttons d-flex justify-space-between">
-                  <button class="plan-button gray-button" (click)="dietIsDone(dietPlan, i)" mat-raised-button>
-                    done
-                  </button>
-                  <button class="plan-button"
-                          [ngClass]="{'gray-button': !dietPlan.active}"
-                          [color]="dietPlan.active && 'primary'"
+                  <button class="plan-button gray-button"
                           (click)="dietIsMissed(dietPlan, i)"
                           mat-raised-button
                   >
                     missed
+                  </button>
+                  <button class="plan-button gray-button"
+                          [ngClass]="{'gray-button': !dietPlan.active}"
+                          [color]="dietPlan.active && 'primary'"
+                          (click)="dietIsDone(dietPlan, i)"
+                          mat-raised-button
+                  >
+                    done
                   </button>
                 </div>
               </div>

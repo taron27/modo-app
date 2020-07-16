@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
+import { DietPlans } from './shared/diet-plan.model';
+import { DietPlanService } from './shared/diet-plan.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogOverviewComponent } from './dialog-overview/dialog-overview.component';
 
 @Component({
   selector: 'app-diet-plan',
@@ -18,102 +23,24 @@ export class DietPlanComponent implements OnInit {
     {name: 'Sa', active: false},
     {name: 'Su', active: false},
   ];
+  selectedDiet = {};
 
-  dietPlans = [
-    {
-      title: 'Breakfast',
-      active: true,
-      isDone: false,
-      isMissed: false,
-      image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
-      ingredients: [
-        {name: '1 Slice Whole Wheat Bread'},
-        {name: '1 Egg'},
-        {name: 'Half Avocado (smashed)'},
-      ]
-    },
-    {
-      title: 'Lunch',
-      active: false,
-      isDone: false,
-      isMissed: false,
-      image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
-      ingredients: [
-        {name: '1 Slice Whole Wheat Bread'},
-        {name: '1 Egg'},
-        {name: 'Half Avocado (smashed)'},
-      ]
-    },
-    {
-      title: 'Dinner',
-      active: false,
-      isDone: false,
-      isMissed: false,
-      image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
-      ingredients: [
-        {name: '1 Slice Whole Wheat Bread'},
-        {name: '1 Egg'},
-        {name: 'Half Avocado (smashed)'},
-      ]
-    },
-    {
-      title: 'Dinner',
-      active: false,
-      isDone: false,
-      isMissed: false,
-      image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
-      ingredients: [
-        {name: '1 Slice Whole Wheat Bread'},
-        {name: '1 Egg'},
-        {name: 'Half Avocado (smashed)'},
-      ]
-    },
-    {
-      title: 'Dinner',
-      active: false,
-      isDone: false,
-      isMissed: false,
-      image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
-      ingredients: [
-        {name: '1 Slice Whole Wheat Bread'},
-        {name: '1 Egg'},
-        {name: 'Half Avocado (smashed)'},
-      ]
-    },
-    {
-      title: 'Dinner',
-      active: false,
-      isDone: false,
-      isMissed: false,
-      image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
-      ingredients: [
-        {name: '1 Slice Whole Wheat Bread'},
-        {name: '1 Egg'},
-        {name: 'Half Avocado (smashed)'},
-      ]
-    },
-    {
-      title: 'Dinner',
-      active: false,
-      isDone: false,
-      isMissed: false,
-      image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
-      ingredients: [
-        {name: '1 Slice Whole Wheat Bread'},
-        {name: '1 Egg'},
-        {name: 'Half Avocado (smashed)'},
-      ]
-    },
-  ];
+  dietPlans: DietPlans[] = [];
 
   doneDiets = [];
+  quantity: string;
+  food: string;
 
-  constructor() {
+  constructor(public router: Router, public dialog: MatDialog, private dietPlanService: DietPlanService) {
     this.dietPlans.map((item, key) => {
       if (item.isDone || item.isMissed) {
         this.doneDiets.push(item);
         this.dietPlans.splice(key, 1);
       }
+    });
+
+    this.dietPlanService.getDietPlans().then((data) => {
+      this.dietPlans = data;
     });
   }
 
@@ -142,12 +69,35 @@ export class DietPlanComponent implements OnInit {
     }
   }
 
-
   changeDietStatus(dietPlan, index): void {
     this.doneDiets.push(dietPlan);
     if (this.dietPlans[index + 1]) {
       this.dietPlans[index + 1].active = true;
     }
     this.dietPlans.splice(index, 1);
+  }
+
+  openCheatMeals(dietPlan): void {
+    this.selectedDiet = dietPlan;
+
+    const dialogRef = this.dialog.open(DialogOverviewComponent, {
+      width: '370px',
+      data: {food: this.food, quantity: this.quantity}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      let cheatIngredient = [];
+      if (result.isCleanDiet) {
+        cheatIngredient = dietPlan.ingredients.filter((item, key) => {
+          if (item.isCheat) {
+            return item;
+          }
+        });
+      } else {
+        cheatIngredient = dietPlan.ingredients;
+      }
+
+      dietPlan.ingredients = [...cheatIngredient, ...result.ingredients];
+    });
   }
 }

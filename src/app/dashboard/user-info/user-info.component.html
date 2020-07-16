@@ -43,25 +43,29 @@
 
       <div class="d-flex justify-space-between profile-info">
         <div>
-          <label for="gender">
-            Gender
+          <label>
+            Measurement system
           </label>
         </div>
-        <div class="w-50 user-info-section">
-          <input type="text" matInput id="gender" placeholder="gender" />
+        <div class="user-info-select">
+          <mat-select>
+            <mat-option value="Female">Metric</mat-option>
+            <mat-option value="Male">Imperial</mat-option>
+          </mat-select>
         </div>
       </div>
 
       <div class="d-flex justify-space-between profile-info">
         <div>
-          <label for="measurement-system">
-            Measurement system
+          <label>
+            Gender
           </label>
         </div>
-        <div class="w-50 user-info-section">
-          <select name="measurement-system" id="measurement-system" class="measurement-system">
-            <option value="cm" selected>cm</option>
-          </select>
+        <div class="user-info-select">
+          <mat-select>
+            <mat-option value="Female">Female</mat-option>
+            <mat-option value="Male">Male</mat-option>
+          </mat-select>
         </div>
       </div>
 

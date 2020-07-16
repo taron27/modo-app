@@ -1,0 +1,58 @@
+<section>
+  <div>
+    <h3 class="align-center cheat-title">
+      Cheat Meals
+    </h3>
+  </div>
+  <div mat-dialog-content>
+    <div class="d-flex justify-center">
+      <div class="cheat-meals-content">
+        <div>
+          <mat-form-field  class="full-width">
+            <mat-label>Quantity</mat-label>
+            <input type="number" matInput [(ngModel)]="data.quantity" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="fill"  class="full-width">
+            <mat-label>Favorite food</mat-label>
+            <mat-select [(ngModel)]="data.food">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{ food.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-center">
+      <div class="cheat-meals-btn">
+        <div>
+          <mat-slide-toggle color="primary" [(ngModel)]="data.isCheat">Replace meal</mat-slide-toggle>
+        </div>
+        <div class="add-cheat-food align-center">
+          <button mat-flat-button color="primary" (click)="updateData()">
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="all-added-data">
+      <div class="d-flex justify-space-between" *ngFor="let option of options">
+        <div>
+          {{ option.name }}
+        </div>
+        <div>
+          <img src="../../../../assets/public/icons/arrows-right-left.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-center" mat-dialog-actions>
+    <div class="cheat-meals-btn align-center" *ngIf="options.length > 0">
+      <button class="btn-submit" [mat-dialog-close]="{ingredients: options, isCleanDiet: isCleanDiet}">
+        Submit
+      </button>
+    </div>
+  </div>
+</section>

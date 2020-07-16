@@ -178,3 +178,31 @@
 .diet-plan-submit {
   width: 288px;
 }
+
+.diet-sub-ingredients {
+  height: 189.3px;
+  overflow: auto;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 5px;
+    background-color: #ffffff
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #D5D5D5;
+    }
+  }
+}

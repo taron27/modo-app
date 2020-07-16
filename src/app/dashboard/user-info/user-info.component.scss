@@ -45,33 +45,15 @@
       padding: 11.5px 0;
       border-bottom: 1px solid #A7A7A7;
       line-height: 15px;
-
-      .user-info-section {
-        input {
-          text-align: right;
-        }
-
-        input:focus {
-          text-align: left;
-        }
-
-        .measurement-system {
-          border: unset;
-          outline: unset;
-          background-color: unset;
-
-          option {
-            border: unset;
-            outline: unset;
-            background-color: unset;
-          }
-        }
-      }
     }
 
     .profile-picture-btn {
       margin-top: 91px;
       text-align: center;
+    }
+
+    .user-info-select {
+      width: 50%;
     }
   }
 }

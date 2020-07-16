@@ -3,6 +3,8 @@
 
   .diet-info-container {
     margin-top: 23px;
+    border-bottom: 1px solid #C6C6C5;
+    padding-bottom: 10px;
 
     .diet-info {
       line-height: 20px;
@@ -10,7 +12,11 @@
       .diet-info-icon {
         display: flex;
         align-items: center;
-        margin-right: 34px;
+        width: 15%;
+      }
+
+      .diet-info-select {
+        width: 80%;
       }
 
       .diet-info-title {
