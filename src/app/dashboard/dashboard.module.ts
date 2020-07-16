@@ -28,6 +28,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatTabsModule} from '@angular/material/tabs';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     FoodsComponent,
     RestaurantsComponent,
     DialogOverviewComponent,
-    ChatComponent
+    ChatComponent,
+    CheckoutComponent
   ],
   imports: [
     CommonModule,
@@ -62,6 +65,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatDialogModule,
     FormsModule,
     MatSlideToggleModule,
+    MatTabsModule,
   ]
 })
 export class DashboardModule { }

@@ -85,7 +85,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   //padding: 10px 108px;
   width: 100%;
   height: 46px;
-  border-radius: 50px;
+  border-radius: 50px !important;;
   color: white;
   background: $primary-color;
   background: linear-gradient(45deg, $primary-color 0%, rgba(5,160,231,1) 35%, $accent-color 100%);
