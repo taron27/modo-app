@@ -38,7 +38,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .align-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .full-width {
@@ -46,7 +46,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .w-50 {
-  max-width: 50%;
+  width: 50%;
 }
 
 .w-70 {
@@ -59,6 +59,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .w-75 {
   width: 75%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.position-relative {
+  position: relative;
 }
 
 .mt-150 {

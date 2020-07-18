@@ -1,0 +1,25 @@
+.checkout-title {
+  font-size: 30px;
+}
+
+.checkout-form {
+  width: 370px;
+  display: flex;
+
+  form {
+    width: 100%;
+  }
+
+  .btn-submit-parent {
+
+    @media only screen and (max-width: 620px) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.input-icon-div {
+  margin-right: 10px;
+  height: 20px;
+  line-height: 60px;
+}

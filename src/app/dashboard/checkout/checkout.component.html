@@ -1,0 +1,138 @@
+<section>
+  <p class="align-center checkout-title">
+    Checkout
+  </p>
+  <div class="auth-main-form d-flex justify-center">
+    <div class="checkout-form main-content">
+      <form class="auth-form" [formGroup]="checkoutForm">
+        <div class="form-div d-flex">
+          <mat-form-field class="full-width form-inputs">
+            <label for="address1" class="auth-label">address 1</label>
+            <input
+              id="address1"
+              class="auth-input"
+              matInput
+              [errorStateMatcher]="matcher"
+              formControlName="address1"
+            />
+            <mat-error *ngIf="checkoutForm.controls.address1.hasError('required')">
+              address1 is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-div d-flex">
+          <mat-form-field class="full-width form-inputs">
+            <label for="address2" class="auth-label">address 2</label>
+            <input
+              id="address2"
+              class="auth-input"
+              matInput
+              [errorStateMatcher]="matcher"
+              formControlName="address2"
+            />
+            <mat-error *ngIf="checkoutForm.controls.address2.hasError('required')">
+              address2 is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-div d-flex">
+          <mat-form-field class="full-width form-inputs">
+            <label for="post-code" class="auth-label">Post Code</label>
+            <input
+              id="post-code"
+              class="auth-input"
+              matInput
+              [errorStateMatcher]="matcher"
+              formControlName="postCode"
+            />
+            <mat-error *ngIf="checkoutForm.controls.postCode.hasError('required')">
+              Post Code is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-div d-flex">
+          <mat-form-field class="full-width form-inputs">
+            <label for="city" class="auth-label">city</label>
+            <input
+              id="city"
+              class="auth-input"
+              matInput
+              [errorStateMatcher]="matcher"
+              formControlName="city"
+            />
+            <mat-error *ngIf="checkoutForm.controls.city.hasError('required')">
+              City is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-div d-flex">
+          <mat-form-field class="full-width form-inputs">
+            <label for="country" class="auth-label">country</label>
+            <input
+              id="country"
+              class="auth-input"
+              matInput
+              [errorStateMatcher]="matcher"
+              formControlName="country"
+            />
+            <mat-error *ngIf="checkoutForm.controls.country.hasError('required')">
+              Country is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-div d-flex">
+          <mat-form-field class="full-width form-inputs">
+            <label for="date" class="auth-label">Date</label>
+            <input
+              id="date"
+              class="auth-input"
+              type="date"
+              matInput
+              [errorStateMatcher]="matcher"
+              formControlName="date"
+            />
+            <mat-error *ngIf="checkoutForm.controls.date.hasError('required')">
+              date is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-div d-flex">
+          <mat-form-field class="full-width form-inputs">
+            <label for="time" class="auth-label">Time</label>
+            <input
+              id="time"
+              class="auth-input"
+              type="time"
+              matInput
+              [errorStateMatcher]="matcher"
+              formControlName="time"
+            />
+            <mat-error *ngIf="checkoutForm.controls.time.hasError('required')">
+              Time is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-div d-flex">
+          <mat-form-field class="full-width form-inputs">
+            <label for="promo-code" class="auth-label">Promo Code</label>
+            <input
+              id="promo-code"
+              class="auth-input"
+              matInput
+              [errorStateMatcher]="matcher"
+              formControlName="promoCode"
+            />
+            <mat-error *ngIf="checkoutForm.controls.promoCode.hasError('required')">
+              Promo code is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="btn-submit-parent d-flex justify-center">
+          <button class="btn-submit" mat-button>
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -18,73 +18,70 @@
     </div>
 
     <div>
+      <form [formGroup]="userInfoForm">
+        <mat-form-field class="full-width align-right">
+          <span matPrefix class="user-info-label">Email</span>
+          <input type="email"
+                 matInput
+                 [errorStateMatcher]="matcher"
+                 formControlName="email">
+          <mat-error *ngIf="userInfoForm.controls.email.hasError('email') && !userInfoForm.controls.email.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="userInfoForm.controls.email.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <div class="d-flex justify-space-between profile-info">
-        <div>
-          <label for="email">
-            Email
-          </label>
-        </div>
-        <div class="w-50 user-info-section">
-          <input type="email" matInput id="email" placeholder="susan@me.com" />
-        </div>
-      </div>
+        <mat-form-field class="full-width align-right">
+          <span matPrefix class="user-info-label">Age</span>
+          <input type="number"
+                 matInput
+                 [errorStateMatcher]="matcher"
+                 formControlName="age">
+          <mat-error *ngIf="userInfoForm.controls.age.hasError('required')">
+            Age is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <div class="d-flex justify-space-between profile-info">
-        <div>
-          <label for="age">
-            Age
-          </label>
-        </div>
-        <div class="w-50 user-info-section">
-          <input type="text" matInput id="age" placeholder="27" />
-        </div>
-      </div>
-
-      <div class="d-flex justify-space-between profile-info">
-        <div>
-          <label>
-            Measurement system
-          </label>
-        </div>
-        <div class="user-info-select">
-          <mat-select>
-            <mat-option value="Female">Metric</mat-option>
-            <mat-option value="Male">Imperial</mat-option>
+        <mat-form-field class="full-width align-right">
+          <span matPrefix class="user-info-label">Gender</span>
+          <mat-select formControlName="system" [(ngModel)]="gender[0].value">
+            <mat-option *ngFor="let data of gender" [value]="data.value">{{ data.name }}</mat-option>
           </mat-select>
-        </div>
-      </div>
+          <mat-error *ngIf="userInfoForm.controls.system.hasError('required')">
+            Gender is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <div class="d-flex justify-space-between profile-info">
-        <div>
-          <label>
-            Gender
-          </label>
-        </div>
-        <div class="user-info-select">
-          <mat-select>
-            <mat-option value="Female">Female</mat-option>
-            <mat-option value="Male">Male</mat-option>
+        <mat-form-field class="full-width align-right">
+          <span matPrefix class="user-info-label">Measurement system</span>
+          <mat-select formControlName="system" [(ngModel)]="systems[0].value">
+            <mat-option *ngFor="let system of systems" [value]="system.value">{{ system.name }}</mat-option>
           </mat-select>
-        </div>
-      </div>
+          <mat-error *ngIf="userInfoForm.controls.system.hasError('required')">
+            Measurement system is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <div class="d-flex justify-space-between profile-info">
-        <div>
-          <label for="height">
-            Height
-          </label>
-        </div>
-        <div class="w-50 user-info-section">
-          <input type="text" matInput id="height" placeholder="165cm" />
-        </div>
-      </div>
+        <mat-form-field class="full-width align-right">
+          <span matPrefix class="user-info-label">Height</span>
+          <input type="number"
+                 matInput
+                 [errorStateMatcher]="matcher"
+                 formControlName="height">
+          <mat-error *ngIf="userInfoForm.controls.height.hasError('required')">
+            Height is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <div class="profile-picture-btn">
-        <button class="btn-submit">
-          Save
-        </button>
-      </div>
+        <div class="profile-picture-btn">
+          <button class="btn-submit" mat-button>
+            Save
+          </button>
+        </div>
+
+      </form>
     </div>
   </div>
 </section>

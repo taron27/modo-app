@@ -49,7 +49,7 @@
 
   <mat-toolbar class="top-sidebar">
     <span class="page-sub-title">
-      {{ title }}
+      {{ title }} <mat-icon>{{ isShowInfoIcon &&  'info' }}</mat-icon>
     </span>
     <span class="spacer"></span>
     <div class="menu-icon" (click)="drawer.toggle()">
@@ -77,7 +77,7 @@
       <a
         mat-list-item
         *ngFor="let sidenavLink of sidenavLinks"
-        (click)="changePage(sidenavLink.title, sidenavLink.path); drawer.toggle();"
+        (click)="changePage(sidenavLink); drawer.toggle();"
       >
         {{ sidenavLink.name }}
       </a>

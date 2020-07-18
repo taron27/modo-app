@@ -1,0 +1,32 @@
+.select-meals {
+  width: 700px;
+
+  .current-meal {
+    width: 80%;
+    margin-top: 30px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C6C6C5;
+  }
+
+  @media only screen and (max-width: 720px) {
+    width: 100%;
+
+    .current-meal {
+      width: 100%;
+    }
+  }
+}
+.btn-submit-parent {
+  margin-top: 100px;
+  width: 360px;
+
+  @media only screen and (max-width: 620px) {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+
+.mat-tab-label {
+  min-width: 72px !important;
+}

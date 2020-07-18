@@ -6,6 +6,7 @@ export const DIETINFOS: DietInfo[] = [
     name: 'weight lose',
     image: '../../../assets/public/icons/diet-info/apple.svg',
     description: 'Diet Types description',
+    isShowInfo: false,
     options: [
       {name: 'Weight Lose', value: 'Weight Lose'},
       {name: 'Weight Gain', value: 'Weight Gain'},
@@ -17,6 +18,7 @@ export const DIETINFOS: DietInfo[] = [
     name: '52',
     image: '../../../assets/public/icons/diet-info/scales.svg',
     description: 'Weight goal description',
+    isShowInfo: false,
     options: [
       {name: '0kg (0 lbs)', value: '0kg (0 lbs)'},
       {name: '0.25kg (0.55 lbs)', value: '0.25kg (0.55 lbs)'},
@@ -28,6 +30,7 @@ export const DIETINFOS: DietInfo[] = [
     name: '4',
     image: '../../../assets/public/icons/diet-info/hot-cup.svg',
     description: 'Meals per day description',
+    isShowInfo: false,
     options: [
       {name: '3', value: '3'},
       {name: '4', value: '4'},
@@ -40,6 +43,7 @@ export const DIETINFOS: DietInfo[] = [
     name: 'Endomo',
     image: '../../../assets/public/icons/diet-info/body.svg',
     description: 'Body type description',
+    isShowInfo: true,
     options: [
       {name: 'Ectomorph', value: 'Ectomorph'},
       {name: 'Mesomorph', value: 'Mesomorph'},
@@ -51,6 +55,7 @@ export const DIETINFOS: DietInfo[] = [
     name: 'Minimum',
     image: '../../../assets/public/icons/diet-info/activity.svg',
     description: 'Activity description',
+    isShowInfo: true,
     options: [
       {name: 'Sedentary', value: 'Sedentary'},
       {name: 'Lightly Active', value: 'Lightly Active'},
@@ -64,6 +69,7 @@ export const DIETINFOS: DietInfo[] = [
     name: '95gr',
     image: '../../../assets/public/icons/diet-info/food-weight.svg',
     description: 'Food weight description',
+    isShowInfo: true,
     options: [
       {name: 'Low', value: 'Low'},
       {name: 'Moderate', value: 'Moderate'},
@@ -75,6 +81,7 @@ export const DIETINFOS: DietInfo[] = [
     name: 'Meat',
     image: '../../../assets/public/icons/diet-info/eating-habit.svg',
     description: 'Eating habit description',
+    isShowInfo: false,
     options: [
       {name: 'Meat eater', value: 'Meat eater'},
       {name: 'Pescatarian', value: 'Pescatarian'},

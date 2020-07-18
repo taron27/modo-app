@@ -34,3 +34,16 @@
     }
   }
 }
+
+.info-icon-parent {
+  position: absolute;
+  right: 30px;
+  bottom: -7px;
+  cursor: help;
+
+  .info-icon {
+    width: 17px;
+    height: 17px;
+    color: #C6C6C6;
+  }
+}

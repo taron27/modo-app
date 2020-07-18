@@ -10,6 +10,8 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { FoodsComponent } from './foods/foods.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { ChatComponent } from './chat/chat.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { SelectMealsComponent } from './select-meals/select-meals.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,8 @@ const routes: Routes = [
       { path: 'foods', component: FoodsComponent },
       { path: 'restaurants', component: RestaurantsComponent },
       { path: 'chat', component: ChatComponent },
+      { path: 'checkout', component: CheckoutComponent },
+      { path: 'select-meals', component: SelectMealsComponent },
       { path: 'subscription', component: SubscriptionComponent },
     ]
   }

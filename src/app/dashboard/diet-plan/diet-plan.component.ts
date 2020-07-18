@@ -93,11 +93,16 @@ export class DietPlanComponent implements OnInit {
             return item;
           }
         });
+        cheatIngredient.push(result.finallyData);
+        dietPlan.ingredients = cheatIngredient;
       } else {
-        cheatIngredient = dietPlan.ingredients;
+        dietPlan.ingredients.push(result.finallyData);
       }
-
-      dietPlan.ingredients = [...cheatIngredient, ...result.ingredients];
     });
+  }
+
+  orderFood(): void {
+    const redirectUrl = '/select-meals';
+    this.router.navigate([redirectUrl]);
   }
 }

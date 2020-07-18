@@ -1,1 +1,29 @@
-<p>select-meals works!</p>
+<p class="title mt-100">
+  Select Meals
+</p>
+<section class="d-flex justify-center">
+  <div class="select-meals">
+    <mat-tab-group>
+      <mat-tab *ngFor="let week of weeks" [label]="week.weekName" class="week-tab">
+        <div class="d-flex justify-center">
+          <div class="current-meal d-flex justify-space-between" *ngFor="let meal of week.meals">
+            <div>
+              {{ meal.name }}
+            </div>
+            <div>
+              <mat-slide-toggle color="primary" [(ngModel)]="meal.isSelect" (change)="changeAllAmount(meal)"></mat-slide-toggle>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+    <div class="d-flex justify-center">
+      <div class="btn-submit-parent align-center">
+        <button class="btn-submit" mat-button (click)="nextStep()">
+          Total Price: € {{ amount }} - NEXT
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
