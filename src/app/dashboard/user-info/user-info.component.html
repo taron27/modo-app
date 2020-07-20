@@ -46,7 +46,7 @@
 
         <mat-form-field class="full-width align-right">
           <span matPrefix class="user-info-label">Gender</span>
-          <mat-select formControlName="system" [(ngModel)]="gender[0].value">
+          <mat-select formControlName="gender" [(ngModel)]="currentGender">
             <mat-option *ngFor="let data of gender" [value]="data.value">{{ data.name }}</mat-option>
           </mat-select>
           <mat-error *ngIf="userInfoForm.controls.system.hasError('required')">
@@ -56,7 +56,7 @@
 
         <mat-form-field class="full-width align-right">
           <span matPrefix class="user-info-label">Measurement system</span>
-          <mat-select formControlName="system" [(ngModel)]="systems[0].value">
+          <mat-select formControlName="system" [(ngModel)]="currentSystem">
             <mat-option *ngFor="let system of systems" [value]="system.value">{{ system.name }}</mat-option>
           </mat-select>
           <mat-error *ngIf="userInfoForm.controls.system.hasError('required')">

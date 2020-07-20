@@ -14,11 +14,13 @@ export class UserInfoComponent implements OnInit {
   gender = [
     {name: 'Female', value: 'female'},
     {name: 'Male', value: 'male'},
-  ]
+  ];
+  currentGender = this.gender[0].value;
   systems = [
     {name: 'Metric', value: 'Metric'},
     {name: 'Imperial', value: 'Imperial'},
-  ]
+  ];
+  currentSystem = this.systems[0].value;
 
   constructor() {
     this.userInfoForm = new FormGroup({
@@ -32,7 +34,7 @@ export class UserInfoComponent implements OnInit {
       gender: new FormControl('', [
         Validators.required,
       ]),
-      system: new FormControl('', [
+      system: new FormControl(this.systems[0].value, [
         Validators.required,
       ]),
       height: new FormControl('175', [
