@@ -2,7 +2,7 @@ export interface DietInfo {
   title: string;
   name: string;
   image: string;
-  description: string;
+  infoDescription: string;
   isShowInfo: boolean;
   options: Option[];
 }

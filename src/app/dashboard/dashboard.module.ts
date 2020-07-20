@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { MatRippleModule } from '@angular/material/core';
@@ -31,7 +30,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { InfoPopUpComponent } from './dashboard/info-pop-up/info-pop-up.component';
+import { InfoPopUpComponent } from './info-pop-up/info-pop-up.component';
 
 @NgModule({
   declarations: [

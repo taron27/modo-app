@@ -4,7 +4,7 @@ import { AuthService } from '../../auth/auth.service';
 import { SideNav } from './shared/side-nav.model';
 import { DashboardService } from './shared/dashboard.service';
 import { MatDialog } from '@angular/material/dialog';
-import { InfoPopUpComponent } from './info-pop-up/info-pop-up.component';
+import { InfoPopUpComponent } from '../info-pop-up/info-pop-up.component';
 
 @Component({
   selector: 'app-dashboard',

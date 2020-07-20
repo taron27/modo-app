@@ -5,7 +5,7 @@ export const DIETINFOS: DietInfo[] = [
     title: 'Diet Types',
     name: 'weight lose',
     image: '../../../assets/public/icons/diet-info/apple.svg',
-    description: 'Diet Types description',
+    infoDescription: 'Diet Types infoDescription',
     isShowInfo: false,
     options: [
       {name: 'Weight Lose', value: 'Weight Lose'},
@@ -17,7 +17,7 @@ export const DIETINFOS: DietInfo[] = [
     title: 'Weight goal',
     name: '52',
     image: '../../../assets/public/icons/diet-info/scales.svg',
-    description: 'Weight goal description',
+    infoDescription: 'Weight goal infoDescription',
     isShowInfo: false,
     options: [
       {name: '0kg (0 lbs)', value: '0kg (0 lbs)'},
@@ -29,7 +29,7 @@ export const DIETINFOS: DietInfo[] = [
     title: 'Meals per day',
     name: '4',
     image: '../../../assets/public/icons/diet-info/hot-cup.svg',
-    description: 'Meals per day description',
+    infoDescription: 'Meals per day infoDescription',
     isShowInfo: false,
     options: [
       {name: '3', value: '3'},
@@ -42,7 +42,7 @@ export const DIETINFOS: DietInfo[] = [
     title: 'Body type',
     name: 'Endomo',
     image: '../../../assets/public/icons/diet-info/body.svg',
-    description: 'Body type description',
+    infoDescription: 'Body type infoDescription',
     isShowInfo: true,
     options: [
       {name: 'Ectomorph', value: 'Ectomorph'},
@@ -54,7 +54,7 @@ export const DIETINFOS: DietInfo[] = [
     title: 'Activity',
     name: 'Minimum',
     image: '../../../assets/public/icons/diet-info/activity.svg',
-    description: 'Activity description',
+    infoDescription: 'Activity infoDescription',
     isShowInfo: true,
     options: [
       {name: 'Sedentary', value: 'Sedentary'},
@@ -68,7 +68,7 @@ export const DIETINFOS: DietInfo[] = [
     title: 'Food weight',
     name: '95gr',
     image: '../../../assets/public/icons/diet-info/food-weight.svg',
-    description: 'Food weight description',
+    infoDescription: 'Food weight infoDescription',
     isShowInfo: true,
     options: [
       {name: 'Low', value: 'Low'},
@@ -80,7 +80,7 @@ export const DIETINFOS: DietInfo[] = [
     title: 'Eating habit',
     name: 'Meat',
     image: '../../../assets/public/icons/diet-info/eating-habit.svg',
-    description: 'Eating habit description',
+    infoDescription: 'Eating habit infoDescription',
     isShowInfo: false,
     options: [
       {name: 'Meat eater', value: 'Meat eater'},
