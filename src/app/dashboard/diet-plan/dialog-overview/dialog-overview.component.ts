@@ -13,17 +13,16 @@ import {Validator} from '../../../validator';
 })
 export class DialogOverviewComponent implements OnInit {
   foods: Food[] = [];
-  options = [];
   isCleanDiet = false;
   mealsForm: FormGroup;
   option = {
     quantity: '1',
     food: '',
-  }
+  };
   finallyData = {
     name: '',
     isCheat: false,
-  }
+  };
   matcher = new Validator();
 
   constructor(
@@ -36,6 +35,9 @@ export class DialogOverviewComponent implements OnInit {
   ngOnInit(): void {
     this.dietPlanService.getFoods().then((data) => {
       this.foods = data;
+      if (data[0]) {
+        this.option.food = data[0].value;
+      }
     });
 
     this.mealsForm = new FormGroup({

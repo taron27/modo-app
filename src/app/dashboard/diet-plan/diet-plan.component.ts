@@ -86,17 +86,19 @@ export class DietPlanComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      let cheatIngredient = [];
-      if (result.isCleanDiet) {
-        cheatIngredient = dietPlan.ingredients.filter((item, key) => {
-          if (item.isCheat) {
-            return item;
-          }
-        });
-        cheatIngredient.push(result.finallyData);
-        dietPlan.ingredients = cheatIngredient;
-      } else {
-        dietPlan.ingredients.push(result.finallyData);
+      if (result) {
+        let cheatIngredient = [];
+        if (result.isCleanDiet) {
+          cheatIngredient = dietPlan.ingredients.filter((item, key) => {
+            if (item.isCheat) {
+              return item;
+            }
+          });
+          cheatIngredient.push(result.finallyData);
+          dietPlan.ingredients = cheatIngredient;
+        } else {
+          dietPlan.ingredients.push(result.finallyData);
+        }
       }
     });
   }
