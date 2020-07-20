@@ -31,6 +31,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { InfoPopUpComponent } from './dashboard/info-pop-up/info-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     RestaurantsComponent,
     DialogOverviewComponent,
     ChatComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    InfoPopUpComponent
   ],
   imports: [
     CommonModule,

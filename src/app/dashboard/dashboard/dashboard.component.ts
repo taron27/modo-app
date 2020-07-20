@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../auth/auth.service';
+import { SideNav } from './shared/side-nav.model';
+import { DashboardService } from './shared/dashboard.service';
+import { MatDialog } from '@angular/material/dialog';
+import { InfoPopUpComponent } from './info-pop-up/info-pop-up.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,29 +13,32 @@ import { AuthService } from '../../auth/auth.service';
 })
 export class DashboardComponent implements OnInit {
   title = 'user info';
+  currentInfoDescription = 'user info';
 
   showTrialPopUp = false;
   showSomeWindowPopUp = false;
   isShowInfoIcon = false;
-
-  sidenavLinks = [
-    { name: 'My Profile', path: '/user-info', title: 'user info', isShowInfoIcon: false },
-    { name: 'Diet info', path: '/diet-info', title: 'diet info', isShowInfoIcon: false },
-    { name: 'Diet Plan', path: '/diet-plan', title: 'diet plan', isShowInfoIcon: true },
-    { name: 'Overview', path: '/', title: 'overview', isShowInfoIcon: false },
-    { name: 'Shopping', path: '/shopping', title: 'shopping', isShowInfoIcon: false },
-    { name: 'Foods', path: '/foods', title: 'food', isShowInfoIcon: false },
-    { name: 'Restaurants', path: '/restaurants', title: 'restaurants', isShowInfoIcon: false },
-    { name: 'Chat', path: '/chat', title: 'chat', isShowInfoIcon: false },
-    { name: 'Subscription', path: '/subscription', title: 'Subscribe', isShowInfoIcon: false },
-  ];
+  sidenavLinks: SideNav[] = [];
 
   constructor(
     private authService: AuthService,
     private router: Router,
-  ) { }
+    private dashboardService: DashboardService,
+    private dialog: MatDialog,
+  ) {
+    dashboardService.getSideNav().then((data) => {
+      this.sidenavLinks = data;
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  openInfoPopUp(): void {
+    this.dialog.open(InfoPopUpComponent, {
+      width: '370px',
+      data: { description: this.currentInfoDescription, title: this.title }
+    });
   }
 
   logout(): void {
@@ -40,11 +47,15 @@ export class DashboardComponent implements OnInit {
   }
 
   changePage(sidenavLink): void {
-    const { title, path, isShowInfoIcon } = sidenavLink
+    const {
+      title, path, isShowInfoIcon,
+      infoPopUpDescription
+    } = sidenavLink;
     this.router.navigate([path])
       .then(() => {
         this.isShowInfoIcon = isShowInfoIcon;
         this.title = title;
+        this.currentInfoDescription = infoPopUpDescription;
       });
   }
 }

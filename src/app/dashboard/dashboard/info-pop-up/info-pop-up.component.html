@@ -1,0 +1,21 @@
+<section>
+  <div>
+    <h3 class="align-center cheat-title">
+      {{data.title}}
+    </h3>
+  </div>
+  <div mat-dialog-content>
+    <div class="d-flex justify-center">
+      <div class="cheat-meals-content">
+        {{data.description}}
+      </div>
+    </div>
+  </div>
+  <div class="bottom-button d-flex justify-center" mat-dialog-actions>
+    <div class="cheat-meals-btn align-center">
+      <button class="btn-submit" [mat-dialog-close]="{}">
+        Ok
+      </button>
+    </div>
+  </div>
+</section>

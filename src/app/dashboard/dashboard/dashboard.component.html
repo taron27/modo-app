@@ -49,7 +49,7 @@
 
   <mat-toolbar class="top-sidebar">
     <span class="page-sub-title">
-      {{ title }} <mat-icon>{{ isShowInfoIcon &&  'info' }}</mat-icon>
+      {{ title }} <mat-icon (click)="openInfoPopUp()" class="info-icon">{{ isShowInfoIcon &&  'info' }}</mat-icon>
     </span>
     <span class="spacer"></span>
     <div class="menu-icon" (click)="drawer.toggle()">
