@@ -68,3 +68,7 @@ $primary-color: map-get($modo-primary, 500);
 $accent-color: map-get($modo-accent, 500);
 $gradient-btn-color: linear-gradient(45deg, $primary-color 0%, rgba(5,160,231,1) 35%, $accent-color 100%);
 $modo-gray: #8B8B8B;
+
+// Angular Calendar
+$cal-cell-color: #212B36;
+$cal-weekend-color: $cal-cell-color;

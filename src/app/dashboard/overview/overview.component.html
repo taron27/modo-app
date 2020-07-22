@@ -1,0 +1,73 @@
+<section>
+  <div>
+    <div class="d-flex justify-center">
+      <div class="overview-sub-section">
+        <div class="overview-sub-title">
+          Start
+        </div>
+        <div class="sub-circle">56kg</div>
+        <div class="sub-footer">Dec 6, 18</div>
+      </div>
+      <div class="man-section">
+        <div class="main-circle-content">
+          <mat-progress-spinner
+            class="example-margin"
+            [color]="color"
+            [mode]="mode"
+            [diameter]="153"
+            [value]="value">
+          </mat-progress-spinner>
+          <div class="main-circle-data">
+            <div class="sub-percent-circle">
+              {{ value }}%
+            </div>
+            <div class="main-mass">54kg</div>
+            <div class="main-date">Dec 12, 18</div>
+          </div>
+        </div>
+      </div>
+      <div class="overview-sub-section">
+        <div class="overview-sub-title">
+          Target
+        </div>
+        <div class="sub-circle">52kg</div>
+        <div class="sub-footer">Dec 6, 18</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calendar-section d-flex justify-center">
+
+    <div class="calendar">
+      <p class="calendar-title">
+        Month
+      </p>
+      <app-calendar-month-view
+        [viewDate]="currentDate"
+        [weekStartsOn]="1"
+      >
+      </app-calendar-month-view>
+    </div>
+
+    <div class="calendar">
+      <p class="calendar-title align-right">
+        Month
+      </p>
+      <app-calendar-month-view
+        [viewDate]="currentDate"
+        [weekStartsOn]="1"
+      >
+      </app-calendar-month-view>
+    </div>
+  </div>
+
+  <div class="bottom-add-button d-flex justify-center">
+    <div class="bottom-plus" (click)="openRatingPopUp()">
+      +
+    </div>
+    <div class="d-flex align-items-center">
+      Add today’s eterie
+    </div>
+  </div>
+
+</section>

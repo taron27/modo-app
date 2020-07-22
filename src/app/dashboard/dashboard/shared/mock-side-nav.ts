@@ -24,7 +24,7 @@ export const SIDENAV: SideNav[] = [
   },
   {
     name: 'Overview',
-    path: '/',
+    path: '/overview',
     title: 'overview',
     isShowInfoIcon: false,
     infoPopUpDescription: ''

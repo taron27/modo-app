@@ -31,6 +31,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { InfoPopUpComponent } from './info-pop-up/info-pop-up.component';
+import { OverviewComponent } from './overview/overview.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { CalendarMonthViewComponent } from './calendar-month-view/calendar-month-view.component';
+import { RatingPopUpComponent } from './overview/rating-pop-up/rating-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +54,10 @@ import { InfoPopUpComponent } from './info-pop-up/info-pop-up.component';
     DialogOverviewComponent,
     ChatComponent,
     CheckoutComponent,
-    InfoPopUpComponent
+    InfoPopUpComponent,
+    OverviewComponent,
+    CalendarMonthViewComponent,
+    RatingPopUpComponent,
   ],
   imports: [
     CommonModule,
@@ -69,6 +78,11 @@ import { InfoPopUpComponent } from './info-pop-up/info-pop-up.component';
     MatSlideToggleModule,
     MatTabsModule,
     MatFormFieldModule,
+    MatProgressSpinnerModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
   ]
 })
 export class DashboardModule { }

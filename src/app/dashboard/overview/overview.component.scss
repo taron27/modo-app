@@ -1,0 +1,120 @@
+@import '../../../variables';
+
+.man-section {
+  margin: 0 40px;
+
+  .main-circle-content {
+    position: relative;
+
+    .main-circle-data {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 153px;
+      height: 153px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .sub-percent-circle {
+        width: 42px;
+        height: 42px;
+        background: #ECECEC;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        color: $primary-color;
+      }
+
+      .main-mass {
+        padding: 7px 0 17px;
+        font-size: 29px;
+      }
+
+      .main-date {
+        font-size: 13px;
+        color: #868686;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+    margin: 0 20px;
+
+    .main-circle-content {
+
+      .main-mass {
+        font-size: 25px !important;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.overview-sub-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .sub-circle {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ECECEC;
+    margin: 7px 0 15px;
+  }
+
+  .sub-footer, .overview-sub-title  {
+    color: #868686;
+    font-size: 13px;
+  }
+}
+
+.calendar-section {
+  margin-top: 58px;
+
+  .calendar {
+    padding: 0 112px;
+    width: 408px;
+    height: 300px;
+    overflow: hidden;
+
+    .calendar-title {
+      font-size: 22px;
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+
+    .calendar {
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
+
+.bottom-add-button {
+  margin-top: 58px;
+
+  .bottom-plus {
+    background: $primary-color;
+    color: #ffffff;
+    width: 27px;
+    cursor: pointer;
+    height: 27px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+}
+
