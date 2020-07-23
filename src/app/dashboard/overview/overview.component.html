@@ -38,26 +38,65 @@
 
   <div class="calendar-section d-flex justify-center">
 
-    <div class="calendar">
-      <p class="calendar-title">
-        Month
-      </p>
-      <app-calendar-month-view
-        [viewDate]="currentDate"
-        [weekStartsOn]="1"
-      >
-      </app-calendar-month-view>
+    <div class="main-calendar first-prev-calendar">
+      <div class="calendar">
+        <p class="calendar-title">
+          {{ prevMonthName }}
+        </p>
+        <app-calendar-month-view
+          [viewDate]="prevDate"
+          [weekStartsOn]="1"
+          [rightDietData]="rightDietData"
+          [refresh]="refresh"
+        >
+        </app-calendar-month-view>
+      </div>
+      <div class="d-flex">
+        <div class="d-flex">
+          <div class="right-food"></div>
+          <div>
+            Right Food
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="right-amount"></div>
+          <div>
+            Right Amount
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="calendar">
-      <p class="calendar-title align-right">
-        Month
-      </p>
-      <app-calendar-month-view
-        [viewDate]="currentDate"
-        [weekStartsOn]="1"
-      >
-      </app-calendar-month-view>
+    <div class="main-calendar">
+      <div class="calendar">
+        <p class="calendar-title align-right">
+          {{ currentMonthName }}
+        </p>
+        <app-calendar-month-view
+          [viewDate]="currentDate"
+          [weekStartsOn]="1"
+          [rightDietData]="rightDietData"
+          [refresh]="refresh"
+        >
+        </app-calendar-month-view>
+      </div>
+
+      <div class="d-flex">
+        <div class="d-flex">
+          <div class="right-food"></div>
+          <div>
+            Right Food
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="right-amount"></div>
+          <div>
+            Right Amount
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 

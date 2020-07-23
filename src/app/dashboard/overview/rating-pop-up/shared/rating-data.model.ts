@@ -1,5 +1,5 @@
-export interface RatingData {
+export default interface RatingData {
   rightFood: boolean;
   rightAmount: boolean;
-  date: number;
+  date: Date;
 }

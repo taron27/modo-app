@@ -289,6 +289,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .cal-cell-top {
     min-height: 43px;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    outline: unset;
   }
 
   .cal-cell-row {
@@ -309,6 +312,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   .cal-day-cell {
     min-height: 43px;
+    border: unset;
+    outline: unset;
 
     // ie11 hack for https://github.com/mattlewis92/angular-calendar/issues/501
     @media all and (-ms-high-contrast: none) {
@@ -351,14 +356,40 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-weight: 400;
     opacity: 1;
     margin-right: unset;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: unset;
+    margin-bottom: unset;
     text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
     float: unset;
     color: $cal-cell-color;
     position: relative;
+
+    .right-food {
+      width: 30px;
+      border: 2px solid #CEFFEE;
+      border-top-color: $primary-color !important;
+      border-left-color: $primary-color !important;
+      border-radius: 50%;
+      transform: rotate(-45deg);
+    }
+
+    .right-amount {
+      width: 30px;
+      border: 2px solid #CEFFEE;
+      border-right-color: $accent-color !important;
+      border-bottom-color: $accent-color !important;
+      border-radius: 50%;
+      transform: rotate(-45deg);
+    }
+
+    .right-amount, .right-food {
+
+      .month-day {
+        transform: rotate(45deg);
+      }
+    }
   }
 
   .cal-events {

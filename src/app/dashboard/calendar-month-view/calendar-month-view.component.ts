@@ -28,6 +28,8 @@ import {
 } from 'calendar-utils';
 import { Subject, Subscription } from 'rxjs';
 import { PlacementArray } from 'positioning';
+import { MonthCustomView, MonthCustomViewDay } from './shared/month-custom-view.model';
+import RatingData from '../overview/rating-pop-up/shared/rating-data.model';
 
 export interface CalendarMonthViewBeforeRenderEvent {
   header: WeekDay[];
@@ -113,7 +115,7 @@ export class CalendarMonthViewComponent implements OnChanges, OnInit, OnDestroy 
    * For checking today's diet amount and is right or not
    */
 
-  @Input() todayData: object;
+  @Input() rightDietData: RatingData[];
 
   /**
    * A custom template to use to replace the header
@@ -157,7 +159,7 @@ export class CalendarMonthViewComponent implements OnChanges, OnInit, OnDestroy 
    * Called when the day cell is clicked
    */
   @Output() dayClicked = new EventEmitter<{
-    day: MonthViewDay;
+    day: MonthCustomViewDay;
     sourceEvent: MouseEvent | any;
   }>();
 
@@ -193,7 +195,7 @@ export class CalendarMonthViewComponent implements OnChanges, OnInit, OnDestroy 
   /**
    * @hidden
    */
-  view: MonthView;
+  view: MonthCustomView;
 
   /**
    * @hidden
@@ -203,7 +205,7 @@ export class CalendarMonthViewComponent implements OnChanges, OnInit, OnDestroy 
   /**
    * @hidden
    */
-  openDay: MonthViewDay;
+  openDay: MonthCustomViewDay;
 
   /**
    * @hidden
@@ -360,6 +362,19 @@ export class CalendarMonthViewComponent implements OnChanges, OnInit, OnDestroy 
       excluded: this.excludeDays,
       weekendDays: this.weekendDays,
     });
+
+    if (this.rightDietData.length > 0) {
+      this.view.days.map(day => {
+        const todayData = this.rightDietData.find(
+          item => (item.date.toString().slice(0, 15) === day.date.toString().slice(0, 15))
+        );
+
+        if (todayData) {
+          day.rightFood = todayData.rightFood;
+          day.rightAmount = todayData.rightAmount;
+        }
+      });
+    }
   }
 
   protected checkActiveDayIsOpen(): void {

@@ -81,16 +81,59 @@
 .calendar-section {
   margin-top: 58px;
 
-  .calendar {
-    padding: 0 112px;
-    width: 408px;
-    height: 300px;
-    overflow: hidden;
 
-    .calendar-title {
-      font-size: 22px;
+  .main-calendar {
+    padding: 0 112px;
+
+    .calendar {
+      width: 408px;
+      height: 300px;
+      overflow: hidden;
+
+      .calendar-title {
+        font-size: 22px;
+      }
+    }
+
+    .right-food {
+      width: 18px;
+      height: 18px;
+      border: 3px solid #CEFFEE;
+      border-left-color: $primary-color;
+      border-top-color: $primary-color;
+      border-radius: 50%;
+      margin-right: 10px;
+      transform: rotate(310deg);
+    };
+
+    .right-amount {
+      width: 18px;
+      height: 18px;
+      border: 3px solid #CEFFEE;
+      border-left-color: $accent-color;
+      border-top-color: $accent-color;
+      border-radius: 50%;
+      margin-right: 10px;
+      transform: rotate(130deg);
+      margin-left: 54px;
+    };
+
+    @media only screen and (max-width: 620px) {
+      padding: 0;
+
+      .calendar {
+        width: 100%;
+      }
     }
   }
+
+  .first-prev-calendar {
+
+    @media only screen and (max-width: 620px) {
+      display: none;
+    }
+  }
+
 
   @media only screen and (max-width: 620px) {
 

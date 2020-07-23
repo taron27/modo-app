@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { RatingData } from './shared/rating-data.model'
+import RatingData from './shared/rating-data.model';
 
 @Component({
   selector: 'app-rating-pop-up',
@@ -18,6 +18,6 @@ export class RatingPopUpComponent implements OnInit {
   }
 
   closeDialog(): void {
-    this.data.date = Date.now();
+    this.data.date = new Date();
   }
 }
