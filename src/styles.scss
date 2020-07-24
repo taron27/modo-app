@@ -1,13 +1,25 @@
 @import 'variables';
-@import "~angular-calendar/scss/angular-calendar.scss";
 
 // Custom Theming for Angular Material
 @import 'theme';
 
+@import "~angular-calendar/scss/angular-calendar.scss";
+
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+  font-family: SofiaProRegular;
+  src: url("../src/assets/public/fonts/Sofia Pro Regular.ttf");
+}
+
+@font-face {
+  font-family: SofiaProBold;
+  src: url("../src/assets/public/fonts/Sofia Pro Bold.ttf");
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: $main-font-family, Roboto, sans-serif !important; }
+
 
 .d-flex {
   display: flex !important;
@@ -262,195 +274,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // TODO: change drawer backdrop color with angular material variable
 .mat-drawer-backdrop.mat-drawer-shown {
   background-color: rgba($modo-gray, 0.3);
-}
-
-// Angular Calendar
-.cal-month-view {
-  .cal-header {
-    text-align: center;
-    font-weight: unset;
-  }
-
-  .cal-header .cal-cell {
-    padding: 5px 0;
-    overflow: hidden;
-    color: #8B8B8B;
-    font-size: 14px;
-    text-transform: uppercase;
-    display: block;
-    text-overflow: unset;
-    white-space: nowrap;
-  }
-
-  .cal-days {
-    border: unset;
-  }
-
-  .cal-cell-top {
-    min-height: 43px;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    outline: unset;
-  }
-
-  .cal-cell-row {
-    display: flex;
-  }
-
-  .cal-cell {
-    float: left;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-
-    .cal-event {
-      pointer-events: all !important;
-    }
-  }
-
-  .cal-day-cell {
-    min-height: 43px;
-    border: unset;
-    outline: unset;
-
-    // ie11 hack for https://github.com/mattlewis92/angular-calendar/issues/501
-    @media all and (-ms-high-contrast: none) {
-      display: block;
-    }
-
-    &.cal-today {
-      background-color: unset;
-      font-size: 16px;
-      opacity: 1;
-    }
-  }
-
-  .cal-day-cell:not(:last-child) {
-    border-right: unset;
-  }
-
-  .cal-days .cal-cell-row {
-    border-bottom: unset;
-    background-color: #ffffff;
-  }
-
-  .cal-day-badge {
-    margin-top: 18px;
-    margin-left: 10px;
-    display: inline-block;
-    min-width: 10px;
-    padding: 3px 7px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    border-radius: 10px;
-  }
-
-  .cal-day-number {
-    font-size: 16px;
-    font-weight: 400;
-    opacity: 1;
-    margin-right: unset;
-    margin-top: unset;
-    margin-bottom: unset;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: unset;
-    color: $cal-cell-color;
-    position: relative;
-
-    .right-food {
-      width: 30px;
-      border: 2px solid #CEFFEE;
-      border-top-color: $primary-color !important;
-      border-left-color: $primary-color !important;
-      border-radius: 50%;
-      transform: rotate(-45deg);
-    }
-
-    .right-amount {
-      width: 30px;
-      border: 2px solid #CEFFEE;
-      border-right-color: $accent-color !important;
-      border-bottom-color: $accent-color !important;
-      border-radius: 50%;
-      transform: rotate(-45deg);
-    }
-
-    .right-amount, .right-food {
-
-      .month-day {
-        transform: rotate(45deg);
-      }
-    }
-  }
-
-  .cal-events {
-    flex: 1;
-    align-items: flex-end;
-    margin: 3px;
-    line-height: 10px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .cal-event {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 2px;
-  }
-
-  .cal-day-cell.cal-in-month.cal-has-events {
-    cursor: pointer;
-  }
-
-  .cal-day-cell.cal-out-month .cal-day-number {
-    opacity: 0.1;
-    cursor: default;
-  }
-
-  .cal-day-cell.cal-today .cal-day-number {
-    font-size: 16px;
-  }
-
-  .cal-open-day-events {
-    padding: 15px;
-  }
-
-  .cal-open-day-events .cal-event {
-    position: relative;
-    top: 2px;
-  }
-
-  .cal-out-month {
-    .cal-day-badge,
-    .cal-event {
-      opacity: 0.3;
-    }
-  }
-
-  .cal-draggable {
-    cursor: move;
-  }
-
-  .cal-drag-active * {
-    pointer-events: none;
-  }
-
-  .cal-event-title {
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }

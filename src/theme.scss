@@ -30,3 +30,10 @@ $my-modo-app-theme: mat-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($my-modo-app-theme);
+
+$custom-typography: mat-typography-config(
+  $font-family: $main-font-family,
+);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
