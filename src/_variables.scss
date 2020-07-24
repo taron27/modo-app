@@ -68,7 +68,7 @@ $primary-color: map-get($modo-primary, 500);
 $accent-color: map-get($modo-accent, 500);
 $gradient-btn-color: linear-gradient(45deg, $primary-color 0%, rgba(5,160,231,1) 35%, $accent-color 100%);
 $modo-gray: #8B8B8B;
-$main-font-family: 'SofiaProRegular, Roboto, "Helvetica Neue", sans-serif';
+$main-font-family: Roboto, "Helvetica Neue", sans-serif;
 
 // Angular Calendar
 $cal-cell-color: #212B36;

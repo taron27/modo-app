@@ -1,3 +1,8 @@
+@font-face {
+  font-family: sofia-pro;
+  src: url("../src/assets/public/fonts/Sofia Pro Regular.ttf");
+}
+
 @import 'variables';
 
 // Custom Theming for Angular Material
@@ -7,18 +12,8 @@
 
 /* You can add global styles to this file, and also import other style files */
 
-@font-face {
-  font-family: SofiaProRegular;
-  src: url("../src/assets/public/fonts/Sofia Pro Regular.ttf");
-}
-
-@font-face {
-  font-family: SofiaProBold;
-  src: url("../src/assets/public/fonts/Sofia Pro Bold.ttf");
-}
-
 html, body { height: 100%; }
-body { margin: 0; font-family: $main-font-family, Roboto, sans-serif !important; }
+body { margin: 0; }
 
 
 .d-flex {
