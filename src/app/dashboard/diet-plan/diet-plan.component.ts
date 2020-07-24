@@ -89,7 +89,7 @@ export class DietPlanComponent implements OnInit {
       if (result) {
         let cheatIngredient = [];
         if (result.isCleanDiet) {
-          cheatIngredient = dietPlan.ingredients.filter((item, key) => {
+          cheatIngredient = dietPlan.ingredients.filter(item => {
             if (item.isCheat) {
               return item;
             }
@@ -104,7 +104,7 @@ export class DietPlanComponent implements OnInit {
   }
 
   orderFood(): void {
-    const redirectUrl = '/select-meals';
+    const redirectUrl = '/diet-plan/select-meals';
     this.router.navigate([redirectUrl]);
   }
 }

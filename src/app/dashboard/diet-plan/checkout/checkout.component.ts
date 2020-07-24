@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Validator } from '../../validator';
-import {Router} from '@angular/router';
+import { Validator } from '../../../validator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',

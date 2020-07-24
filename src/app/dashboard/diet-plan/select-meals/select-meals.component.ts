@@ -38,7 +38,7 @@ export class SelectMealsComponent implements OnInit {
   }
 
   nextStep(): void {
-    const redirectUrl = '/checkout';
+    const redirectUrl = '/diet-plan/checkout';
     this.router.navigate([redirectUrl]);
   }
 

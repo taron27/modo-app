@@ -2,17 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../auth/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SubscriptionComponent } from './subscription/subscription.component';
-import { DietInfoComponent } from './diet-info/diet-info.component';
-import { DietPlanComponent } from './diet-plan/diet-plan.component';
-import { UserInfoComponent } from './user-info/user-info.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { FoodsComponent } from './foods/foods.component';
-import { RestaurantsComponent } from './restaurants/restaurants.component';
-import { ChatComponent } from './chat/chat.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { SelectMealsComponent } from './select-meals/select-meals.component';
-import { OverviewComponent } from './overview/overview.component';
 
 const routes: Routes = [
   {
@@ -20,17 +9,15 @@ const routes: Routes = [
     component: DashboardComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: 'user-info', component: UserInfoComponent },
-      { path: 'diet-info', component: DietInfoComponent },
-      { path: 'diet-plan', component: DietPlanComponent },
-      { path: 'shopping', component: ShoppingListComponent },
-      { path: 'foods', component: FoodsComponent },
-      { path: 'restaurants', component: RestaurantsComponent },
-      { path: 'chat', component: ChatComponent },
-      { path: 'checkout', component: CheckoutComponent },
-      { path: 'select-meals', component: SelectMealsComponent },
-      { path: 'subscription', component: SubscriptionComponent },
-      { path: 'overview', component: OverviewComponent },
+      { path: 'user-info', loadChildren: () => import('./user-info/user-info.module').then(m => m.UserInfoModule) },
+      { path: 'diet-info', loadChildren: () => import('./diet-info/diet-info.module').then(m => m.DietInfoModule) },
+      { path: 'diet-plan', loadChildren: () => import('./diet-plan/diet-plan.module').then(m => m.DietPlanModule) },
+      { path: 'shopping', loadChildren: () => import('./shopping-list/shopping-list.module').then(m => m.ShoppingListModule) },
+      { path: 'foods', loadChildren: () => import('./foods/foods.module').then(m => m.FoodsModule) },
+      { path: 'restaurants', loadChildren: () => import('./restaurants/restaurants.module').then(m => m.RestaurantsModule) },
+      { path: 'chat', loadChildren: () => import('./chat/chat.module').then(m => m.ChatModule) },
+      { path: 'subscription', loadChildren: () => import('./subscription/subscription.module').then(m => m.SubscriptionModule) },
+      { path: 'overview', loadChildren: () => import('./overview/overview.module').then(m => m.OverviewModule) },
     ]
   }
 ];
