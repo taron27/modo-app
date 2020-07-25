@@ -1,1 +1,19 @@
-<p>chat works!</p>
+<section class="chat-body">
+  <div class="main-chat-content">
+    <div class="messages-main-content"  id="message-content">
+      <div *ngFor="let message of messages" [className]="message.userId === userId ? 'my-message' : 'friend-message'">
+        <div class="message-content">
+        <span class="message">
+          {{ message.message }}
+        </span>
+        </div>
+      </div>
+    </div>
+    <div class="input-text">
+      <textarea class="textarea-text" matInput (keyup.enter)="sendMessage()" [(ngModel)]="message">{{ message }}</textarea>
+      <button mat-mini-fab class="chat-button" color="primary" >
+        <mat-icon matSuffix mat-mini-fab (click)="sendMessage()">send</mat-icon>
+      </button>
+    </div>
+  </div>
+</section>
