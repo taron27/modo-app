@@ -62,7 +62,7 @@
           </mat-accordion>
         </div>
       </div>
-      <div [ngClass]="{'w-70': doneDiets.length > 0}">
+      <div [ngClass]="{'w-calc': doneDiets.length > 0}">
         <div class="diet-plans">
           <div *ngFor="let dietPlan of dietPlans; let i = index" class="diet-plan diet-plan-slider " [ngClass]="{'current-plan': dietPlan.active}">
             <div class="d-flex justify-space-between align-items-center diet-plan-header">
