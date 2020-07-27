@@ -132,11 +132,20 @@
 
 .w-calc {
   width: calc(100% - 420px);
+
+  @media only screen and (max-width: 820px) {
+    padding-top: 30px;
+    width: 100%;
+  }
+}
+
+.all-diet-info {
+  padding-top: 66px;
 }
 
 .diet-plans {
   overflow: auto;
-  padding: 66px 36px 30px;
+  padding: 0 36px 30px;
   margin-bottom: 46px;
   display: flex;
   transition: all 0.5s ease;
@@ -173,7 +182,7 @@
   }
 
   @media only screen and (max-width: 1223px) {
-    padding: 30px 20px;
+    padding: 0 20px 30px;
     margin-bottom: 0;
     .diet-plan {
       padding-bottom: 30px;

@@ -10,7 +10,7 @@
     </div>
   </section>
   <section>
-    <div [ngClass]="{'d-flex': doneDiets.length > 0}">
+    <div class="all-diet-info" [ngClass]="{'d-flex': doneDiets.length > 0}">
       <div class="diet-is-done" *ngIf="doneDiets.length > 0">
         <div *ngFor="let doneDiet of doneDiets">
           <mat-accordion>
