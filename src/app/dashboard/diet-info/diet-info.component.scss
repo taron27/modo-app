@@ -1,9 +1,11 @@
+@import "./../../../variables";
+
 .main-container {
   width: 370px;
 
   .diet-info-container {
     margin-top: 23px;
-    border-bottom: 1px solid #C6C6C5;
+    border-bottom: 1px solid $underline-color;
     padding-bottom: 10px;
 
     .diet-info {

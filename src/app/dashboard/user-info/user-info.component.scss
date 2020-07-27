@@ -1,4 +1,4 @@
-@import '../../../_variables.scss';
+@import '../../../_variables';
 
 .main-user-info-section {
 
@@ -47,7 +47,7 @@
     }
 
     .profile-picture-btn {
-      margin-top: 91px;
+      margin-top: 26px;
       text-align: center;
     }
 
@@ -63,7 +63,7 @@ input::placeholder {
 
 .user-info-section {
   height: 58px;
-  border-bottom: 1px solid #C6C6C5;
+  border-bottom: 1px solid $underline-color;
 }
 
 .label-section {

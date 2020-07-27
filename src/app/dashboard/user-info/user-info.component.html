@@ -18,7 +18,7 @@
     </div>
 
     <div>
-      <form [formGroup]="userInfoForm">
+      <form [formGroup]="userInfoForm" class="user-info-form">
         <mat-form-field class="full-width align-right">
           <span matPrefix class="user-info-label">Email</span>
           <input type="email"
@@ -72,6 +72,17 @@
                  formControlName="height">
           <mat-error *ngIf="userInfoForm.controls.height.hasError('required')">
             Height is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width align-right">
+          <span matPrefix class="user-info-label">Weight</span>
+          <input type="number"
+                 matInput
+                 [errorStateMatcher]="matcher"
+                 formControlName="weight">
+          <mat-error *ngIf="userInfoForm.controls.weight.hasError('required')">
+            Weight is <strong>required</strong>
           </mat-error>
         </mat-form-field>
 

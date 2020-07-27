@@ -93,10 +93,6 @@ body { margin: 0; }
   line-height: 50px;
 }
 
-.mat-drawer-content {
-  background: #ffffff;
-}
-
 .page-sub-title {
   color: $modo-gray;
 }
@@ -213,12 +209,6 @@ body { margin: 0; }
   }
 }
 
-.mat-list-item-content {
-  justify-content: flex-end !important;
-  padding: 0 !important;
-}
-
-
 @media only screen and (max-width: 420px) {
   .title-header {
     display: flex;
@@ -250,11 +240,6 @@ body { margin: 0; }
   .forgot-password-buttons {
     margin-top: 291.64px;
   }
-
-  .mat-list-base .mat-list-item,
-  .mat-list-base .mat-list-option {
-    height: 55px !important;
-  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -266,7 +251,43 @@ body { margin: 0; }
   }
 }
 
+// Angular Material Customization
 // TODO: change drawer backdrop color with angular material variable
 .mat-drawer-backdrop.mat-drawer-shown {
   background-color: rgba($modo-gray, 0.3);
+}
+
+.mat-drawer-content {
+  background: #ffffff;
+}
+
+.mat-form-field-appearance-legacy {
+  .mat-form-field-underline {
+    background-color: $underline-color;
+  }
+}
+
+.mat-form-field-infix {
+  border-top: 0;
+  color: #707070;
+
+  .mat-select-value {
+    color: #707070;
+  }
+}
+
+.mat-form-field-flex {
+  padding-bottom: 5px;
+}
+
+.mat-list-item-content {
+  justify-content: flex-end !important;
+  padding: 0 !important;
+}
+
+@media only screen and (max-width: 420px) {
+  .mat-list-base .mat-list-item,
+  .mat-list-base .mat-list-option {
+    height: 55px !important;
+  }
 }

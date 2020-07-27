@@ -40,6 +40,9 @@ export class UserInfoComponent implements OnInit {
       height: new FormControl('175', [
         Validators.required,
       ]),
+      weight: new FormControl('55', [
+        Validators.required,
+      ]),
     });
   }
 

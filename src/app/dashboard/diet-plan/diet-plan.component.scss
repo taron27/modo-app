@@ -91,7 +91,7 @@
   padding-right: 82px;
   transition: all 0.5s ease;
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 620px) {
     padding: 0;
   }
 }
@@ -125,7 +125,7 @@
     }
 
     .gray-button {
-      background-color: #C6C6C5;
+      background-color: $underline-color;
     }
   }
 }
