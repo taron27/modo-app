@@ -1,3 +1,5 @@
+@import "../../../variables";
+
 .enabled-foods, .disabled-foods {
   padding: 0 20px;
 }
@@ -5,7 +7,7 @@
 .food-section {
   width: 370px;
   margin-top: 10px;
-  height: 450px;
+  height: 72vh;
   padding: 0 10px;
   overflow: auto;
 
@@ -34,6 +36,14 @@
     }
   }
 
+  .food-text-context {
+    line-height: 77px;
+    white-space: nowrap;
+    max-width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   @media only screen and (max-width: 620px) {
     width: 100%;
     padding: 0 10px;
@@ -46,11 +56,11 @@
 }
 
 .food-info {
-    margin-top: 30px;
+  border-bottom: 1px solid $modo-gray;
 }
 
 .btn-submit-parent {
-  margin-top: 50px;
+  background-color: transparent;
   text-align: center;
 
   button {

@@ -7,18 +7,25 @@
             <div class="enabled-foods">
               <div class="food-section" *ngIf="foods.length > 0; else elseBlock">
                 <div class="food-info d-flex justify-space-between" *ngFor="let food of foods">
-                  <div>
-                    {{ food.name }}
+                  <div class="d-flex">
+                    <div>
+                      <img [src]="food.image" alt="food image">
+                    </div>
+                    <div class="food-text-context">
+                      {{ food.name }}
+                    </div>
                   </div>
-                  <div>
+                  <div class="food-text-context">
                     <mat-slide-toggle color="primary" [(ngModel)]="food.isEnabled"></mat-slide-toggle>
                   </div>
                 </div>
               </div>
               <ng-template #elseBlock>
-                <p class="food-info message-missing-data align-center">
-                  No data for show
-                </p>
+                <div class="food-section">
+                  <p class="message-missing-data align-center">
+                    No data for show
+                  </p>
+                </div>
               </ng-template>
             </div>
           </mat-tab>
@@ -35,9 +42,11 @@
                 </div>
               </div>
               <ng-template #elseBlock>
-                <p class="food-info align-center">
-                  No data for show
-                </p>
+                <div class="food-section">
+                  <p class="message-missing-data align-center">
+                    No data for show
+                  </p>
+                </div>
               </ng-template>
             </div>
           </mat-tab>
