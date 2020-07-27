@@ -91,6 +91,10 @@
   padding-right: 82px;
   transition: all 0.5s ease;
 
+  &:last-child {
+    padding-right: unset;
+  }
+
   @media only screen and (max-width: 620px) {
     padding: 0;
   }
@@ -145,7 +149,7 @@
 
 .diet-plans {
   overflow: auto;
-  padding: 0 36px 30px;
+  padding-bottom: 30px;
   margin-bottom: 46px;
   display: flex;
   transition: all 0.5s ease;

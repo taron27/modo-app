@@ -185,6 +185,12 @@ body { margin: 0; }
   }
 }
 
+.mat-button-wrapper {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
 .register-form-buttons {
   margin-top: 112.64px;
 }
