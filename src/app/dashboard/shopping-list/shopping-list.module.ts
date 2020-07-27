@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShoppingListRoutingModule } from './shopping-list-routing.module';
 import { ShoppingListComponent } from './shopping-list.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -10,7 +12,9 @@ import { ShoppingListComponent } from './shopping-list.component';
   ],
   imports: [
     CommonModule,
-    ShoppingListRoutingModule
+    ShoppingListRoutingModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class ShoppingListModule { }

@@ -1,1 +1,32 @@
-<p>shopping-list works!</p>
+<section class="d-flex justify-center">
+  <div class="main-list-content">
+    <div class="sub-list-content">
+      <div *ngFor="let option of list">
+        <p class="list-title">
+          {{ option.name }}
+        </p>
+        <div>
+          <div *ngFor="let ingredient of option.ingredients" class="ingredient-list d-flex justify-space-between">
+            <div>
+              <img [src]="ingredient.image" alt="list image">
+            </div>
+            <div class="ingredient-name">
+              {{ ingredient.name }}
+            </div>
+            <div (click)="addFood(ingredient)" class="d-flex align-items-center">
+              <div class="checkbox" *ngIf="!ingredient.isSelected; else elseBlock"></div>
+              <ng-template #elseBlock>
+                <mat-icon color="primary" class="check-icon">check_circle</mat-icon>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-submit-parent d-flex justify-center">
+      <button class="btn-submit"  mat-button>
+        Save
+      </button>
+    </div>
+  </div>
+</section>

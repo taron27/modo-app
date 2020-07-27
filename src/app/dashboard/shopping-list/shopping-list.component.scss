@@ -1,0 +1,68 @@
+@import "../../../variables";
+
+.main-list-content {
+  width: 370px;
+
+  .sub-list-content {
+    height: 80vh;
+    overflow: auto;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    &::-webkit-scrollbar
+    {
+      width: 5px;
+      background-color: #ffffff
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        background-color: #D5D5D5;
+      }
+    }
+
+    .list-title {
+      font-size: 20px;
+    }
+
+    .ingredient-list {
+      border-bottom: 1px solid $modo-gray;
+      margin-bottom: 32px;
+
+      .checkbox {
+        width: 22px;
+        height: 22px;
+        border: 1px solid $modo-gray;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .ingredient-name {
+        width: 117px;
+        display: flex;
+        align-items: center;
+      }
+
+      .active-checkbox {
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    width: 100%;
+  }
+}
