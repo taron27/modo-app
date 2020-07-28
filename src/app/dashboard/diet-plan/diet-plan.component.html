@@ -1,132 +1,126 @@
 <section>
-
-  <section class="d-flex justify-center">
-    <div class="week-days d-flex justify-space-between">
-      <div *ngFor="let weekDay of weekDays"
-           (click)="changeCurrentWeekDay(weekDay)"
-           [class]="weekDay.active ? 'current-week-day' : 'week-day'">
-        {{ weekDay.name }}
-      </div>
-    </div>
-  </section>
   <section>
-    <div class="all-diet-info" [ngClass]="{'d-flex': doneDiets.length > 0}">
-      <div class="diet-is-done" *ngIf="doneDiets.length > 0">
-        <div *ngFor="let doneDiet of doneDiets">
-          <mat-accordion>
-            <mat-expansion-panel (opened)="panelOpenState = true"
-                                 (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  {{ doneDiet.title }} {{ doneDiet.isDone ? '(done)' : '(missed)' }}
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <div>
-                <div class="diet-plan current-plan">
-                  <div class="d-flex justify-space-between align-items-center diet-plan-header">
-                    <div class="plan-title">
-                      {{ doneDiet.title }}
-                    </div>
-                    <div class="plan-buttons d-flex justify-flex-end">
-                      <button mat-mini-fab color="primary" class="share-circle">
-                        <mat-icon>share</mat-icon>
-                      </button>
-                      <button (click)="openCheatMeals(doneDiet)" mat-mini-fab color="primary" >
-                        <img src="../../../assets/public/icons/hamburger.svg" alt="">
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="background-image" [style]="doneDiet.image">
-                    <div class="circle d-flex justify-center align-items-center">
-                      <img src="../../../assets/public/icons/spoon-paper.svg" alt="">
-                    </div>
-                  </div>
-
-                  <div class="diet-ingredients d-flex justify-center">
-                    <div class="w-75 diet-sub-ingredients">
-                      <div *ngFor="let ingredient of doneDiet.ingredients" class="d-flex justify-space-between diet-ingredient">
-                        <div>
-                          {{ ingredient.name }}
+    <mat-tab-group>
+      <mat-tab *ngFor="let dayData of dietPlans;let key = index" [label]="dayData.weekName">
+        <div class="all-diet-info" [ngClass]="{'d-flex': dayData.doneDietPlan.length > 0}">
+          <div class="diet-is-done" *ngIf="dayData.doneDietPlan.length > 0">
+            <div *ngFor="let doneDiet of dayData.doneDietPlan">
+              <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      {{ doneDiet.title }} {{ doneDiet.isDone ? '(done)' : '(missed)' }}
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div>
+                    <div class="diet-plan current-plan">
+                      <div class="d-flex justify-space-between align-items-center diet-plan-header">
+                        <div class="plan-title">
+                          {{ doneDiet.title }}
                         </div>
+                        <div class="plan-buttons d-flex justify-flex-end">
+                          <button mat-mini-fab color="primary" class="share-circle">
+                            <mat-icon>share</mat-icon>
+                          </button>
+                          <button (click)="openCheatMeals(doneDiet)" mat-mini-fab color="primary" >
+                            <img src="../../../assets/public/icons/hamburger.svg" alt="">
+                          </button>
+                        </div>
+                      </div>
 
-                        <div>
-                          <img src="../../../assets/public/icons/arrows-right-left.svg" alt="arrows-right-left">
+                      <div class="background-image" [style]="doneDiet.image">
+                        <div class="circle d-flex justify-center align-items-center">
+                          <img src="../../../assets/public/icons/spoon-paper.svg" alt="">
+                        </div>
+                      </div>
+
+                      <div class="diet-ingredients d-flex justify-center">
+                        <div class="w-75 diet-sub-ingredients">
+                          <div *ngFor="let ingredient of doneDiet.ingredients" class="d-flex justify-space-between diet-ingredient">
+                            <div>
+                              {{ ingredient.name }}
+                            </div>
+
+                            <div>
+                              <img src="../../../assets/public/icons/arrows-right-left.svg" alt="arrows-right-left">
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </mat-expansion-panel>
-          </mat-accordion>
-        </div>
-      </div>
-      <div [ngClass]="{'w-calc': doneDiets.length > 0}">
-        <div class="diet-plans">
-          <div *ngFor="let dietPlan of dietPlans; let i = index" class="diet-plan diet-plan-slider " [ngClass]="{'current-plan': dietPlan.active}">
-            <div class="d-flex justify-space-between align-items-center diet-plan-header">
-              <div class="plan-title">
-                {{ dietPlan.title }}
-              </div>
-              <div class="plan-buttons d-flex justify-flex-end">
-                <button mat-mini-fab color="primary" class="share-circle">
-                  <mat-icon>share</mat-icon>
-                </button>
-                <button mat-mini-fab color="primary" (click)="openCheatMeals(dietPlan)">
-                  <img src="../../../assets/public/icons/hamburger.svg" alt="">
-                </button>
-              </div>
-            </div>
-
-            <div class="background-image" [style]="dietPlan.image">
-              <div class="circle d-flex justify-center align-items-center">
-                <img src="../../../assets/public/icons/spoon-paper.svg" alt="">
-              </div>
-            </div>
-
-            <div class="diet-ingredients d-flex justify-center">
-              <div class="w-75 diet-sub-ingredients">
-                <div *ngFor="let ingredient of dietPlan.ingredients" class="d-flex justify-space-between diet-ingredient">
-                  <div>
-                    {{ ingredient.name }}
-                  </div>
-
-                  <div>
-                    <img src="../../../assets/public/icons/arrows-right-left.svg" alt="arrows-right-left">
-                  </div>
-                </div>
-              </div>
-
-              <div class="plan-bottom-buttons d-flex justify-center">
-                <div class="plan-sub-buttons d-flex justify-space-between">
-                  <button class="plan-button gray-button"
-                          (click)="dietIsMissed(dietPlan, i)"
-                          mat-raised-button
-                  >
-                    missed
-                  </button>
-                  <button class="plan-button gray-button"
-                          [ngClass]="{'gray-button': !dietPlan.active}"
-                          [color]="dietPlan.active && 'primary'"
-                          (click)="dietIsDone(dietPlan, i)"
-                          mat-raised-button
-                  >
-                    done
-                  </button>
-                </div>
-              </div>
+                </mat-expansion-panel>
+              </mat-accordion>
             </div>
           </div>
-        </div>
-        <section class="d-flex justify-center">
-          <div class="diet-plan-submit d-flex justify-center">
-            <button class="btn-submit" mat-button (click)="orderFood()">
-              order food
-            </button>
+          <div [ngClass]="{'w-calc': dayData.doneDietPlan.length > 0}">
+            <div class="diet-plans">
+              <div *ngFor="let dietPlan of dayData.dietPlan; let i = index" class="diet-plan diet-plan-slider " [ngClass]="{'current-plan': dietPlan.active}">
+                <div class="d-flex justify-space-between align-items-center diet-plan-header">
+                  <div class="plan-title">
+                    {{ dietPlan.title }}
+                  </div>
+                  <div class="plan-buttons d-flex justify-flex-end">
+                    <button mat-mini-fab color="primary" class="share-circle">
+                      <mat-icon>share</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="primary" (click)="openCheatMeals(dietPlan)">
+                      <img src="../../../assets/public/icons/hamburger.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="background-image" [style]="dietPlan.image">
+                  <div class="circle d-flex justify-center align-items-center">
+                    <img src="../../../assets/public/icons/spoon-paper.svg" alt="">
+                  </div>
+                </div>
+
+                <div class="diet-ingredients d-flex justify-center">
+                  <div class="w-75 diet-sub-ingredients">
+                    <div *ngFor="let ingredient of dietPlan.ingredients" class="d-flex justify-space-between diet-ingredient">
+                      <div>
+                        {{ ingredient.name }}
+                      </div>
+
+                      <div>
+                        <img src="../../../assets/public/icons/arrows-right-left.svg" alt="arrows-right-left">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="plan-bottom-buttons d-flex justify-center">
+                    <div class="plan-sub-buttons d-flex justify-space-between">
+                      <button class="plan-button gray-button"
+                              (click)="dietIsMissed(dietPlan, key, dayData, i)"
+                              mat-raised-button
+                      >
+                        missed
+                      </button>
+                      <button class="plan-button gray-button"
+                              [ngClass]="{'gray-button': !dietPlan.active}"
+                              [color]="dietPlan.active && 'primary'"
+                              (click)="dietIsDone(dietPlan, key, dayData, i)"
+                              mat-raised-button
+                      >
+                        done
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="d-flex justify-center">
+              <div class="diet-plan-submit d-flex justify-center">
+                <button class="btn-submit" mat-button (click)="orderFood()">
+                  order food
+                </button>
+              </div>
+            </section>
           </div>
-        </section>
-      </div>
-    </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </section>
 </section>

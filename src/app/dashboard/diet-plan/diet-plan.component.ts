@@ -14,15 +14,6 @@ export class DietPlanComponent implements OnInit {
 
   panelOpenState = false;
 
-  weekDays = [
-    {name: 'Mo', active: true},
-    {name: 'Tu', active: false},
-    {name: 'We', active: false},
-    {name: 'Th', active: false},
-    {name: 'Fr', active: false},
-    {name: 'Sa', active: false},
-    {name: 'Su', active: false},
-  ];
   selectedDiet = {};
 
   dietPlans: DietPlans[] = [];
@@ -33,10 +24,10 @@ export class DietPlanComponent implements OnInit {
 
   constructor(public router: Router, public dialog: MatDialog, private dietPlanService: DietPlanService) {
     this.dietPlans.map((item, key) => {
-      if (item.isDone || item.isMissed) {
+      /*if (item.isDone || item.isMissed) {
         this.doneDiets.push(item);
         this.dietPlans.splice(key, 1);
-      }
+      }*/
     });
 
     this.dietPlanService.getDietPlans().then((data) => {
@@ -47,34 +38,26 @@ export class DietPlanComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeCurrentWeekDay(weekDay): void {
-    const currentWeekDay = this.weekDays.find((item) => (item.active === true));
-    if (currentWeekDay) {
-      currentWeekDay.active = false;
-    }
-    weekDay.active = true;
-  }
-
-  dietIsDone(dietPlan, index): void {
+  dietIsDone(dietPlan, weekKey, dayData, index): void {
     if (dietPlan.active) {
       dietPlan.isDone = true;
-      this.changeDietStatus(dietPlan, index);
+      this.changeDietStatus(dietPlan, weekKey, dayData, index);
     }
   }
 
-  dietIsMissed(dietPlan, index): void {
+  dietIsMissed(dietPlan, weekKey, dayData, index): void {
     if (dietPlan.active) {
       dietPlan.isMissed = true;
-      this.changeDietStatus(dietPlan, index);
+      this.changeDietStatus(dietPlan, weekKey, dayData, index);
     }
   }
 
-  changeDietStatus(dietPlan, index): void {
-    this.doneDiets.push(dietPlan);
-    if (this.dietPlans[index + 1]) {
-      this.dietPlans[index + 1].active = true;
+  changeDietStatus(dietPlan, weekKey, dayData, index): void {
+    this.dietPlans[weekKey].doneDietPlan.push(dietPlan);
+    if (dayData.dietPlan[index + 1]) {
+      this.dietPlans[weekKey].dietPlan[index + 1].active = true;
     }
-    this.dietPlans.splice(index, 1);
+    this.dietPlans[weekKey].dietPlan.splice(index, 1);
   }
 
   openCheatMeals(dietPlan): void {
