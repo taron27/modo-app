@@ -36,7 +36,8 @@ export class DashboardComponent implements OnInit {
 
   openInfoPopUp(): void {
     this.dialog.open(InfoPopUpComponent, {
-      width: '370px',
+      width: '375px',
+      position: {bottom: '0'},
       data: { description: this.currentInfoDescription, title: this.title }
     });
   }

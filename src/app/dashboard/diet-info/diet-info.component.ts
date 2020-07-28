@@ -23,7 +23,8 @@ export class DietInfoComponent implements OnInit {
 
   openInfoPopUp(info): void {
     this.dialog.open(InfoPopUpComponent, {
-      width: '370px',
+      width: '375px',
+      position: {bottom: '0'},
       data: { description: info.infoDescription, title: info.title }
     });
   }

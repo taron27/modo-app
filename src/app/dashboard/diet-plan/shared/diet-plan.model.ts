@@ -11,10 +11,14 @@ interface Plans {
   isMissed: boolean;
   image: string;
   ingredients: Ingredients[];
+  recipe: Recipe[];
 }
 
 interface Ingredients {
   name: string;
   isCheat: boolean;
+}
+
+interface Recipe {
   description: string;
 }

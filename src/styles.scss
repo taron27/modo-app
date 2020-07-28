@@ -307,3 +307,16 @@ body { margin: 0; }
     height: 55px !important;
   }
 }
+
+@media only screen and(max-width: 376px){
+  .cdk-overlay-pane {
+    width: 100% !important;
+  }
+}
+
+@media only screen and(max-width: 620px){
+
+  .cdk-overlay-pane {
+    max-width: 100% !important;
+  }
+}

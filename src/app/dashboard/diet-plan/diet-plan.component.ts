@@ -4,6 +4,7 @@ import { DietPlans } from './shared/diet-plan.model';
 import { DietPlanService } from './shared/diet-plan.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogOverviewComponent } from './dialog-overview/dialog-overview.component';
+import { RecipeComponent } from './recipe/recipe.component';
 
 @Component({
   selector: 'app-diet-plan',
@@ -18,7 +19,6 @@ export class DietPlanComponent implements OnInit {
 
   dietPlans: DietPlans[] = [];
 
-  doneDiets = [];
   quantity: string;
   food: string;
 
@@ -64,7 +64,8 @@ export class DietPlanComponent implements OnInit {
     this.selectedDiet = dietPlan;
 
     const dialogRef = this.dialog.open(DialogOverviewComponent, {
-      width: '370px',
+      width: '375px',
+      position: {bottom: '0'},
       data: {food: this.food, quantity: this.quantity}
     });
 
@@ -83,6 +84,15 @@ export class DietPlanComponent implements OnInit {
           dietPlan.ingredients.push(result.finallyData);
         }
       }
+    });
+  }
+
+  openRecipe(recipe, image): void {
+     this.dialog.open(RecipeComponent, {
+      width: '375px',
+      height: '100%',
+      position: {bottom: '0'},
+      data: {recipe, image}
     });
   }
 

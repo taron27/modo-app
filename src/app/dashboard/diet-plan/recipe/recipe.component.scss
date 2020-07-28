@@ -1,0 +1,70 @@
+.recipe-modal-content {
+  padding: 0 14px 0 11px;
+  height: 100%;
+  overflow: hidden auto;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 5px;
+    background-color: #ffffff
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #D5D5D5;
+    }
+  }
+
+  .image-content {
+
+    .background-image {
+      padding-bottom: 32px;
+      background-repeat: no-repeat;
+      width: 307px;
+      height: 179px;
+      overflow: hidden;
+    }
+  }
+
+  .recipe-question {
+    font-size: 20px;
+  }
+
+  .recipe-step {
+    margin-top: 33px;
+
+    .step-description {
+      font-size: 14px;
+      color: #5D5D5D;
+    }
+
+    .step-count {
+      font-size: 14px;
+    }
+  }
+
+  .close-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 32.5%;
+
+    .button-for-close {
+      background: #C6C6C6;
+    }
+
+    @media only screen and (max-width: 620px) {
+      right: 25%;
+    }
+  }
+}

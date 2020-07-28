@@ -9,22 +9,42 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -33,22 +53,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/lunch.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -57,22 +81,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/dinner.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -81,22 +109,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/dinner-2.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -105,22 +137,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/lunch-2.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -129,22 +165,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -153,22 +193,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -183,22 +227,26 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -207,22 +255,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/lunch-2.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -231,22 +283,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/dinner-2.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -255,22 +311,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/dinner.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -279,22 +339,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/dinner-2.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -303,22 +367,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -327,22 +395,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -357,22 +429,26 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/lunch-2.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -381,22 +457,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/dinner.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -405,22 +485,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -429,22 +513,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -453,22 +541,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -477,22 +569,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -501,22 +597,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -527,22 +627,26 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: true,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -556,22 +660,26 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/dinner-2.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -580,22 +688,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -604,22 +716,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -628,22 +744,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -652,22 +772,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -676,22 +800,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -700,22 +828,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -730,22 +862,26 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/dinner.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -754,22 +890,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -778,22 +918,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -802,22 +946,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -826,22 +974,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -850,22 +1002,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -874,22 +1030,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -904,22 +1064,26 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/lunch-2.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -928,22 +1092,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -952,22 +1120,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -976,22 +1148,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -1000,22 +1176,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -1024,22 +1204,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -1048,22 +1232,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -1078,22 +1266,26 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -1102,22 +1294,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -1126,22 +1322,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -1150,22 +1350,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -1174,22 +1378,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -1198,22 +1406,27 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'Serve with lemon slices.'}
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },
@@ -1222,22 +1435,26 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        recipe: [
+          {description: 'Preheat oven to 200 degrees Celsius.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+          {description: 'When finished, carefully open the foil packets.'},
+        ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: '1 Egg',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
           {
             name: 'Half Avocado (smashed)',
-            isCheat: false,
-            description: ''
+            isCheat: false
           },
         ]
       },

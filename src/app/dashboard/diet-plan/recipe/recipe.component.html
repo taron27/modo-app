@@ -1,0 +1,23 @@
+<section class="recipe-modal-content">
+  <div class="image-content">
+    <div [style]="data.image" class="background-image"></div>
+  </div>
+  <div class="recipe-question">
+    How to make it
+  </div>
+  <div>
+    <div class="recipe-step" *ngFor="let recipe of data.recipe; let key = index">
+      <div class="step-count">
+        Step {{ key+1 }}
+      </div>
+      <div class="step-description">
+        {{ recipe.description }}
+      </div>
+    </div>
+  </div>
+  <div class="close-btn">
+    <button mat-mini-fab class="button-for-close" (click)="closeRecipe()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</section>

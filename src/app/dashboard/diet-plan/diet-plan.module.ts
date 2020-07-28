@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogOverviewComponent } from './dialog-overview/dialog-overview.component';
+import { RecipeComponent } from './recipe/recipe.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DialogOverviewComponent } from './dialog-overview/dialog-overview.compo
     SelectMealsComponent,
     DialogOverviewComponent,
     CheckoutComponent,
+    RecipeComponent,
   ],
   imports: [
     CommonModule,

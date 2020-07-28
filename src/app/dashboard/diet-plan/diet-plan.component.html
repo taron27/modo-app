@@ -1,10 +1,10 @@
-<section>
-  <section>
+<section class="main-content-diet-plan">
+  <div>
     <mat-tab-group>
       <mat-tab *ngFor="let dayData of dietPlans;let key = index" [label]="dayData.weekName">
         <div class="all-diet-info" [ngClass]="{'d-flex': dayData.doneDietPlan.length > 0}">
           <div class="diet-is-done" *ngIf="dayData.doneDietPlan.length > 0">
-            <div *ngFor="let doneDiet of dayData.doneDietPlan">
+            <div *ngFor="let doneDiet of dayData.doneDietPlan" class="done-diet">
               <mat-accordion>
                 <mat-expansion-panel (opened)="panelOpenState = true"
                                      (closed)="panelOpenState = false">
@@ -30,8 +30,8 @@
                       </div>
 
                       <div class="background-image" [style]="doneDiet.image">
-                        <div class="circle d-flex justify-center align-items-center">
-                          <img src="../../../assets/public/icons/spoon-paper.svg" alt="">
+                        <div class="circle d-flex justify-center align-items-center" (click)="openRecipe(doneDiet.recipe, doneDiet.image)">
+                          <img src="../../../assets/public/icons/spoon-paper.svg" alt="recipe">
                         </div>
                       </div>
 
@@ -72,8 +72,8 @@
                 </div>
 
                 <div class="background-image" [style]="dietPlan.image">
-                  <div class="circle d-flex justify-center align-items-center">
-                    <img src="../../../assets/public/icons/spoon-paper.svg" alt="">
+                  <div class="circle d-flex justify-center align-items-center" (click)="openRecipe(dietPlan.recipe, dietPlan.image)">
+                    <img src="../../../assets/public/icons/spoon-paper.svg" alt="recipe">
                   </div>
                 </div>
 
@@ -122,5 +122,5 @@
         </div>
       </mat-tab>
     </mat-tab-group>
-  </section>
+  </div>
 </section>
