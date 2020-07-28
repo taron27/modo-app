@@ -291,6 +291,16 @@ body { margin: 0; }
   padding: 0 !important;
 }
 
+.mat-tab-label {
+  padding: 0 !important;
+  min-width: 46px !important;
+}
+
+.mat-tab-header {
+  margin: 0 auto;
+  border-bottom: unset;
+}
+
 @media only screen and (max-width: 420px) {
   .mat-list-base .mat-list-item,
   .mat-list-base .mat-list-option {

@@ -3,6 +3,34 @@
 .select-meals {
   width: 700px;
 
+  .week-meals {
+    overflow: auto;
+    height: 63vh;
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    &::-webkit-scrollbar
+    {
+      width: 5px;
+      background-color: #ffffff
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        background-color: #D5D5D5;
+      }
+    }
+  }
+
   .current-meal {
     width: 80%;
     margin-top: 30px;
@@ -19,6 +47,7 @@
     }
   }
 }
+
 .btn-submit-parent {
   margin-top: 100px;
   width: 360px;

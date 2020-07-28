@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Weeks} from './shared/weeks.model';
 import { SelectMealsService } from './shared/select-meals.service';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { DashboardComponent } from '../../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-select-meals',
@@ -13,7 +14,9 @@ export class SelectMealsComponent implements OnInit {
   weeks: Weeks[] = [];
   amount = 0;
 
-  constructor(private selectMealsService: SelectMealsService, private router: Router) {
+  constructor(private selectMealsService: SelectMealsService,
+              private router: Router,
+              private dashboardComponent: DashboardComponent) {
     selectMealsService.getWeeks().then((data) => {
       this.weeks = data;
       data.map((item) => {
@@ -23,10 +26,18 @@ export class SelectMealsComponent implements OnInit {
           }
         });
       });
+      this.setDashboardSettings();
     });
   }
 
   ngOnInit(): void {
+  }
+
+  setDashboardSettings(): void {
+    this.dashboardComponent.title = 'Select meals';
+    this.dashboardComponent.currentInfoDescription = 'Select meals';
+    this.dashboardComponent.isShowInfoIcon = true;
+
   }
 
   changeAllAmount(meal): void {
