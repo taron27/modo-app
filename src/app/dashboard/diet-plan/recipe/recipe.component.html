@@ -15,6 +15,16 @@
       </div>
     </div>
   </div>
+  <div class="suggestion d-flex justify-center align-items-center">
+    <div class="sub-suggestion d-flex justify-space-between">
+      <div class="suggestion-icon">
+        <img src="../../../../assets/public/icons/suggestion.svg" alt="suggestion">
+      </div>
+      <div class="suggestion-message">
+        {{ data.suggestion }}
+      </div>
+    </div>
+  </div>
   <div class="close-btn">
     <button mat-mini-fab class="button-for-close" (click)="closeRecipe()">
       <mat-icon>close</mat-icon>

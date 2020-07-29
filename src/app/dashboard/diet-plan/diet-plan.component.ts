@@ -66,7 +66,8 @@ export class DietPlanComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogOverviewComponent, {
       width: '375px',
       position: {bottom: '0'},
-      data: {food: this.food, quantity: this.quantity}
+      panelClass: 'fullscreen-modal',
+      data: {food: this.food, quantity: this.quantity},
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -87,12 +88,13 @@ export class DietPlanComponent implements OnInit {
     });
   }
 
-  openRecipe(recipe, image): void {
+  openRecipe(recipe, image, suggestion): void {
      this.dialog.open(RecipeComponent, {
       width: '375px',
       height: '100%',
       position: {bottom: '0'},
-      data: {recipe, image}
+       panelClass: 'fullscreen-modal',
+      data: {recipe, image, suggestion}
     });
   }
 

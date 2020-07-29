@@ -38,6 +38,7 @@ export class DashboardComponent implements OnInit {
     this.dialog.open(InfoPopUpComponent, {
       width: '375px',
       position: {bottom: '0'},
+      panelClass: 'fullscreen-modal',
       data: { description: this.currentInfoDescription, title: this.title }
     });
   }

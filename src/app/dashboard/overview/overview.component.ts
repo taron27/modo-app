@@ -47,6 +47,7 @@ export class OverviewComponent implements OnInit {
     const dialogRef = this.dialog.open(RatingPopUpComponent, {
       width: '375px',
       position: {bottom: '0'},
+      panelClass: 'fullscreen-modal',
       data: this.todayData
     });
 

@@ -301,6 +301,33 @@ body { margin: 0; }
   border-bottom: unset;
 }
 
+.mat-drawer-inner-container {
+  padding-right: 30px;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: $primary-color;
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 5px;
+    background-color: $primary-color;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    background-color: $primary-color;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #D5D5D5;
+    }
+  }
+}
+
 @media only screen and (max-width: 420px) {
   .mat-list-base .mat-list-item,
   .mat-list-base .mat-list-option {
@@ -309,14 +336,14 @@ body { margin: 0; }
 }
 
 @media only screen and(max-width: 376px){
-  .cdk-overlay-pane {
+  .fullscreen-modal {
     width: 100% !important;
   }
 }
 
 @media only screen and(max-width: 620px){
 
-  .cdk-overlay-pane {
+  .fullscreen-modal {
     max-width: 100% !important;
   }
 }

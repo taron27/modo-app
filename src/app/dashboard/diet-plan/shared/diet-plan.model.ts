@@ -10,6 +10,7 @@ interface Plans {
   isDone: boolean;
   isMissed: boolean;
   image: string;
+  suggestion: string;
   ingredients: Ingredients[];
   recipe: Recipe[];
 }

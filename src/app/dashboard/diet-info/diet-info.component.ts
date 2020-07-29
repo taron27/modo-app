@@ -25,6 +25,7 @@ export class DietInfoComponent implements OnInit {
     this.dialog.open(InfoPopUpComponent, {
       width: '375px',
       position: {bottom: '0'},
+      panelClass: 'fullscreen-modal',
       data: { description: info.infoDescription, title: info.title }
     });
   }

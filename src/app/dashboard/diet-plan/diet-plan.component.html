@@ -30,9 +30,9 @@
                       </div>
 
                       <div class="background-image" [style]="doneDiet.image">
-                        <div class="circle d-flex justify-center align-items-center" (click)="openRecipe(doneDiet.recipe, doneDiet.image)">
+                        <button mat-mini-fab class="circle d-flex justify-center align-items-center" (click)="openRecipe(doneDiet.recipe, doneDiet.image, doneDiet.suggestion)">
                           <img src="../../../assets/public/icons/spoon-paper.svg" alt="recipe">
-                        </div>
+                        </button>
                       </div>
 
                       <div class="diet-ingredients d-flex justify-center">
@@ -72,9 +72,9 @@
                 </div>
 
                 <div class="background-image" [style]="dietPlan.image">
-                  <div class="circle d-flex justify-center align-items-center" (click)="openRecipe(dietPlan.recipe, dietPlan.image)">
+                  <button mat-mini-fab class="circle d-flex justify-center align-items-center" (click)="openRecipe(dietPlan.recipe, dietPlan.image, dietPlan.suggestion)">
                     <img src="../../../assets/public/icons/spoon-paper.svg" alt="recipe">
-                  </div>
+                  </button>
                 </div>
 
                 <div class="diet-ingredients d-flex justify-center">

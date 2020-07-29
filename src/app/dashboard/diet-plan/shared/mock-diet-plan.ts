@@ -33,6 +33,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'},
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top oftry adding lemon zest on top of',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -61,6 +62,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/lunch.png\')',
+        suggestion: 'the chicken for extra flavourthe chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -89,6 +91,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/dinner.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -117,6 +120,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/dinner-2.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -145,6 +149,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/lunch-2.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -173,6 +178,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -201,6 +207,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -235,6 +242,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -263,6 +271,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/lunch-2.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -291,6 +300,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/dinner-2.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -319,6 +329,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/dinner.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -347,6 +358,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/dinner-2.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -375,6 +387,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -403,6 +416,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -437,6 +451,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/lunch-2.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -465,6 +480,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/dinner.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -493,6 +509,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -521,6 +538,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -549,6 +567,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -577,6 +596,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -605,6 +625,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -635,6 +656,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -668,6 +690,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/dinner-2.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -696,6 +719,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -724,6 +748,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -752,6 +777,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -780,6 +806,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -808,6 +835,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -836,6 +864,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -870,6 +899,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/dinner.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -898,6 +928,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -926,6 +957,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -954,6 +986,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -982,6 +1015,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1010,6 +1044,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1038,6 +1073,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1072,6 +1108,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/lunch-2.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1100,6 +1137,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1128,6 +1166,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1156,6 +1195,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1184,6 +1224,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1212,6 +1253,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1240,6 +1282,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1274,6 +1317,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1302,6 +1346,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1330,6 +1375,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1358,6 +1404,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1386,6 +1433,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1415,6 +1463,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'Serve with lemon slices.'}
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',
@@ -1443,6 +1492,7 @@ export const DIETPLANS: DietPlans[] = [
           {description: 'When finished, carefully open the foil packets.'},
         ],
         image: 'background-image: url(\'../../../assets/public/images/breakfast.png\')',
+        suggestion: 'try adding lemon zest on top of the chicken for extra flavour',
         ingredients: [
           {
             name: '1 Slice Whole Wheat Bread',

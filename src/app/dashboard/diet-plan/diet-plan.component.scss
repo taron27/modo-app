@@ -24,8 +24,8 @@
   }
 
   .diet-is-done {
-    margin-right: 10px;
-    width: 410px;
+    margin: 0 10px;
+    width: 420px;
 
     .done-diet {
       margin-bottom: 10px;
@@ -61,6 +61,7 @@
     }
 
     .plan-buttons {
+      padding: 8px 0;
 
       .share-circle {
         margin-right: 14px;
@@ -143,7 +144,7 @@
   }
 
   .w-calc {
-    width: calc(100% - 420px);
+    width: calc(100% - 440px);
 
     @media only screen and (max-width: 820px) {
       padding-top: 30px;
@@ -152,13 +153,13 @@
   }
 
   .all-diet-info {
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   .diet-plans {
     overflow: auto;
     padding-bottom: 30px;
-    margin-bottom: 46px;
+    margin-bottom: 30px;
     display: flex;
     transition: all 0.5s ease;
 
@@ -194,7 +195,7 @@
     }
 
     @media only screen and (max-width: 1223px) {
-      padding: 0 20px 30px;
+      padding: 0 20px 10px;
       margin-bottom: 0;
       .diet-plan {
         padding-bottom: 30px;
@@ -209,22 +210,23 @@
   .diet-sub-ingredients {
     height: 189.3px;
     overflow: auto;
+    padding: 0 10px;
 
     &::-webkit-scrollbar-track {
       border-radius: 10px;
-      background-color: #ffffff;
+      background-color: #ECECEC;
     }
 
     &::-webkit-scrollbar
     {
       width: 5px;
-      background-color: #ffffff
+      background-color: #ECECEC
     }
 
     &::-webkit-scrollbar-thumb
     {
       border-radius: 10px;
-      background-color: #ffffff;
+      background-color: #D5D5D5;
     }
 
     &:hover {
