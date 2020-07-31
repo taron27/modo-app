@@ -22,21 +22,6 @@
         </div>
         <div class="form-div d-flex">
           <mat-form-field class="full-width form-inputs">
-            <label for="address2" class="auth-label">address 2</label>
-            <input
-              id="address2"
-              class="auth-input"
-              matInput
-              [errorStateMatcher]="matcher"
-              formControlName="address2"
-            />
-            <mat-error *ngIf="checkoutForm.controls.address2.hasError('required')">
-              address2 is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
-        </div>
-        <div class="form-div d-flex">
-          <mat-form-field class="full-width form-inputs">
             <label for="post-code" class="auth-label">Post Code</label>
             <input
               id="post-code"
@@ -109,6 +94,31 @@
             />
             <mat-error *ngIf="checkoutForm.controls.time.hasError('required')">
               Time is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-div d-flex">
+          <mat-form-field appearance="fill" class="full-width position-relative">
+            <mat-select disableRipple
+                        formControlName="paymentMethod">
+              <mat-option *ngFor="let paymentMethod of paymentMethods"
+                          [value]="paymentMethod.value"
+                          (click)="choosePaymentMethod(paymentMethod)">
+                <div  class="d-flex justify-space-between">
+                  <div>
+                    {{ paymentMethod.name }}
+                  </div>
+                  <div>
+                    <img [src]="paymentMethod.icon" alt="payment icon">
+                  </div>
+                </div>
+              </mat-option>
+            </mat-select>
+            <div *ngIf="currentPayment" class="current-payment-icon">
+              <img [src]="currentPayment.icon" alt="Current Payment icon">
+            </div>
+            <mat-error *ngIf="checkoutForm.controls.paymentMethod.hasError('required')">
+              Payment Method is <strong>required</strong>
             </mat-error>
           </mat-form-field>
         </div>

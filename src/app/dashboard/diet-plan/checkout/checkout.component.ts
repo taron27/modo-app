@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Validator } from '../../../validator';
 import { Router } from '@angular/router';
+import { DietPlanService } from '../shared/diet-plan.service';
+import { Payment } from '../shared/payment.model';
 
 @Component({
   selector: 'app-checkout',
@@ -12,8 +14,10 @@ export class CheckoutComponent implements OnInit {
 
   checkoutForm: FormGroup;
   matcher = new Validator();
+  paymentMethods: Payment[] = [];
+  currentPayment: Payment;
 
-  constructor(public router: Router) {
+  constructor(public router: Router, public dietPlanService: DietPlanService) {
     this.checkoutForm = new FormGroup({
       date: new FormControl('', [
         Validators.required,
@@ -36,13 +40,19 @@ export class CheckoutComponent implements OnInit {
       address1: new FormControl('', [
         Validators.required,
       ]),
-      address2: new FormControl('', [
+      paymentMethod: new FormControl('', [
         Validators.required,
       ]),
     });
   }
 
   ngOnInit(): void {
+    this.dietPlanService.getPaymentMethods().then(data => {
+      this.paymentMethods = data;
+    });
   }
 
+  choosePaymentMethod(currentPayment): void {
+    this.currentPayment = currentPayment;
+  }
 }
