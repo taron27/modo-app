@@ -60,6 +60,19 @@ export class DietPlanComponent implements OnInit {
     this.dietPlans[weekKey].dietPlan.splice(index, 1);
   }
 
+  notDone(doneDiet, doneDietKey, dayDataKey): void {
+    if (this.dietPlans[dayDataKey].doneDietPlan[doneDietKey]) {
+      this.dietPlans[dayDataKey].doneDietPlan.splice(doneDietKey, 1);
+      doneDiet.isDone = false;
+      doneDiet.isMissed = false;
+      doneDiet.active = true;
+      if (this.dietPlans[dayDataKey].dietPlan.length > 0) {
+        this.dietPlans[dayDataKey].dietPlan[0].active = false;
+      }
+      this.dietPlans[dayDataKey].dietPlan.unshift(doneDiet);
+    }
+  }
+
   openCheatMeals(dietPlan): void {
     this.selectedDiet = dietPlan;
 

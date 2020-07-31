@@ -30,13 +30,18 @@
             </div>
           </mat-tab>
           <mat-tab [label]="'Disabled (' + disabledFoods.length + ')'">
-            <div class="disabled-foods">
+            <div class="enabled-foods">
               <div *ngIf="disabledFoods.length > 0; else elseBlock" class="food-section">
                 <div class="food-info d-flex justify-space-between" *ngFor="let food of disabledFoods">
-                  <div>
-                    {{ food.name }}
+                  <div class="d-flex">
+                    <div>
+                      <img [src]="food.image" alt="food image">
+                    </div>
+                    <div class="food-text-context">
+                      {{ food.name }}
+                    </div>
                   </div>
-                  <div>
+                  <div class="food-text-context">
                     <mat-slide-toggle color="primary" [(ngModel)]="food.isEnabled"></mat-slide-toggle>
                   </div>
                 </div>
@@ -52,11 +57,13 @@
           </mat-tab>
         </mat-tab-group>
       </div>
-      <div class="btn-submit-parent">
-        <button class="btn-submit" mat-button (click)="saveChanges()">
-          Save
-        </button>
-      </div>
+    </div>
+  </div>
+  <div class="bottom-btn">
+    <div class="btn-submit-parent">
+      <button class="btn-submit" mat-button (click)="saveChanges()">
+        Save
+      </button>
     </div>
   </div>
 </section>

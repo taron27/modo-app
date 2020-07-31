@@ -1,11 +1,15 @@
 @import "../../../variables";
 
 .main-list-content {
-  width: 370px;
+  width: 302px;
 
   .sub-list-content {
     height: 80vh;
     overflow: auto;
+
+    &:last-child {
+      padding-bottom: 20px;
+    }
 
     &::-webkit-scrollbar-track {
       border-radius: 10px;
@@ -14,7 +18,7 @@
 
     &::-webkit-scrollbar
     {
-      width: 5px;
+      width: 0;
       background-color: #ffffff
     }
 
@@ -22,12 +26,6 @@
     {
       border-radius: 10px;
       background-color: #ffffff;
-    }
-
-    &:hover {
-      &::-webkit-scrollbar-thumb {
-        background-color: #D5D5D5;
-      }
     }
 
     .list-title {
@@ -52,6 +50,10 @@
         align-items: center;
       }
 
+      .checkbox-section {
+        padding-right: 10px;
+      }
+
       .active-checkbox {
         cursor: pointer;
         width: 25px;
@@ -66,3 +68,37 @@
     width: 100%;
   }
 }
+
+.under-section {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  padding: 50px 0 40px;
+
+  .under-sub-section {
+    width: 302px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .btn-submit-parent {
+      width: 231px;
+
+      button {
+        width: 100%;
+      }
+    }
+
+    .under-bottom-message {
+      font-size: 18px;
+      text-align: center;
+      margin: 13px 0 0;
+    }
+  }
+}
+

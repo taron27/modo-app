@@ -4,6 +4,8 @@ import { ShoppingListRoutingModule } from './shopping-list-routing.module';
 import { ShoppingListComponent } from './shopping-list.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     ShoppingListRoutingModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
+    FormsModule
   ]
 })
 export class ShoppingListModule { }

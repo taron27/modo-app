@@ -8,10 +8,10 @@
     <h3 class="align-center">How was you day</h3>
     <div class="d-flex justify-center">
       <div class="">
-        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightFood }"  (click)="data.rightFood = true">thumb_up</mat-icon>
+        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightFood !== undefined && data.rightFood}"  (click)="data.rightFood = true">thumb_up</mat-icon>
       </div>
       <div>
-        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : !data.rightFood && data.rightFood !== undefined  }" (click)="data.rightFood = false">thumb_down</mat-icon>
+        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightFood !== undefined && !data.rightFood }" (click)="data.rightFood = false">thumb_down</mat-icon>
       </div>
       <div>
         Did you eat the right foods?
@@ -19,19 +19,22 @@
     </div>
     <div class="d-flex justify-center">
       <div class="">
-        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightAmount }" (click)="data.rightAmount = true">thumb_up</mat-icon>
+        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightAmount !== undefined && data.rightAmount}" (click)="data.rightAmount = true">thumb_up</mat-icon>
       </div>
       <div>
-        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : !data.rightAmount && data.rightAmount !== undefined }" (click)="data.rightAmount = false">thumb_down</mat-icon>
+        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightAmount !== undefined && !data.rightAmount}" (click)="data.rightAmount = false">thumb_down</mat-icon>
       </div>
       <div>
         Did you eat the right amount?
       </div>
     </div>
+    <div class="error-message" *ngIf="errorMessage">
+      Please provide both ratings and then submit.
+    </div>
   </div>
   <div class="bottom-button d-flex justify-center">
     <div class="align-center submit-parent">
-      <button class="btn-submit" (click)="closeDialog()" [mat-dialog-close]="data">
+      <button class="btn-submit" (click)="closeDialog()">
         Save
       </button>
     </div>

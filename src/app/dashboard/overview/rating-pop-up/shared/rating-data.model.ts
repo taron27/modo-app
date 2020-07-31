@@ -1,5 +1,5 @@
 export default interface RatingData {
-  rightFood: boolean;
-  rightAmount: boolean;
+  rightFood: boolean | undefined;
+  rightAmount: boolean | undefined;
   date: Date;
 }

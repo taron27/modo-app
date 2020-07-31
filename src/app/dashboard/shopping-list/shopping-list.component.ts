@@ -29,6 +29,5 @@ export class ShoppingListComponent implements OnInit {
     } else {
       this.selected.push(ingredient);
     }
-    ingredient.isSelected = !ingredient.isSelected;
   }
 }

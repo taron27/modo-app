@@ -1,57 +1,23 @@
 <section class="main-content-diet-plan">
-  <div>
+  <div class="week-tabs">
     <mat-tab-group>
       <mat-tab *ngFor="let dayData of dietPlans;let key = index" [label]="dayData.weekName">
         <div class="all-diet-info" [ngClass]="{'d-flex': dayData.doneDietPlan.length > 0}">
           <div class="diet-is-done" *ngIf="dayData.doneDietPlan.length > 0">
-            <div *ngFor="let doneDiet of dayData.doneDietPlan" class="done-diet">
-              <mat-accordion>
-                <mat-expansion-panel (opened)="panelOpenState = true"
-                                     (closed)="panelOpenState = false">
-                  <mat-expansion-panel-header>
-                    <mat-panel-title>
-                      {{ doneDiet.title }} {{ doneDiet.isDone ? '(done)' : '(missed)' }}
-                    </mat-panel-title>
-                  </mat-expansion-panel-header>
-                  <div>
-                    <div class="diet-plan current-plan">
-                      <div class="d-flex justify-space-between align-items-center diet-plan-header">
-                        <div class="plan-title">
-                          {{ doneDiet.title }}
-                        </div>
-                        <div class="plan-buttons d-flex justify-flex-end">
-                          <button mat-mini-fab color="primary" class="share-circle">
-                            <mat-icon>share</mat-icon>
-                          </button>
-                          <button (click)="openCheatMeals(doneDiet)" mat-mini-fab color="primary" >
-                            <img src="../../../assets/public/icons/hamburger.svg" alt="">
-                          </button>
-                        </div>
-                      </div>
-
-                      <div class="background-image" [style]="doneDiet.image">
-                        <button mat-mini-fab class="circle d-flex justify-center align-items-center" (click)="openRecipe(doneDiet.recipe, doneDiet.image, doneDiet.suggestion)">
-                          <img src="../../../assets/public/icons/spoon-paper.svg" alt="recipe">
-                        </button>
-                      </div>
-
-                      <div class="diet-ingredients d-flex justify-center">
-                        <div class="w-75 diet-sub-ingredients">
-                          <div *ngFor="let ingredient of doneDiet.ingredients" class="d-flex justify-space-between diet-ingredient">
-                            <div>
-                              {{ ingredient.name }}
-                            </div>
-
-                            <div>
-                              <img src="../../../assets/public/icons/arrows-right-left.svg" alt="arrows-right-left">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            <div *ngFor="let doneDiet of dayData.doneDietPlan; let index = index" class="done-diet">
+              <div class="sub-done">
+                <div class="d-flex w-90">
+                  <div class="w-25">
+                    {{ doneDiet.title }}
                   </div>
-                </mat-expansion-panel>
-              </mat-accordion>
+                  <div class="w-10">
+                    <mat-icon color="primary" class="check-circle">check_circle</mat-icon>
+                  </div>
+                </div>
+                <div>
+                  <mat-icon class="drop-down-arrow" (click)="notDone(doneDiet, index, key)">arrow_drop_down</mat-icon>
+                </div>
+              </div>
             </div>
           </div>
           <div [ngClass]="{'w-calc': dayData.doneDietPlan.length > 0}">

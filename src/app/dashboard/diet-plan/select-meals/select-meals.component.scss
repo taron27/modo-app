@@ -14,7 +14,7 @@
 
     &::-webkit-scrollbar
     {
-      width: 5px;
+      width: 0;
       background-color: #ffffff
     }
 
@@ -22,12 +22,6 @@
     {
       border-radius: 10px;
       background-color: #ffffff;
-    }
-
-    &:hover {
-      &::-webkit-scrollbar-thumb {
-        background-color: #D5D5D5;
-      }
     }
   }
 

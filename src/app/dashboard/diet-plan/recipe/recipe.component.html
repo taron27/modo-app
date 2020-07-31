@@ -20,7 +20,7 @@
       <div class="suggestion-icon">
         <img src="../../../../assets/public/icons/suggestion.svg" alt="suggestion">
       </div>
-      <div class="suggestion-message">
+      <div class="suggestion-message" *ngIf="data.suggestion">
         {{ data.suggestion }}
       </div>
     </div>

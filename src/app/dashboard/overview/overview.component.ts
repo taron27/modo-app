@@ -20,8 +20,8 @@ export class OverviewComponent implements OnInit {
   currentDate = Date.now();
   prevDate: number;
   todayData = {
-    rightFood: false,
-    rightAmount: false,
+    rightFood: undefined,
+    rightAmount: undefined,
     date: new Date()
   };
   rightDietData: RatingData[] = [];

@@ -7,26 +7,35 @@
         </p>
         <div>
           <div *ngFor="let ingredient of option.ingredients" class="ingredient-list d-flex justify-space-between">
-            <div>
+            <div (click)="addFood(ingredient); ingredient.isSelected = !ingredient.isSelected">
               <img [src]="ingredient.image" alt="list image">
             </div>
-            <div class="ingredient-name">
+            <div class="ingredient-name" (click)="addFood(ingredient); ingredient.isSelected = !ingredient.isSelected">
               {{ ingredient.name }}
             </div>
-            <div (click)="addFood(ingredient)" class="d-flex align-items-center">
-              <div class="checkbox" *ngIf="!ingredient.isSelected; else elseBlock"></div>
-              <ng-template #elseBlock>
-                <mat-icon color="primary" class="check-icon">check_circle</mat-icon>
-              </ng-template>
+            <div class="checkbox-section d-flex align-items-center">
+              <mat-checkbox class="custom-frame"
+                            color="primary"
+                            [(ngModel)]="ingredient.isSelected"
+                            (change)="addFood(ingredient)">
+              </mat-checkbox>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="btn-submit-parent d-flex justify-center">
-      <button class="btn-submit"  mat-button>
-        Save
-      </button>
+  </div>
+  <div class="under-section">
+    <div class="under-sub-section">
+      <div class="btn-submit-parent d-flex justify-center">
+        <button class="btn-submit"  mat-button>
+          Add to list
+        </button>
+      </div>
+      <div class="under-bottom-message">
+        Share list with someone
+      </div>
     </div>
+
   </div>
 </section>

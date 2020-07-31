@@ -1,5 +1,23 @@
 @import "../../../variables";
 
+.foods-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-submit-parent {
+  background-color: transparent;
+  text-align: center;
+
+  button {
+    width: 370px;
+
+    @media only screen and (max-width: 620px) {
+      width: 270px;
+    }
+  }
+}
+
 .enabled-foods, .disabled-foods {
   padding: 0 20px;
 }
@@ -7,8 +25,7 @@
 .food-section {
   width: 370px;
   margin-top: 10px;
-  height: 72vh;
-  padding: 0 10px;
+  height: 62vh;
   overflow: auto;
 
   &::-webkit-scrollbar-track
@@ -19,7 +36,7 @@
 
   &::-webkit-scrollbar
   {
-    width: 5px;
+    width: 0;
     background-color: #ffffff
   }
 
@@ -36,6 +53,10 @@
     }
   }
 
+  &:last-child {
+    margin-bottom: 70px;
+  }
+
   .food-text-context {
     line-height: 77px;
     white-space: nowrap;
@@ -46,7 +67,7 @@
 
   @media only screen and (max-width: 620px) {
     width: 100%;
-    padding: 0 10px;
+    height: unset;
 
     &::-webkit-scrollbar-thumb
     {
@@ -56,18 +77,21 @@
 }
 
 .food-info {
+  padding-right: 20px;
   border-bottom: 1px solid $modo-gray;
 }
 
-.btn-submit-parent {
-  background-color: transparent;
-  text-align: center;
+@media only screen and (max-width: 620px) {
 
-  button {
-    width: 370px;
-
-    @media only screen and (max-width: 620px) {
-      width: 270px;
-    }
+  .bottom-btn {
+    position: fixed;
+    z-index: 999;
+    margin-left: -20px;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    padding: 25px 0;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    justify-content: center;
   }
 }
