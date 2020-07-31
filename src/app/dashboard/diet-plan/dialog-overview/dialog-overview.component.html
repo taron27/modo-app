@@ -27,11 +27,25 @@
         </div>
       </div>
     </div>
-    <div class="d-flex justify-center">
-      <div class="cheat-meals-btn">
-        <div>
-          <mat-slide-toggle color="primary" [(ngModel)]="finallyData.isCheat" (change)="changeIsCheat(finallyData.isCheat)">Replace meal</mat-slide-toggle>
-        </div>
+    <div class="warning-section d-flex justify-space-between">
+      <div class="warning-icon">
+        <img src="../../../../assets/public/icons/warning.svg" alt="warning">
+      </div>
+      <div class="warning-message">
+        You have exceeded the maximum
+        allowance of Cheat Calories per week.
+        It is advisable that you do not have any
+        more Cheat Meals.
+      </div>
+    </div>
+    <div class="d-flex justify-space-between">
+      <div>
+        Replace food
+        <mat-icon class="info-icon" (click)="openInfoPopUp()">info</mat-icon>
+      </div>
+      <div>
+        <mat-slide-toggle color="primary" [(ngModel)]="finallyData.isCheat" (change)="changeIsCheat(finallyData.isCheat)">
+        </mat-slide-toggle>
       </div>
     </div>
   </div>

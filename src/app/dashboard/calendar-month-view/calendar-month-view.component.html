@@ -107,7 +107,7 @@
 </div>
 
 <ng-template #cellTemplate let-day="day" let-locale="locale">
-  <div class="cal-cell-top">
+  <div class="cal-cell-top calendar-day">
     <span class="cal-day-badge" *ngIf="day.badgeTotal > 0">{{ day.badgeTotal }}</span>
     <div class="cal-day-number" >
       <span [ngClass]="{'right-food': day.rightFood, 'right-amount': day.rightAmount}">

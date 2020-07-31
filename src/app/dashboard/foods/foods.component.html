@@ -7,14 +7,9 @@
             <div class="enabled-foods">
               <div class="food-section" *ngIf="foods.length > 0; else elseBlock">
                 <div class="food-info d-flex justify-space-between" *ngFor="let food of foods">
-                  <div class="d-flex">
-                    <div>
-                      <img [src]="food.image" alt="food image">
-                    </div>
-                    <div class="food-text-context">
+                  <div class="food-text-context">
                       {{ food.name }}
                     </div>
-                  </div>
                   <div class="food-text-context">
                     <mat-slide-toggle color="primary" [(ngModel)]="food.isEnabled"></mat-slide-toggle>
                   </div>
@@ -33,14 +28,9 @@
             <div class="enabled-foods">
               <div *ngIf="disabledFoods.length > 0; else elseBlock" class="food-section">
                 <div class="food-info d-flex justify-space-between" *ngFor="let food of disabledFoods">
-                  <div class="d-flex">
-                    <div>
-                      <img [src]="food.image" alt="food image">
-                    </div>
-                    <div class="food-text-context">
+                  <div class="food-text-context">
                       {{ food.name }}
                     </div>
-                  </div>
                   <div class="food-text-context">
                     <mat-slide-toggle color="primary" [(ngModel)]="food.isEnabled"></mat-slide-toggle>
                   </div>

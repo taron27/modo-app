@@ -126,9 +126,6 @@
     padding-right: 82px;
     transition: all 0.5s ease;
 
-    &:last-child {
-      padding-right: unset;
-    }
 
     @media only screen and (max-width: 620px) {
       padding: 0;
@@ -180,6 +177,14 @@
 
   .all-diet-info {
     padding-top: 30px;
+    @media only screen and (max-width: 770px) and (min-width: 621px) {
+      justify-content: center;
+
+      .diet-is-done {
+        min-width: 486px;
+        width: 486px;
+      }
+    }
   }
 
   .diet-plans {
@@ -188,6 +193,11 @@
     margin-bottom: 30px;
     display: flex;
     transition: all 0.5s ease;
+
+
+    &:last-child {
+      padding-right: unset;
+    }
 
     &::-webkit-scrollbar-track {
       border-radius: 10px;
@@ -206,16 +216,37 @@
       background-color: #ffffff;
     }
 
-    //&:hover {
-    //  &::-webkit-scrollbar-thumb {
-    //    background-color: #D5D5D5;
-    //  }
-    //}
+    @media (max-width:770px) {
+
+      .diet-plan {
+
+        &:last-child {
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    @media (max-width: 770px) and (min-width: 621px) {
+
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .diet-plan {
+
+        border-bottom: 1px solid $modo-gray;
+        padding-right: 0;
+        padding-bottom: 45px !important;
+        margin-bottom: 20px;
+        min-width: 486px;
+      }
+    }
 
     @media only screen and (max-width: 620px) {
       flex-wrap: wrap;
 
       .diet-plan {
+        padding-bottom: 40px !important;
+        margin-bottom: 10px;
         border-bottom: 1px solid $modo-gray;
       }
     }
@@ -265,4 +296,11 @@
   @media only screen and(max-width: 620px) {
     margin-right: 0;
   }
+}
+
+.diet-plan-button-section {
+  position: fixed;
+  bottom: 20px;
+  margin-left: -20px;
+  width: 100%;
 }

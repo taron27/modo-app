@@ -1,3 +1,5 @@
+@import "../../../../variables";
+
 .cheat-title {
   margin-bottom: 30px;
 }
@@ -9,11 +11,29 @@
 
 .cheat-meals-btn {
   width: 310px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.warning-section {
+  background-color: #ECECEC;
+  border-radius: 8px;
+  padding: 11px 26px 11px 13px;
+  margin-bottom: 23px;
+
+  .warning-message {
+    padding-left: 10px;
+    max-width: 245px;
+    font-size: 14px;
+    color: #5D5D5D;
+  }
+
+  .warning-icon {
+    padding: 3px 0 0 5px;
+  }
 }
 
 .bottom-button {
-  padding-bottom: 20px;
+  margin-top: 20px;
 }
 
 .all-added-data {

@@ -1,10 +1,11 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { DialogData } from '../shared/dialog-data.model';
 import { Food } from '../shared/food.model';
 import { DietPlanService } from '../shared/diet-plan.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Validator} from '../../../validator';
+import { InfoPopUpComponent } from '../../info-pop-up/info-pop-up.component';
 
 @Component({
   selector: 'app-dialog-overview',
@@ -28,7 +29,8 @@ export class DialogOverviewComponent implements OnInit {
   constructor(
     private dietPlanService: DietPlanService,
     public dialogRef: MatDialogRef<DialogOverviewComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    private dialog: MatDialog) {
     data.quantity = '1';
   }
 
@@ -60,5 +62,20 @@ export class DialogOverviewComponent implements OnInit {
       this.finallyData.name = `${quantity} ${food}`;
       this.finallyData.isCheat = true;
     }
+  }
+
+  openInfoPopUp(): void {
+    const payload = {
+      title: 'Replace Food',
+      description: 'If you have eaten the cheat meal instead of the planned meal, enable this option.' +
+        'If you have eaten the Cheat Meal on top of the planned meal, do not enable.'
+    };
+
+    this.dialog.open(InfoPopUpComponent, {
+      width: '375px',
+      position: {bottom: '0'},
+      panelClass: 'fullscreen-modal',
+      data: payload
+    });
   }
 }

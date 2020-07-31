@@ -1,6 +1,6 @@
 @import '../../../variables';
 
-.man-section {
+.main-section {
   margin: 0 40px;
 
   .main-circle-content {
@@ -127,13 +127,6 @@
     }
   }
 
-  .first-prev-calendar {
-
-    @media only screen and (max-width: 620px) {
-      display: none;
-    }
-  }
-
 
   @media only screen and (max-width: 620px) {
 
@@ -161,3 +154,43 @@
   }
 }
 
+@media only screen and (max-width: 770px) and (min-width: 620px) {
+
+  .overview-main-section {
+    margin-top: 60px;
+  }
+
+  .main-section {
+    padding: 0 30px;
+  }
+
+  .calendar-section {
+
+    .main-calendar {
+
+      .calendar {
+        width: 483px;
+        height: 398px;
+      }
+    }
+  }
+
+  .overview-sub-section {
+
+    .sub-circle {
+      width: 84px;
+      height: 84px;
+      font-size: 18px;
+    }
+  }
+
+  .first-prev-calendar, .calendar-title {
+
+    display: none;
+  }
+
+  .calendar-bottom-info {
+    margin-top: 70px;
+    justify-content: space-between;
+  }
+}

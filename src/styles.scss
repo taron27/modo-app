@@ -166,6 +166,11 @@ body {
   }
 }
 
+.info-icon {
+  cursor: help;
+  color: $modo-gray;
+}
+
 .under-form-text {
   a {
     color: #2695F9;
