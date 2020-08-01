@@ -19,9 +19,6 @@ export class CheckoutComponent implements OnInit {
 
   constructor(public router: Router, public dietPlanService: DietPlanService) {
     this.checkoutForm = new FormGroup({
-      date: new FormControl('', [
-        Validators.required,
-      ]),
       time: new FormControl('', [
         Validators.required,
       ]),

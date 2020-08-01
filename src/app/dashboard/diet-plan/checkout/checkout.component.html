@@ -65,20 +65,16 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="form-div d-flex">
-          <mat-form-field class="full-width form-inputs">
-            <label for="date" class="auth-label">Date</label>
-            <input
-              id="date"
-              class="auth-input"
-              type="date"
-              matInput
-              [errorStateMatcher]="matcher"
-              formControlName="date"
-            />
-            <mat-error *ngIf="checkoutForm.controls.date.hasError('required')">
-              date is <strong>required</strong>
-            </mat-error>
+<!--        Date -->
+        <div class="form-div">
+          <mat-datepicker #picker></mat-datepicker>
+
+          <mat-form-field class="full-width" appearance="fill" (click)="picker.open()">
+            <mat-label>
+              Delivery date
+            </mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-icon matSuffix>arrow_drop_down</mat-icon>
           </mat-form-field>
         </div>
         <div class="form-div d-flex">
@@ -99,6 +95,7 @@
         </div>
         <div class="form-div d-flex">
           <mat-form-field appearance="fill" class="full-width position-relative">
+            <mat-label>Payment Method</mat-label>
             <mat-select disableRipple
                         formControlName="paymentMethod">
               <mat-option *ngFor="let paymentMethod of paymentMethods"

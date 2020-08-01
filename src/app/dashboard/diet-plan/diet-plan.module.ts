@@ -16,6 +16,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogOverviewComponent } from './dialog-overview/dialog-overview.component';
 import { RecipeComponent } from './recipe/recipe.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { RecipeComponent } from './recipe/recipe.component';
     ReactiveFormsModule,
     MatSelectModule,
     MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ]
 })
 export class DietPlanModule { }
