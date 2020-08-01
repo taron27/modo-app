@@ -194,3 +194,11 @@
     justify-content: space-between;
   }
 }
+
+@media (max-width: 620px) {
+
+  .first-prev-calendar, .calendar-title {
+
+    display: none;
+  }
+}
