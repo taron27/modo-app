@@ -15,8 +15,9 @@ export class SelectMealsComponent implements OnInit {
   amount = 0;
 
   constructor(private selectMealsService: SelectMealsService,
-              private router: Router,
-              private dashboardComponent: DashboardComponent) {
+              private router: Router, public dashboardComponent: DashboardComponent) {
+    this.changeDashboardSettings();
+
     selectMealsService.getWeeks().then((data) => {
       this.weeks = data;
       data.map((item) => {
@@ -26,18 +27,21 @@ export class SelectMealsComponent implements OnInit {
           }
         });
       });
-      this.setDashboardSettings();
     });
   }
 
   ngOnInit(): void {
   }
 
-  setDashboardSettings(): void {
-    this.dashboardComponent.title = 'Select meals';
-    this.dashboardComponent.currentInfoDescription = 'Select meals';
-    this.dashboardComponent.isShowInfoIcon = true;
-
+  changeDashboardSettings(): void {
+    this.dashboardComponent.isIpadContent = true;
+    this.dashboardComponent.isFixedHeader = false;
+    this.dashboardComponent.isMobileFixedHeader = false;
+    this.dashboardComponent.isTransparentHeader = false;
+    this.dashboardComponent.title = 'Select Meals';
+    this.dashboardComponent.currentInfoDescription = 'Select Meals';
+    this.dashboardComponent.isShowInfoIcon = false;
+    this.dashboardComponent.isShowShareIcon = false;
   }
 
   changeAllAmount(meal): void {

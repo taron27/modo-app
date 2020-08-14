@@ -7,6 +7,7 @@
 .cheat-meals-content {
   width: 370px;
   margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .cheat-meals-btn {
@@ -46,4 +47,53 @@
 
 .add-cheat-food {
   margin-top: 30px;
+}
+
+.replace-food {
+  font-size: 14px;
+  color: #707070;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .replace-food-name {
+    margin-right: 15px;
+  }
+
+  .info-icon {
+    display: flex;
+    align-items: center;
+
+    mat-icon {
+      font-size: 18px;
+    }
+  }
+}
+
+.add-btn {
+  border-radius: 28px;
+}
+
+.selected-meals-section {
+  background-color: #ECECEC;
+  border-radius: 13px;
+  margin: 15px 0;
+  padding: 0 15px;
+
+  .selected-meals {
+    transition: all 0.5s ease;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.content-animation {
+  opacity: 0;
+  overflow: hidden;
+}
+
+.content-animation-unset {
+  opacity: 1;
 }

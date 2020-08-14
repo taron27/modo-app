@@ -47,9 +47,15 @@
     </div>
   </div>
 
-  <mat-toolbar class="top-sidebar">
-    <span class="page-sub-title">
-      {{ title }} <mat-icon (click)="openInfoPopUp()" class="info-icon">{{ isShowInfoIcon &&  'info' }}</mat-icon>
+  <mat-toolbar class="top-sidebar" [ngClass]="{'transparent-header': isTransparentHeader, 'fixed-header': isFixedHeader, 'fixed-mobile-header': isMobileFixedHeader}">
+    <span class="page-sub-title d-flex align-items-center">
+      <span class="dashboard-title">
+        {{ title }}
+      </span>
+      <mat-icon (click)="openInfoPopUp()" class="info-icon" *ngIf="isShowInfoIcon">info</mat-icon>
+      <span class="share-title-circle" *ngIf="isShowShareIcon">
+          <mat-icon (click)="openSharePopUp()">share</mat-icon>
+      </span>
     </span>
     <span class="spacer"></span>
     <div class="menu-icon" (click)="drawer.toggle()">
@@ -90,7 +96,7 @@
     </mat-nav-list>
   </mat-drawer>
 
-  <div class="content">
+  <div class="content" [ngClass]="{'ipad-content': isIpadContent}">
     <router-outlet></router-outlet>
   </div>
 

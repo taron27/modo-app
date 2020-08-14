@@ -1,11 +1,11 @@
 <section class="d-flex justify-center">
   <div class="select-meals">
     <div class="week-meals week-tabs">
-      <mat-tab-group>
+      <mat-tab-group class="full-height">
         <mat-tab *ngFor="let week of weeks" [label]="week.weekName" class="week-tab">
-          <div class="d-flex justify-center">
+          <div class="meals-content d-flex justify-center">
             <div class="current-meal d-flex justify-space-between" *ngFor="let meal of week.meals">
-              <div>
+              <div class="meal-name">
                 {{ meal.name }}
               </div>
               <div>
@@ -17,8 +17,7 @@
       </mat-tab-group>
     </div>
 
-
-    <div class="d-flex justify-center">
+    <div class="under-section d-flex justify-center">
       <div class="btn-submit-parent align-center">
         <p>
           Total Price: € {{ amount }}

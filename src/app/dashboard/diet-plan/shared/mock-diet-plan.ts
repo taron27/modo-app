@@ -1,4 +1,4 @@
-import { DietPlans } from './diet-plan.model';
+import {DietPlans, SocialAccounts} from './diet-plan.model';
 
 export const DIETPLANS: DietPlans[] = [
   {
@@ -9,6 +9,7 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -54,6 +55,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -83,6 +85,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -112,6 +115,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -141,6 +145,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -170,6 +175,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -199,6 +205,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -234,6 +241,7 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -263,6 +271,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -292,6 +301,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -321,6 +331,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -350,6 +361,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -379,6 +391,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -408,6 +421,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -443,6 +457,7 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -472,6 +487,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -501,6 +517,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -530,6 +547,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -559,6 +577,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -588,6 +607,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -617,6 +637,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -648,6 +669,7 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: true,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -682,6 +704,7 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -711,6 +734,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -740,6 +764,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -769,6 +794,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -798,6 +824,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -827,6 +854,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -856,6 +884,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -891,6 +920,7 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -920,6 +950,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -949,6 +980,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -978,6 +1010,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1007,6 +1040,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1036,6 +1070,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1065,6 +1100,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1100,6 +1136,7 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1129,6 +1166,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1158,6 +1196,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1187,6 +1226,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1216,6 +1256,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1245,6 +1286,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1274,6 +1316,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1309,6 +1352,7 @@ export const DIETPLANS: DietPlans[] = [
         active: true,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1338,6 +1382,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1367,6 +1412,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1396,6 +1442,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1425,6 +1472,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1454,6 +1502,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1484,6 +1533,7 @@ export const DIETPLANS: DietPlans[] = [
         active: false,
         isDone: false,
         isMissed: false,
+        socialAccounts: [],
         recipe: [
           {description: 'Preheat oven to 200 degrees Celsius.'},
           {description: 'When finished, carefully open the foil packets.'},
@@ -1511,4 +1561,19 @@ export const DIETPLANS: DietPlans[] = [
     ],
     doneDietPlan: []
   }
+];
+
+export const SOCIALACCOUNT: SocialAccounts[] = [
+  {
+    name: 'Instagram',
+    icon: '../../../assets/public/icons/instagram.svg'
+  },
+  {
+    name: 'FaceBook',
+    icon: '../../../assets/public/icons/fb.svg'
+  },
+  {
+    name: 'Whats App',
+    icon: '../../../assets/public/icons/whatsapp.svg'
+  },
 ];

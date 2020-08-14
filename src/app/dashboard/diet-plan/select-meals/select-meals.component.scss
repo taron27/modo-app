@@ -27,14 +27,18 @@
 
   .current-meal {
     width: 80%;
-    margin-top: 30px;
+    padding: 20px 10px 20px 0;
     overflow: hidden;
-    padding-bottom: 10px;
     border-bottom: 1px solid $underline-color;
+
+    .meal-name {
+      font-weight: 500;
+    }
   }
 
   @media only screen and (max-width: 720px) {
     width: 100%;
+    margin: 0 25px;
 
     .current-meal {
       width: 100%;
@@ -42,11 +46,16 @@
   }
 }
 
+.under-section {
+  margin-bottom: 30px;
+}
+
 .btn-submit-parent {
-  margin-top: 100px;
+  margin-top: 70px;
   width: 360px;
 
   @media only screen and (max-width: 620px) {
+    margin-top: 20px;
     width: 100%;
     font-size: 13px;
   }

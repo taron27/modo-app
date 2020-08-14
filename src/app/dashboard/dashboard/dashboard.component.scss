@@ -103,12 +103,26 @@
 .top-sidebar {
   padding: 32px 36px 0;
   z-index: 999;
+  background-color: #ffffff;
+}
 
-  @media only screen and (max-width: 620px) {
+.fixed-mobile-header {
+  @media only screen and (max-width: 420px) {
     padding: 18px 36px;
     position: fixed;
     top: 0;
   }
+}
+
+.transparent-header {
+  background-color: transparent;
+  z-index: 999;
+  position: fixed;
+}
+
+.fixed-header {
+  z-index: 999;
+  position: fixed;
 }
 
 .logo {
@@ -122,10 +136,21 @@
 
 .content {
   background: #fff;
-  padding: 0 20px 10px 20px;
+  padding: 0 20px 0 20px;
+}
 
-  @media only screen and (max-width: 620px) {
-    margin-top: 72.45px;
+.ipad-content {
+
+  @media (max-height: 749px) and (max-width: 620px) {
+    margin-top: 75px;
+  }
+
+  @media (max-width: 1000px) and (min-height: 750px) {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
   }
 }
 
@@ -170,7 +195,29 @@
 
 .page-sub-title {
   color: $modo-gray;
-  font-size: 13px;
+  font-size: 22px;
+
+  .dashboard-title {
+    margin-right: 10px;
+  }
+
+  .share-title-circle {
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    border-radius: 50px;
+    background-color: $modo-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    mat-icon {
+      width: unset;
+      height: unset;
+      color: #fff;
+      font-size: 13px;
+    }
+  }
 }
 
 .info-icon {

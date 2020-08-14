@@ -13,6 +13,7 @@ interface Plans {
   suggestion: string;
   ingredients: Ingredients[];
   recipe: Recipe[];
+  socialAccounts?: SocialAccounts[];
 }
 
 interface Ingredients {
@@ -22,4 +23,9 @@ interface Ingredients {
 
 interface Recipe {
   description: string;
+}
+
+export interface SocialAccounts {
+  name: string;
+  icon: string;
 }

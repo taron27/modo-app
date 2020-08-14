@@ -1,5 +1,12 @@
-.content {
-  padding-top: 44px;
+.auth-content {
+  padding-top: 97px;
   background: #fff;
-  padding-bottom: 71px;
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
 }

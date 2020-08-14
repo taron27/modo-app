@@ -1,0 +1,10 @@
+<button
+  mat-mini-fab
+  color="primary"
+  class="share-circle diet-plan-button"
+  (click)="toggle()"
+>
+  <mat-icon color="{{animate ? colorEnd : colorStart}}" [ngClass]="{'animate' : animate}">
+    {{animate ? end : start}}
+  </mat-icon>
+</button>

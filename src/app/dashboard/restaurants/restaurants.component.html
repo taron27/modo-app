@@ -1,1 +1,63 @@
-<p>restaurants works!</p>
+<section class="restaurants-section">
+  <div class="map">
+    <agm-map [latitude]="lat" [longitude]="lng">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+  </div>
+  <div class="restaurants">
+    <div class="sub-restaurants">
+      <div class="restaurant" *ngFor="let restaurant of restaurants">
+        <div>
+          <div class="restaurant-image" [ngStyle]="{'background-image': 'url(' + restaurant.image + ')'}">
+          </div>
+          <div class="restaurant-content">
+            <div class="restaurant-name">
+              {{ restaurant.name }}
+            </div>
+            <div class="restaurant-location">
+              {{ restaurant.location }}
+            </div>
+            <div class="rate-way d-flex justify-space-between">
+              <div>
+                <mat-icon color="primary" class="rate-star"
+                          (mouseover)="rateRestaurant(restaurant, 1)"
+                          (click)="setNewRateRestaurant(restaurant, 1)"
+                          (mouseout)="endRateRestaurant(restaurant)">
+                  {{ restaurant.rateForHover >= 1 ? 'star': 'star_border' }}
+                </mat-icon>
+                <mat-icon color="primary" class="rate-star"
+                          (mouseover)="rateRestaurant(restaurant, 2)"
+                          (click)="setNewRateRestaurant(restaurant, 2)"
+                          (mouseout)="endRateRestaurant(restaurant)">
+                  {{ restaurant.rateForHover >= 2 ? 'star': 'star_border' }}
+                </mat-icon>
+                <mat-icon color="primary" class="rate-star"
+                          (mouseover)="rateRestaurant(restaurant, 3)"
+                          (click)="setNewRateRestaurant(restaurant, 3)"
+                          (mouseout)="endRateRestaurant(restaurant)">
+                  {{ restaurant.rateForHover >= 3 ? 'star': 'star_border' }}
+                </mat-icon>
+                <mat-icon color="primary" class="rate-star"
+                          (mouseover)="rateRestaurant(restaurant, 4)"
+                          (click)="setNewRateRestaurant(restaurant, 4)"
+                          (mouseout)="endRateRestaurant(restaurant)">
+                  {{ restaurant.rateForHover >= 4 ? 'star': 'star_border' }}
+                </mat-icon>
+                <mat-icon color="primary" class="rate-star"
+                          (mouseover)="rateRestaurant(restaurant, 5)"
+                          (click)="setNewRateRestaurant(restaurant, 5)"
+                          (mouseout)="endRateRestaurant(restaurant)">
+                  {{ restaurant.rateForHover >= 5 ? 'star': 'star_border' }}
+                </mat-icon>
+              </div>
+              <div class="way">
+                {{ restaurant.way }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

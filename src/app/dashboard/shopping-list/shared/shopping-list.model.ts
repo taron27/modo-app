@@ -4,7 +4,11 @@ export interface ShoppingList {
 }
 
 export interface Ingredients {
-  image: string;
   name: string;
   isSelected: boolean;
+  isDeleted: boolean;
+}
+
+export interface ExtraAttributes {
+  name: string;
 }

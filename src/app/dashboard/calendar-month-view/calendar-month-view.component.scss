@@ -89,7 +89,7 @@
 
   .cal-day-number {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     opacity: 1;
     margin-right: unset;
     margin-top: unset;
@@ -103,21 +103,29 @@
     position: relative;
 
     .right-food {
-      width: 30px;
-      border: 2px solid #CEFFEE;
+      height: 33px;
+      width: 33px;
+      border: 4px solid #CEFFEE;
       border-top-color: $primary-color !important;
       border-left-color: $primary-color !important;
       border-radius: 50%;
       transform: rotate(-45deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .right-amount {
-      width: 30px;
-      border: 2px solid #CEFFEE;
+      height: 33px;
+      width: 33px;
+      border: 4px solid #CEFFEE;
       border-right-color: $accent-color !important;
       border-bottom-color: $accent-color !important;
       border-radius: 50%;
       transform: rotate(-45deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .right-amount, .right-food {
@@ -128,6 +136,7 @@
     }
 
     .month-day {
+      font-weight: 600;
       padding: 5px;
     }
   }

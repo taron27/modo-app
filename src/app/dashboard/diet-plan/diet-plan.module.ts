@@ -18,6 +18,10 @@ import { DialogOverviewComponent } from './dialog-overview/dialog-overview.compo
 import { RecipeComponent } from './recipe/recipe.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { _MatMenuDirectivesModule, MatMenuModule } from '@angular/material/menu';
+import { MatAnimatedIconComponent } from '../mat-animated-icon/mat-animated-icon.component';
+import { DateAdapter } from '@angular/material/core';
+import { CustomDateAdapter } from './checkout/custom-date-adapter';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     DialogOverviewComponent,
     CheckoutComponent,
     RecipeComponent,
+    MatAnimatedIconComponent,
   ],
   imports: [
     CommonModule,
@@ -42,7 +47,15 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSelectModule,
     MatDialogModule,
     MatDatepickerModule,
-    MatNativeDateModule
-  ]
+    MatNativeDateModule,
+    _MatMenuDirectivesModule,
+    MatMenuModule,
+  ],
+  providers: [
+    {provide: DateAdapter, useClass: CustomDateAdapter }
+  ],
+  entryComponents: [CheckoutComponent],
+  bootstrap: [CheckoutComponent],
 })
-export class DietPlanModule { }
+export class DietPlanModule {}
+

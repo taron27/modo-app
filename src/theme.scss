@@ -37,3 +37,20 @@ $custom-typography: mat-typography-config(
 
 // Override typography for all Angular Material, including mat-base-typography and all components.
 @include angular-material-typography($custom-typography);
+
+@import './scss/vars';
+@import './scss/mixins';
+@import './scss/icons';
+@import './scss/fonts';
+@import '~@angular/material/theming';
+
+$ng-app-accent: mat-palette($mat-blue);
+$ng-app-warn: mat-palette($mat-red);
+$ng-app-theme: mat-light-theme(
+    $ng-app-accent,
+    $ng-app-warn
+);
+$theme: $ng-app-theme;
+
+@include mat-core($custom-typography);
+@include angular-material-theme($theme);

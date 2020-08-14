@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Plan } from './shared/plan.model';
 import { SubscriptionService } from './shared/subscription.service';
+import {ChatService} from '../chat/shared/chat.service';
+import {DashboardComponent} from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-subscription',
@@ -10,11 +12,24 @@ import { SubscriptionService } from './shared/subscription.service';
 export class SubscriptionComponent implements OnInit {
   plans: Plan[] = [];
 
-  constructor(private subscriptionService: SubscriptionService) { }
+  constructor(private subscriptionService: SubscriptionService, public dashboardComponent: DashboardComponent) {
+    this.changeDashboardSettings();
+  }
 
   ngOnInit(): void {
     this.subscriptionService.getPlans()
       .then(plans => this.plans = plans);
+  }
+
+  changeDashboardSettings(): void {
+    this.dashboardComponent.isIpadContent = true;
+    this.dashboardComponent.isFixedHeader = false;
+    this.dashboardComponent.isMobileFixedHeader = false;
+    this.dashboardComponent.isTransparentHeader = false;
+    this.dashboardComponent.title = 'Shopping';
+    this.dashboardComponent.currentInfoDescription = 'Shopping';
+    this.dashboardComponent.isShowInfoIcon = false;
+    this.dashboardComponent.isShowShareIcon = false;
   }
 
   private changeActivePlan = (id: number) => {

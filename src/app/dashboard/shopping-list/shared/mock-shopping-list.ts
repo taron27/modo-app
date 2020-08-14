@@ -5,14 +5,14 @@ export const SHOPPINGLIST: ShoppingList[] = [
     name: 'dairy',
     ingredients: [
       {
-        image: '../../../assets/public/images/cheddar-cheese.png',
         name: '1280g Skimmed Milk (1% Fat)',
-        isSelected: false
+        isSelected: false,
+        isDeleted: false
       },
       {
-        image: '../../../assets/public/images/foodExample.png',
         name: '380 egg white',
-        isSelected: false
+        isSelected: false,
+        isDeleted: false
       }
     ]
   },
@@ -20,14 +20,14 @@ export const SHOPPINGLIST: ShoppingList[] = [
     name: 'daily',
     ingredients: [
       {
-        image: '../../../assets/public/images/cheddar-cheese.png',
         name: '1280g Skimmed Milk (1% Fat)',
-        isSelected: false
+        isSelected: false,
+        isDeleted: false
       },
       {
-        image: '../../../assets/public/images/foodExample.png',
         name: '380 egg white',
-        isSelected: false
+        isSelected: false,
+        isDeleted: false
       }
     ]
   },
@@ -35,14 +35,14 @@ export const SHOPPINGLIST: ShoppingList[] = [
     name: 'cereal',
     ingredients: [
       {
-        image: '../../../assets/public/images/cheddar-cheese.png',
         name: '1280g Skimmed Milk (1% Fat)',
-        isSelected: false
+        isSelected: false,
+        isDeleted: false
       },
       {
-        image: '../../../assets/public/images/foodExample.png',
         name: '380 egg white',
-        isSelected: false
+        isSelected: false,
+        isDeleted: false
       }
     ]
   },
@@ -50,14 +50,14 @@ export const SHOPPINGLIST: ShoppingList[] = [
     name: 'daily',
     ingredients: [
       {
-        image: '../../../assets/public/images/cheddar-cheese.png',
         name: '1280g Skimmed Milk (1% Fat)',
-        isSelected: false
+        isSelected: false,
+        isDeleted: false
       },
       {
-        image: '../../../assets/public/images/foodExample.png',
         name: '380 egg white',
-        isSelected: false
+        isSelected: false,
+        isDeleted: false
       }
     ]
   },
@@ -65,14 +65,14 @@ export const SHOPPINGLIST: ShoppingList[] = [
     name: 'daily',
     ingredients: [
       {
-        image: '../../../assets/public/images/cheddar-cheese.png',
         name: '1280g Skimmed Milk (1% Fat)',
-        isSelected: false
+        isSelected: false,
+        isDeleted: false
       },
       {
-        image: '../../../assets/public/images/foodExample.png',
         name: '380 egg white',
-        isSelected: false
+        isSelected: false,
+        isDeleted: false
       }
     ]
   }

@@ -1,31 +1,15 @@
 @import "../../../variables";
 
-.foods-section {
-  position: relative;
-  overflow: hidden;
-}
-
 .btn-submit-parent {
   background-color: transparent;
   text-align: center;
-
-  button {
-    width: 370px;
-
-    @media only screen and (max-width: 620px) {
-      width: 270px;
-    }
-  }
-}
-
-.enabled-foods, .disabled-foods {
-  padding: 0 20px;
+  width: 231px;
 }
 
 .food-section {
-  width: 370px;
+  position: relative;
+  width: 302px;
   margin-top: 10px;
-  height: 62vh;
   overflow: auto;
 
   &::-webkit-scrollbar-track
@@ -54,44 +38,40 @@
   }
 
   &:last-child {
-    margin-bottom: 70px;
+    margin-bottom: 90px;
   }
 
   .food-text-context {
-    line-height: 77px;
     white-space: nowrap;
-    max-width: 170px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  @media only screen and (max-width: 620px) {
-    width: 100%;
-    height: unset;
-
-    &::-webkit-scrollbar-thumb
-    {
-      background-color: #D5D5D5;
-    }
+  .food-name {
+    cursor: pointer;
+    color: $modo-gray;
   }
 }
 
 .food-info {
-  padding-right: 20px;
   border-bottom: 1px solid $modo-gray;
+
+  .food-info-connect {
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width: 620px) {
-
-  .bottom-btn {
-    position: fixed;
-    z-index: 999;
-    margin-left: -20px;
-    display: flex;
-    bottom: 0;
-    width: 100%;
-    padding: 25px 0;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-    justify-content: center;
-  }
+.bottom-btn {
+  position: fixed;
+  z-index: 999;
+  margin-left: -20px;
+  display: flex;
+  bottom: 0;
+  padding: 25px 0;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  justify-content: center;
+  width: 100%;
 }

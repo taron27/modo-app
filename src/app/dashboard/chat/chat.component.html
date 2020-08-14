@@ -1,18 +1,18 @@
 <section class="chat-body">
   <div class="main-chat-content">
     <div class="messages-main-content"  id="message-content">
-      <div *ngFor="let message of messages" [className]="message.userId === userId ? 'my-message' : 'friend-message'">
+      <div *ngFor="let message of messages" class="message-sub-content" [className]="message.userId === userId ? 'my-message message-sub-content' : 'friend-message message-sub-content'">
         <div class="message-content">
-        <span class="message">
-          {{ message.message }}
-        </span>
+          <span class="message">
+            {{ message.message }}
+          </span>
         </div>
       </div>
     </div>
     <div class="input-text">
-      <textarea class="textarea-text" matInput (keyup.enter)="sendMessage()" [(ngModel)]="message">{{ message }}</textarea>
-      <button mat-mini-fab class="chat-button" color="primary" >
-        <mat-icon matSuffix mat-mini-fab (click)="sendMessage()">send</mat-icon>
+      <textarea class="textarea-text" matInput (keyup)="enterMessage($event)" [(ngModel)]="message">{{ message }}</textarea>
+      <button mat-mini-fab class="chat-button" color="primary" (click)="sendMessage()">
+        <img src="../../../assets/public/icons/send-message.svg" alt="send" matSuffix>
       </button>
     </div>
   </div>

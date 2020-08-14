@@ -1,79 +1,86 @@
 .recipe-modal-content {
   padding: 0 14px 0 11px;
   height: 100%;
-  overflow: hidden auto;
+  position: relative;
 
-  &::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: #ffffff;
-  }
+  .all-recipe-content {
+    height: 100%;
+    overflow: hidden auto;
 
-  &::-webkit-scrollbar
-  {
-    width: 0;
-    background-color: #ffffff
-  }
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
 
-  &::-webkit-scrollbar-thumb
-  {
-    border-radius: 10px;
-    background-color: #ffffff;
-  }
+    &::-webkit-scrollbar
+    {
+      width: 0;
+      background-color: #ffffff
+    }
 
-  .suggestion {
-    width: 100%;
-    background: #ECECEC;
-    border-radius: 13px;
-    margin: 32px 0 70px;
+    &::-webkit-scrollbar-thumb
+    {
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
 
-    .sub-suggestion {
-      padding: 25px 20px 28px;
+    .suggestion {
+      width: 100%;
+      background: #ECECEC;
+      border-radius: 13px;
+      margin: 32px 0 70px;
 
-      .suggestion-icon {
-        width: 20%;
+      .sub-suggestion {
+        padding: 25px 20px 28px;
+
+        .suggestion-icon {
+          width: 20%;
+        }
+
+        .suggestion-message {
+          width: 80%;
+        }
+      }
+    }
+
+    .image-content {
+
+      .background-image {
+        padding-bottom: 32px;
+        background-repeat: no-repeat;
+        width: 307px;
+        height: 179px;
+        overflow: hidden;
+      }
+    }
+
+    .recipe-question {
+      font-size: 20px;
+    }
+
+    .recipe-step {
+      margin-top: 33px;
+
+      .step-description {
+        font-size: 14px;
+        color: #5D5D5D;
       }
 
-      .suggestion-message {
-        width: 80%;
+      .step-count {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 10px;
       }
     }
   }
+}
 
-  .image-content {
+.close-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
 
-    .background-image {
-      padding-bottom: 32px;
-      background-repeat: no-repeat;
-      width: 307px;
-      height: 179px;
-      overflow: hidden;
-    }
-  }
-
-  .recipe-question {
-    font-size: 20px;
-  }
-
-  .recipe-step {
-    margin-top: 33px;
-
-    .step-description {
-      font-size: 14px;
-      color: #5D5D5D;
-    }
-
-    .step-count {
-      font-size: 14px;
-    }
-  }
-
-  .close-btn {
-    position: fixed;
-    right: 37px;
-    bottom: 32px;
-
-    .button-for-close {
-      background: #C6C6C6;
-    }
+  .button-for-close {
+    background: #C6C6C6;
   }
 }

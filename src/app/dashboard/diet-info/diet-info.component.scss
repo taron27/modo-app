@@ -1,51 +1,59 @@
 @import "./../../../variables";
 
-.main-container {
-  width: 370px;
+.main-diet-info-section {
 
-  .diet-info-container {
-    margin-top: 23px;
-    border-bottom: 1px solid $underline-color;
-    padding-bottom: 10px;
+  .main-container {
+    width: 370px;
 
-    .diet-info {
-      line-height: 20px;
+    .diet-info-container {
+      margin-top: 23px;
+      border-bottom: 1px solid $underline-color;
+      padding-bottom: 10px;
 
-      .diet-info-icon {
-        display: flex;
-        align-items: center;
-        width: 15%;
+      .diet-info {
+        line-height: 20px;
+
+        .diet-info-icon {
+          display: flex;
+          align-items: center;
+          width: 15%;
+        }
+
+        .diet-info-select {
+          width: 80%;
+        }
+
+        .diet-info-title {
+          color: #6F6F6E;
+        }
       }
 
-      .diet-info-select {
-        width: 80%;
+      @media (max-width: 620px) {
+        margin-top: 15px;
       }
+    }
 
-      .diet-info-title {
-        color: #6F6F6E;
+    .btn-submit-parent {
+      margin: 30px 0;
+      width: 288px;
+
+      @media (max-width: 420px) {
+        width: 100%;
       }
     }
   }
 
-  .btn-submit-parent {
-    margin-top: 80px;
-    width: 288px;
+  .info-icon-parent {
+    position: absolute;
+    right: 30px;
+    bottom: -7px;
+    cursor: help;
 
-    @media only screen and (max-width: 620px) {
-      width: 80%;
+    .info-icon {
+      width: 17px;
+      height: 17px;
+      color: #C6C6C6;
     }
   }
 }
 
-.info-icon-parent {
-  position: absolute;
-  right: 30px;
-  bottom: -7px;
-  cursor: help;
-
-  .info-icon {
-    width: 17px;
-    height: 17px;
-    color: #C6C6C6;
-  }
-}

@@ -12,12 +12,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
+import { SharePopUpComponent } from './share-pop-up/share-pop-up.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     RecipesComponent,
-    InfoPopUpComponent
+    InfoPopUpComponent,
+    SharePopUpComponent
   ],
   imports: [
     CommonModule,

@@ -1,102 +1,114 @@
 <section>
-  <p class="align-center checkout-title">
-    Checkout
-  </p>
   <div class="auth-main-form d-flex justify-center">
     <div class="checkout-form main-content">
       <form class="auth-form" [formGroup]="checkoutForm">
-        <div class="form-div d-flex">
-          <mat-form-field class="full-width form-inputs">
-            <label for="address1" class="auth-label">address 1</label>
-            <input
-              id="address1"
-              class="auth-input"
-              matInput
-              [errorStateMatcher]="matcher"
-              formControlName="address1"
-            />
-            <mat-error *ngIf="checkoutForm.controls.address1.hasError('required')">
-              address1 is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
-        </div>
-        <div class="form-div d-flex">
-          <mat-form-field class="full-width form-inputs">
-            <label for="post-code" class="auth-label">Post Code</label>
-            <input
-              id="post-code"
-              class="auth-input"
-              matInput
-              [errorStateMatcher]="matcher"
-              formControlName="postCode"
-            />
-            <mat-error *ngIf="checkoutForm.controls.postCode.hasError('required')">
-              Post Code is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
-        </div>
-        <div class="form-div d-flex">
-          <mat-form-field class="full-width form-inputs">
-            <label for="city" class="auth-label">city</label>
-            <input
-              id="city"
-              class="auth-input"
-              matInput
-              [errorStateMatcher]="matcher"
-              formControlName="city"
-            />
-            <mat-error *ngIf="checkoutForm.controls.city.hasError('required')">
-              City is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
-        </div>
-        <div class="form-div d-flex">
-          <mat-form-field class="full-width form-inputs">
-            <label for="country" class="auth-label">country</label>
-            <input
-              id="country"
-              class="auth-input"
-              matInput
-              [errorStateMatcher]="matcher"
-              formControlName="country"
-            />
-            <mat-error *ngIf="checkoutForm.controls.country.hasError('required')">
-              Country is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
-        </div>
-<!--        Date -->
+        <!--        Date -->
         <div class="form-div">
-          <mat-datepicker #picker></mat-datepicker>
-
+          <mat-datepicker #picker class="date-picker"></mat-datepicker>
+          <label for="delivery-date" class="auth-label">
+            Delivery date
+          </label>
           <mat-form-field class="full-width" appearance="fill" (click)="picker.open()">
-            <mat-label>
-              Delivery date
-            </mat-label>
-            <input matInput [matDatepicker]="picker">
+            <input matInput id="delivery-date" [matDatepicker]="picker">
             <mat-icon matSuffix>arrow_drop_down</mat-icon>
           </mat-form-field>
         </div>
+<!--        Delivery address-->
         <div class="form-div d-flex">
+          <label for="address" class="auth-label">Delivery address</label>
           <mat-form-field class="full-width form-inputs">
-            <label for="time" class="auth-label">Time</label>
             <input
-              id="time"
+              id="address"
               class="auth-input"
-              type="time"
               matInput
               [errorStateMatcher]="matcher"
-              formControlName="time"
+              formControlName="address"
             />
-            <mat-error *ngIf="checkoutForm.controls.time.hasError('required')">
-              Time is <strong>required</strong>
+            <mat-error *ngIf="checkoutForm.controls.address.hasError('required')">
+              Delivery address is <strong>required</strong>
             </mat-error>
           </mat-form-field>
         </div>
+<!--        Telephone-->
         <div class="form-div d-flex">
+          <label for="phone" class="auth-label">Telephone</label>
+          <mat-form-field class="full-width form-inputs">
+            <span matPrefix>+</span>
+            <input
+              id="phone"
+              type="number"
+              class="auth-input"
+              matInput
+              [errorStateMatcher]="matcher"
+              formControlName="phone"
+            />
+            <mat-error *ngIf="checkoutForm.controls.phone.hasError('required')">
+              Telephone is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+<!--        Flat & Floor -->
+        <div class="form-div d-flex">
+          <div class="w-50">
+            <!--          Flat-->
+            <mat-form-field class="full-width form-inputs">
+              <label for="flat" class="auth-label">Flat</label>
+              <input
+                id="flat"
+                class="auth-input"
+                type="number"
+                matInput
+                [errorStateMatcher]="matcher"
+                formControlName="flat"
+              />
+              <mat-error *ngIf="checkoutForm.controls.flat.hasError('required')">
+                Flat is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="w-50">
+            <!--          Floor-->
+            <mat-form-field class="full-width form-inputs">
+              <label for="floor" class="auth-label">Floor</label>
+              <input
+                id="floor"
+                class="auth-input"
+                type="number"
+                matInput
+                [errorStateMatcher]="matcher"
+                formControlName="floor"
+              />
+              <mat-error *ngIf="checkoutForm.controls.floor.hasError('required')">
+                Floor is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+<!--        Order Comments-->
+        <div class="form-div d-flex">
+          <label for="order-comments" class="auth-label">Order comments</label>
+
+          <mat-form-field class="full-width form-inputs">
+            <input
+              id="order-comments"
+              class="auth-input"
+              matInput
+              [errorStateMatcher]="matcher"
+              formControlName="orderComments"
+            />
+            <mat-error *ngIf="checkoutForm.controls.orderComments.hasError('required')">
+              Order comments is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+<!--        Payment Method-->
+        <div class="form-div d-flex">
+          <label for="payment-method" class="auth-label">Payment Method</label>
+
           <mat-form-field appearance="fill" class="full-width position-relative">
-            <mat-label>Payment Method</mat-label>
             <mat-select disableRipple
+                        id="payment-method"
                         formControlName="paymentMethod">
               <mat-option *ngFor="let paymentMethod of paymentMethods"
                           [value]="paymentMethod.value"
@@ -119,25 +131,12 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="form-div d-flex">
-          <mat-form-field class="full-width form-inputs">
-            <label for="promo-code" class="auth-label">Promo Code</label>
-            <input
-              id="promo-code"
-              class="auth-input"
-              matInput
-              [errorStateMatcher]="matcher"
-              formControlName="promoCode"
-            />
-            <mat-error *ngIf="checkoutForm.controls.promoCode.hasError('required')">
-              Promo code is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
-        </div>
-        <div class="btn-submit-parent d-flex justify-center">
-          <button class="btn-submit" mat-button>
-            Save
-          </button>
+        <div class="d-flex justify-center">
+          <div class="btn-submit-parent">
+            <button class="btn-submit" mat-button>
+              Checkout
+            </button>
+          </div>
         </div>
       </form>
     </div>

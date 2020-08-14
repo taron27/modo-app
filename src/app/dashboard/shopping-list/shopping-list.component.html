@@ -1,16 +1,13 @@
-<section class="d-flex justify-center">
+<section class="list-content d-flex justify-center">
   <div class="main-list-content">
     <div class="sub-list-content">
-      <div *ngFor="let option of list">
+      <div *ngFor="let option of list; let key = index" [ngClass]="{'last-list-child': key+ 1 === list.length}" class="little-list-content">
         <p class="list-title">
           {{ option.name }}
         </p>
         <div>
           <div *ngFor="let ingredient of option.ingredients" class="ingredient-list d-flex justify-space-between">
-            <div (click)="addFood(ingredient); ingredient.isSelected = !ingredient.isSelected">
-              <img [src]="ingredient.image" alt="list image">
-            </div>
-            <div class="ingredient-name" (click)="addFood(ingredient); ingredient.isSelected = !ingredient.isSelected">
+            <div class="ingredient-name" [ngClass]="{'is-deleted' :ingredient.isDeleted}" (click)="addFood(ingredient); ingredient.isSelected = !ingredient.isSelected">
               {{ ingredient.name }}
             </div>
             <div class="checkbox-section d-flex align-items-center">
@@ -23,19 +20,43 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="under-section">
-    <div class="under-sub-section">
-      <div class="btn-submit-parent d-flex justify-center">
-        <button class="btn-submit"  mat-button>
-          Add to list
-        </button>
+      <div class="extra-title">
+        Add Extras
       </div>
-      <div class="under-bottom-message">
-        Share list with someone
+      <div class="extra-section">
+        <div class="extra-attribute d-flex" *ngFor="let attribute of extraAttributes; let key = index">
+          <div class="extra-number">
+            {{ key + 1 }}
+          </div>
+          <div class="attribute-name">
+            {{ attribute.name }}
+          </div>
+        </div>
+        <div class="extra-attribute d-flex">
+          <div class="extra-number">
+            <span class="d-flex align-items-center">
+              {{ extraAttributes.length + 1 }}
+            </span>
+          </div>
+          <div>
+            <mat-form-field class="extra-input">
+              <input matInput [(ngModel)]="extraAttribute.name" (keyup)="addExtraAttribute($event)" />
+            </mat-form-field>
+          </div>
+          <div class="error-message" *ngIf="extraAttribute.error">
+            Attribute name is required
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
+<div class="under-section">
+  <div class="under-sub-section">
+    <div class="btn-submit-parent d-flex justify-center">
+      <button class="btn-submit"  mat-button>
+        Shop online
+      </button>
+    </div>
+  </div>
+</div>

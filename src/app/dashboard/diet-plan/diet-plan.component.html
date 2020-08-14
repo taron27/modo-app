@@ -1,82 +1,110 @@
-<section class="main-content-diet-plan">
+<section class="list-content main-content-diet-plan">
   <div class="week-tabs">
     <mat-tab-group>
       <mat-tab *ngFor="let dayData of dietPlans;let key = index" [label]="dayData.weekName">
         <div class="all-diet-info" [ngClass]="{'d-flex': dayData.doneDietPlan.length > 0}">
           <div class="diet-is-done" *ngIf="dayData.doneDietPlan.length > 0">
-            <div *ngFor="let doneDiet of dayData.doneDietPlan; let index = index" class="done-diet">
-              <div class="sub-done">
-                <div class="d-flex w-90">
-                  <div class="w-25">
-                    {{ doneDiet.title }}
+            <div *ngFor="let doneDiet of dayData.doneDietPlan; let index = index" [@responsiveAnimation]="'fullHeight'">
+              <div class="done-diet">
+                <div class="sub-done">
+                  <div class="d-flex align-items-center w-90">
+                    <div class="done-title d-flex align-items-center">
+                      {{ doneDiet.title }}
+                    </div>
+                    <div class="done-status" *ngIf="doneDiet.isDone">
+                      (done)
+                    </div>
+                    <div class="done-status" *ngIf="doneDiet.isMissed">
+                      (missed)
+                    </div>
                   </div>
-                  <div class="w-10">
-                    <mat-icon color="primary" class="check-circle">check_circle</mat-icon>
+                  <div class="d-flex align-items-center">
+                    <mat-icon class="drop-down-arrow" (click)="notDone(doneDiet, index, key)">arrow_drop_down</mat-icon>
                   </div>
-                </div>
-                <div>
-                  <mat-icon class="drop-down-arrow" (click)="notDone(doneDiet, index, key)">arrow_drop_down</mat-icon>
                 </div>
               </div>
             </div>
           </div>
-          <div [ngClass]="{'w-calc': dayData.doneDietPlan.length > 0}">
-            <div class="diet-plans">
-              <div *ngFor="let dietPlan of dayData.dietPlan; let i = index" class="diet-plan diet-plan-slider " [ngClass]="{'current-plan': dietPlan.active}">
-                <div class="d-flex justify-space-between align-items-center diet-plan-header">
-                  <div class="plan-title">
-                    {{ dietPlan.title }}
-                  </div>
-                  <div class="plan-buttons d-flex justify-flex-end">
-                    <button mat-mini-fab color="primary" class="share-circle">
-                      <mat-icon>share</mat-icon>
-                    </button>
-                    <button mat-mini-fab color="primary" (click)="openCheatMeals(dietPlan)">
-                      <img src="../../../assets/public/icons/hamburger.svg" alt="">
-                    </button>
-                  </div>
-                </div>
-
-                <div class="background-image" [style]="dietPlan.image">
-                  <button mat-mini-fab class="circle d-flex justify-center align-items-center" (click)="openRecipe(dietPlan.recipe, dietPlan.image, dietPlan.suggestion)">
-                    <img src="../../../assets/public/icons/spoon-paper.svg" alt="recipe">
-                  </button>
-                </div>
-
-                <div class="diet-ingredients d-flex justify-center">
-                  <div class="w-75 diet-sub-ingredients">
-                    <div *ngFor="let ingredient of dietPlan.ingredients" class="d-flex justify-space-between diet-ingredient">
-                      <div>
-                        {{ ingredient.name }}
+          <div [ngClass]="{'w-calc': dayData.doneDietPlan.length > 0, 'diet-plan-missing': dayData.dietPlan.length === 0}">
+            <div class="diet-plans" [ngClass]="{'some-diets': dayData.dietPlan.length < 3}" *ngIf="dayData.dietPlan.length > 0; else elseBlock">
+              <!--    responsiveAnimation animation      -->
+              <div *ngFor="let dietPlan of dayData.dietPlan; let i = index" [@responsiveAnimation]="isDesktopAnimation ? 'fullWidth' : 'fullHeight'"  class="main-plan-content">
+                <div class="diet-plan diet-plan-slider" [ngClass]="{'current-plan': dietPlan.active}">
+                  <div class="d-flex justify-space-between align-items-center diet-plan-header">
+                    <div class="plan-title">
+                      {{ dietPlan.title }}
+                    </div>
+                    <div class="plan-buttons d-flex justify-flex-end">
+                      <div class="social-accounts" *ngIf="dietPlan.socialAccounts">
+                        <div class="social-account" *ngFor="let account of dietPlan.socialAccounts" [@responsiveAnimation]="'fullWidth'" >
+                          <button mat-mini-fab color="primary" class="share-circle diet-plan-button">
+                            <img [src]="account.icon" alt="account" width="20px">
+                          </button>
+                        </div>
                       </div>
 
-                      <div>
-                        <img src="../../../assets/public/icons/arrows-right-left.svg" alt="arrows-right-left">
-                      </div>
+                      <app-mat-animated-icon
+                        start="share"
+                        end="close"
+                        colorStart="none"
+                        colorEnd="none"
+                        (click)="pushSocialAccounts(dietPlan)"
+                      ></app-mat-animated-icon>
+
+                      <button mat-mini-fab color="primary" class="diet-plan-button" (click)="openCheatMeals(dietPlan)">
+                        <img src="../../../assets/public/icons/hamburger.svg" alt="">
+                      </button>
                     </div>
                   </div>
 
-                  <div class="plan-bottom-buttons d-flex justify-center">
-                    <div class="plan-sub-buttons d-flex justify-space-between">
-                      <button class="plan-button gray-button"
-                              (click)="dietIsMissed(dietPlan, key, dayData, i)"
-                              mat-raised-button
-                      >
-                        missed
-                      </button>
-                      <button class="plan-button gray-button"
-                              [ngClass]="{'gray-button': !dietPlan.active}"
-                              [color]="dietPlan.active && 'primary'"
-                              (click)="dietIsDone(dietPlan, key, dayData, i)"
-                              mat-raised-button
-                      >
-                        done
-                      </button>
+                  <div class="background-image" [style]="dietPlan.image">
+                    <button mat-mini-fab class="circle recipe-btn d-flex justify-center align-items-center" (click)="openRecipe(dietPlan.recipe, dietPlan.image, dietPlan.suggestion)">
+                      <img src="../../../assets/public/icons/spoon-paper.svg" alt="recipe">
+                    </button>
+                  </div>
+
+                  <div class="diet-ingredients d-flex justify-center">
+                    <div class="w-75 diet-sub-ingredients">
+                      <div *ngFor="let ingredient of dietPlan.ingredients" [@responsiveAnimation]="'fullHeight'" class="d-flex justify-space-between diet-ingredient">
+                        <div>
+                          {{ ingredient.name }}
+                        </div>
+
+                        <div>
+                          <img src="../../../assets/public/icons/arrows-right-left.svg" alt="arrows-right-left">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="plan-bottom-buttons d-flex justify-center">
+                      <div class="plan-sub-buttons d-flex justify-space-between">
+                        <div class="missed-parent">
+                          <button class="plan-button gray-button"
+                                  (click)="dietIsMissed(dietPlan, key, dayData, i)"
+                                  mat-raised-button
+                          >
+                            missed
+                          </button>
+                        </div>
+                        <div>
+                          <button class="plan-button gray-button"
+                                  [ngClass]="{'gray-button': !dietPlan.active}"
+                                  [color]="dietPlan.active && 'primary'"
+                                  (click)="dietIsDone(dietPlan, key, dayData, i)"
+                                  mat-raised-button
+                          >
+                            done
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <ng-template #elseBlock>
+              No Diet plan to show
+            </ng-template>
             <section class="diet-plan-button-section d-flex justify-center">
               <div class="diet-plan-submit d-flex justify-center">
                 <button class="btn-submit" mat-button (click)="orderFood()">

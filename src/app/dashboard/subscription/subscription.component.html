@@ -15,7 +15,12 @@
       matRippleCentered="centered"
       *ngFor="let plan of plans"
     >
-      {{ plan.name }}
+      <div class="plan-name">
+        {{ plan.name }}
+      </div>
+      <div>
+        {{ plan.price }}
+      </div>
     </div>
   </section>
 

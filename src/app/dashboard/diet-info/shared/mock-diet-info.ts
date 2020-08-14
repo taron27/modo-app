@@ -89,4 +89,18 @@ export const DIETINFOS: DietInfo[] = [
       {name: 'Vegan', value: 'Vegan'},
     ]
   },
+  {
+    title: 'Cuisine Preference',
+    name: '4',
+    image: '../../../assets/public/icons/diet-info/hot-cup.svg',
+    infoDescription: 'Meals per day infoDescription',
+    isShowInfo: false,
+    options: [
+      {name: 'Meditteranean', value: 'Meditteranean'},
+      {name: 'Middle Eastern', value: 'Middle Eastern'},
+      {name: 'Indian', value: 'Indian'},
+      {name: 'Chinese', value: 'Chinese'},
+      {name: 'Japanese', value: 'Japanese'},
+    ]
+  },
 ];

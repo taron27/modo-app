@@ -1,4 +1,4 @@
-<section>
+<section class="list-content">
   <div class="d-flex justify-center">
     <div class="foods-section">
       <div>
@@ -6,11 +6,11 @@
           <mat-tab [label]="'Enabled (' + foods.length + ')'">
             <div class="enabled-foods">
               <div class="food-section" *ngIf="foods.length > 0; else elseBlock">
-                <div class="food-info d-flex justify-space-between" *ngFor="let food of foods">
-                  <div class="food-text-context">
+                <div class="food-info d-flex justify-space-between align-items-center" *ngFor="let food of foods">
+                  <div class="food-info-connect">
+                    <div class="food-text-context food-name">
                       {{ food.name }}
                     </div>
-                  <div class="food-text-context">
                     <mat-slide-toggle color="primary" [(ngModel)]="food.isEnabled"></mat-slide-toggle>
                   </div>
                 </div>
@@ -27,11 +27,11 @@
           <mat-tab [label]="'Disabled (' + disabledFoods.length + ')'">
             <div class="enabled-foods">
               <div *ngIf="disabledFoods.length > 0; else elseBlock" class="food-section">
-                <div class="food-info d-flex justify-space-between" *ngFor="let food of disabledFoods">
-                  <div class="food-text-context">
+                <div class="food-info d-flex justify-space-between align-items-center" *ngFor="let food of disabledFoods">
+                  <div class="food-info-connect">
+                    <div class="food-text-context food-name">
                       {{ food.name }}
                     </div>
-                  <div class="food-text-context">
                     <mat-slide-toggle color="primary" [(ngModel)]="food.isEnabled"></mat-slide-toggle>
                   </div>
                 </div>
@@ -49,11 +49,12 @@
       </div>
     </div>
   </div>
-  <div class="bottom-btn">
-    <div class="btn-submit-parent">
-      <button class="btn-submit" mat-button (click)="saveChanges()">
-        Save
-      </button>
-    </div>
-  </div>
 </section>
+<div class="bottom-btn">
+  <div class="btn-submit-parent">
+    <button class="btn-submit" mat-button (click)="saveChanges()">
+      Save
+    </button>
+  </div>
+</div>
+

@@ -1,21 +1,36 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { DialogData } from '../shared/dialog-data.model';
 import { Food } from '../shared/food.model';
 import { DietPlanService } from '../shared/diet-plan.service';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Validator} from '../../../validator';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Validator } from '../../../validator';
 import { InfoPopUpComponent } from '../../info-pop-up/info-pop-up.component';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-dialog-overview',
   templateUrl: './dialog-overview.component.html',
-  styleUrls: ['./dialog-overview.component.scss']
+  styleUrls: ['./dialog-overview.component.scss'],
+  animations: [
+    trigger('shrinkOutHeight', [
+      state('in', style({ height: '*', opacity: 1 })),
+      transition('* => void', [
+        style({ height: '*', opacity: 1 }),
+        animate(500, style({ height: 0, opacity: 0 }))
+      ]),
+      transition(':enter', [
+        style({ height: 0, opacity: 0 }),
+        animate(500, style({ height: '*', opacity: 1 }))
+      ])
+    ]),
+  ]
 })
 export class DialogOverviewComponent implements OnInit {
   foods: Food[] = [];
   isCleanDiet = false;
   mealsForm: FormGroup;
+  selectedData = [];
   option = {
     quantity: '1',
     food: '',
@@ -25,6 +40,11 @@ export class DialogOverviewComponent implements OnInit {
     isCheat: false,
   };
   matcher = new Validator();
+  error = {
+    message: '',
+    show: false
+  };
+  isCheat = false;
 
   constructor(
     private dietPlanService: DietPlanService,
@@ -53,15 +73,38 @@ export class DialogOverviewComponent implements OnInit {
   }
 
   changeIsCheat(isCheat): void {
-    this.isCleanDiet = isCheat;
+    if (isCheat) {
+      this.isCleanDiet = isCheat;
+    }
   }
 
   updateData(): void {
-    const { quantity, food } = this.option;
-    if (quantity && food) {
-      this.finallyData.name = `${quantity} ${food}`;
-      this.finallyData.isCheat = true;
+
+    if (this.selectedData.length !== 0) {
+      this.dialogRef.close({finallyData: this.selectedData, isCleanDiet: this.isCleanDiet});
+    } else {
+      this.error.message = 'Meals not selected';
+      this.error.show = true;
     }
+  }
+
+  addCheatMeals(): void {
+    const { quantity, food } = this.option;
+
+    if (quantity && food) {
+      const payload = {
+        name: `${quantity} ${food}`,
+        isCheat: true,
+      };
+      this.error.show = false;
+
+      this.selectedData.unshift(payload);
+    } else {
+
+      this.error.message = 'Fill all fields';
+      this.error.show = true;
+    }
+
   }
 
   openInfoPopUp(): void {
@@ -73,7 +116,6 @@ export class DialogOverviewComponent implements OnInit {
 
     this.dialog.open(InfoPopUpComponent, {
       width: '375px',
-      position: {bottom: '0'},
       panelClass: 'fullscreen-modal',
       data: payload
     });

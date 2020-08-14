@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FoodService  } from './shared/foods.service';
 import { Foods } from './shared/foods.model';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-foods',
@@ -13,14 +14,26 @@ export class FoodsComponent implements OnInit {
   disabledFoods = [];
   foodsCopy = [];
 
-  constructor(private foodService: FoodService) {
-    foodService.getFoods().then((foods) => {
+  constructor(private foodService: FoodService, public dashboardComponent: DashboardComponent) {
+  this.changeDashboardSettings();
+  foodService.getFoods().then((foods) => {
       this.foods = foods;
       this.foodsCopy = [...foods];
     });
   }
 
   ngOnInit(): void {
+  }
+
+  changeDashboardSettings(): void {
+    this.dashboardComponent.isIpadContent = false;
+    this.dashboardComponent.isFixedHeader = false;
+    this.dashboardComponent.isMobileFixedHeader = true;
+    this.dashboardComponent.isTransparentHeader = false;
+    this.dashboardComponent.title = 'Foods';
+    this.dashboardComponent.currentInfoDescription = 'Foods';
+    this.dashboardComponent.isShowInfoIcon = false;
+    this.dashboardComponent.isShowShareIcon = false;
   }
 
   saveChanges(): void {

@@ -16,7 +16,7 @@
 }
 
 .subscription-plans {
-  margin-top: 80px;
+  margin-top: 110px;
   margin-bottom: 125px;
   font-size: 26px;
   display: flex;
@@ -27,6 +27,7 @@
     width: 160px;
     height: 160px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 6px solid $underline-color;
@@ -37,15 +38,28 @@
       border-color: $accent-color;
     }
 
-    @media only screen and (max-width: 600px) {
+    .plan-name {
+      padding-bottom: 20px;
+    }
+
+    @media only screen and (max-width: 620px) {
       width: 90px;
       height: 90px;
       margin-top: 22px;
       flex-direction: column;
       font-size: 15px;
       margin-bottom: 65px;
+
+      .plan-name {
+        padding-bottom: 10px;
+      }
     }
   }
+
+  @media (max-width: 620px) {
+    margin-bottom: 85px;
+  }
+
 }
 
 .cancel-subscription-section {

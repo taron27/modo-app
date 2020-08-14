@@ -5,6 +5,7 @@ import { SideNav } from './shared/side-nav.model';
 import { DashboardService } from './shared/dashboard.service';
 import { MatDialog } from '@angular/material/dialog';
 import { InfoPopUpComponent } from '../info-pop-up/info-pop-up.component';
+import { SharePopUpComponent } from '../share-pop-up/share-pop-up.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,10 +15,14 @@ import { InfoPopUpComponent } from '../info-pop-up/info-pop-up.component';
 export class DashboardComponent implements OnInit {
   title = 'user info';
   currentInfoDescription = 'user info';
-
+  isTransparentHeader = false;
+  isFixedHeader = false;
+  isMobileFixedHeader = false;
   showTrialPopUp = false;
+  isIpadContent = true;
   showSomeWindowPopUp = false;
   isShowInfoIcon = false;
+  isShowShareIcon = false;
   sidenavLinks: SideNav[] = [];
 
   constructor(
@@ -37,7 +42,6 @@ export class DashboardComponent implements OnInit {
   openInfoPopUp(): void {
     this.dialog.open(InfoPopUpComponent, {
       width: '375px',
-      position: {bottom: '0'},
       panelClass: 'fullscreen-modal',
       data: { description: this.currentInfoDescription, title: this.title }
     });
@@ -59,5 +63,13 @@ export class DashboardComponent implements OnInit {
         this.title = title;
         this.currentInfoDescription = infoPopUpDescription;
       });
+  }
+
+  openSharePopUp(): void {
+    this.dialog.open(SharePopUpComponent, {
+      width: '400px',
+      panelClass: 'fullscreen-modal',
+      data: { description: this.currentInfoDescription, title: this.title }
+    });
   }
 }

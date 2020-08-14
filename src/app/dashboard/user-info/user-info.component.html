@@ -23,8 +23,9 @@
           <span matPrefix class="user-info-label">Email</span>
           <input type="email"
                  matInput
+                 disabled
                  [errorStateMatcher]="matcher"
-                 formControlName="email">
+                  value="sousan@mail.com">
           <mat-error *ngIf="userInfoForm.controls.email.hasError('email') && !userInfoForm.controls.email.hasError('required')">
             Please enter a valid email address
           </mat-error>
@@ -70,6 +71,11 @@
                  matInput
                  [errorStateMatcher]="matcher"
                  formControlName="height">
+          <span matSuffix>
+            <mat-select class="select-suffix" formControlName="selectedHeightType" [(ngModel)]="selectedHeightType">
+              <mat-option *ngFor="let type of heightType" [value]="type">{{ type }}</mat-option>
+            </mat-select>
+          </span>
           <mat-error *ngIf="userInfoForm.controls.height.hasError('required')">
             Height is <strong>required</strong>
           </mat-error>
@@ -81,6 +87,11 @@
                  matInput
                  [errorStateMatcher]="matcher"
                  formControlName="weight">
+          <span matSuffix>
+            <mat-select class="select-suffix" formControlName="selectedWightType" [(ngModel)]="selectedWightType">
+              <mat-option *ngFor="let type of weightType" [value]="type">{{ type }}</mat-option>
+            </mat-select>
+          </span>
           <mat-error *ngIf="userInfoForm.controls.weight.hasError('required')">
             Weight is <strong>required</strong>
           </mat-error>

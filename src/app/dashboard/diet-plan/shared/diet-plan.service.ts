@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { FOODS } from './mock-foods';
 import { Food } from './food.model';
-import { DietPlans } from './diet-plan.model';
-import { DIETPLANS } from './mock-diet-plan';
+import { DietPlans, SocialAccounts } from './diet-plan.model';
+import { DIETPLANS, SOCIALACCOUNT } from './mock-diet-plan';
 import { Payment } from './payment.model';
 import { PAYMENT } from './mock-payment';
 
@@ -21,5 +21,9 @@ export class DietPlanService {
 
   getPaymentMethods(): Promise<Payment[]> {
     return Promise.resolve<Payment[]>(PAYMENT);
+  }
+
+  getSocialAccounts(): Promise<SocialAccounts[]> {
+    return Promise.resolve<SocialAccounts[]>(SOCIALACCOUNT);
   }
 }

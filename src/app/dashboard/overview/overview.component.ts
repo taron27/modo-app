@@ -6,6 +6,7 @@ import { RatingPopUpComponent } from './rating-pop-up/rating-pop-up.component';
 import { MatDialog } from '@angular/material/dialog';
 import RatingData from './rating-pop-up/shared/rating-data.model';
 import { OverviewService } from './rating-pop-up/shared/overview.service';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-overview',
@@ -30,7 +31,8 @@ export class OverviewComponent implements OnInit {
   currentMonthName: string;
   refresh: Subject<any> = new Subject();
 
-  constructor(public dialog: MatDialog, public overviewService: OverviewService) {
+  constructor(public dialog: MatDialog, public overviewService: OverviewService, public dashboardComponent: DashboardComponent) {
+    this.changeDashboardSettings();
     const currentDate = new Date();
     this.prevDate = currentDate.setMonth(currentDate.getMonth() - 1);
     this.prevMonthName = currentDate.toLocaleString('default', { month: 'long' });
@@ -43,10 +45,20 @@ export class OverviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeDashboardSettings(): void {
+    this.dashboardComponent.isIpadContent = true;
+    this.dashboardComponent.isFixedHeader = false;
+    this.dashboardComponent.isMobileFixedHeader = false;
+    this.dashboardComponent.isTransparentHeader = false;
+    this.dashboardComponent.title = 'Overview';
+    this.dashboardComponent.currentInfoDescription = 'Overview';
+    this.dashboardComponent.isShowInfoIcon = false;
+    this.dashboardComponent.isShowShareIcon = false;
+  }
+
   openRatingPopUp(): void {
     const dialogRef = this.dialog.open(RatingPopUpComponent, {
       width: '375px',
-      position: {bottom: '0'},
       panelClass: 'fullscreen-modal',
       data: this.todayData
     });

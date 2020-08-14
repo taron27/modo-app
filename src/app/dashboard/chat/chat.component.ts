@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from './shared/chat.service';
 import Messages from './shared/messages.model';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-chat',
@@ -13,7 +14,8 @@ export class ChatComponent implements OnInit {
   message = '';
 
   userId = 1;
-  constructor(public chatService: ChatService) {
+  constructor(public chatService: ChatService, public dashboardComponent: DashboardComponent) {
+    this.changeDashboardSettings();
     chatService.getMessages().then(data => {
       this.messages = data;
     });
@@ -21,6 +23,23 @@ export class ChatComponent implements OnInit {
 
   ngOnInit(): void {
     this.toChatBottom();
+  }
+
+  changeDashboardSettings(): void {
+    this.dashboardComponent.isIpadContent = false;
+    this.dashboardComponent.isFixedHeader = true;
+    this.dashboardComponent.isMobileFixedHeader = false;
+    this.dashboardComponent.isTransparentHeader = false;
+    this.dashboardComponent.title = 'Chat';
+    this.dashboardComponent.currentInfoDescription = 'Chat';
+    this.dashboardComponent.isShowInfoIcon = false;
+    this.dashboardComponent.isShowShareIcon = false;
+  }
+
+  enterMessage(event): void {
+    if (event.key === 'Enter') {
+      this.sendMessage();
+    }
   }
 
   sendMessage(): void {
@@ -42,5 +61,4 @@ export class ChatComponent implements OnInit {
       element.scrollTop = element.scrollHeight;
     }, 0);
   }
-
 }

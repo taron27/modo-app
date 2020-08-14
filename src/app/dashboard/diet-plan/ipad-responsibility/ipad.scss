@@ -1,0 +1,87 @@
+.main-content-diet-plan {
+
+  .diet-plans {
+    padding-top: 60px;
+
+    .main-plan-content {
+
+      .diet-plan {
+        width: 574px;
+
+        &:not(:last-child) {
+          padding-bottom: 78px !important;
+          margin-bottom: 78px;
+        }
+
+        .diet-plan-header {
+          margin-bottom: 34px;
+
+          .plan-title {
+            font-size: 31px;
+            padding-left: 0;
+          }
+
+          .plan-buttons {
+
+            .diet-plan-button {
+              width: 50px;
+              height: 50px;
+            }
+
+            .social-accounts {
+              right: 115px;
+            }
+          }
+        }
+
+        .background-image {
+          height: 247px;
+
+          .recipe-btn {
+            width: 62px;
+            height: 62px;
+            right: -26px;
+
+            img  {
+              width: 30px;
+            }
+          }
+        }
+
+        .diet-ingredients {
+
+          .diet-sub-ingredients {
+            height: 180px;
+            overflow: auto;
+            width: 100%;
+            padding: 51px 31px 26px 41px;
+
+            .diet-ingredient {
+              font-size: 25px;
+              padding-bottom: 35.4px;
+
+              img {
+                width: 17px;
+              }
+            }
+          }
+        }
+
+        .plan-bottom-buttons {
+          bottom: -16px;
+
+          .plan-button {
+            width: 161px;
+            height: 52px;
+            font-size: 24px;
+            border-radius: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .diet-plan-submit {
+    width: 231px;
+  }
+}

@@ -1,3 +1,5 @@
+@import '../../../../variables';
+
 .checkout-title {
   font-size: 30px;
 }
@@ -8,14 +10,28 @@
 
   form {
     width: 100%;
+
+    .form-div {
+      margin-bottom: 20px;
+
+      .auth-input {
+        color: #000;
+      }
+    }
   }
 
   .btn-submit-parent {
+    margin-top: 20px;
+    width: 80%;
 
-    @media only screen and (max-width: 620px) {
-      margin-top: 20px;
+    button {
+      width: 100% !important;
     }
   }
+}
+
+.auth-label {
+  color: $modo-gray;
 }
 
 .input-icon-div {

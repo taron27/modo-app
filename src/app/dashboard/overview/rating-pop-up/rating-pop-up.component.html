@@ -7,23 +7,29 @@
   <div mat-dialog-content>
     <h3 class="align-center">How was you day</h3>
     <div class="d-flex justify-center">
-      <div class="">
-        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightFood !== undefined && data.rightFood}"  (click)="data.rightFood = true">thumb_up</mat-icon>
+      <div class="icons d-flex">
+        <div>
+          <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightFood !== undefined && data.rightFood}"  (click)="data.rightFood = true">thumb_up</mat-icon>
+        </div>
+        <div>
+          <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightFood !== undefined && !data.rightFood }" (click)="data.rightFood = false">thumb_down</mat-icon>
+        </div>
       </div>
-      <div>
-        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightFood !== undefined && !data.rightFood }" (click)="data.rightFood = false">thumb_down</mat-icon>
-      </div>
+
       <div>
         Did you eat the right foods?
       </div>
     </div>
     <div class="d-flex justify-center">
-      <div class="">
-        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightAmount !== undefined && data.rightAmount}" (click)="data.rightAmount = true">thumb_up</mat-icon>
+      <div class="icons d-flex">
+        <div>
+          <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightAmount !== undefined && data.rightAmount}" (click)="data.rightAmount = true">thumb_up</mat-icon>
+        </div>
+        <div>
+          <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightAmount !== undefined && !data.rightAmount}" (click)="data.rightAmount = false">thumb_down</mat-icon>
+        </div>
       </div>
-      <div>
-        <mat-icon class="like-icon" [ngClass]="{ 'rightFood' : data.rightAmount !== undefined && !data.rightAmount}" (click)="data.rightAmount = false">thumb_down</mat-icon>
-      </div>
+
       <div>
         Did you eat the right amount?
       </div>
