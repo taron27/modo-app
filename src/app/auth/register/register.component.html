@@ -3,88 +3,92 @@
 </div>
 <section class="auth-main-form d-flex justify-center">
   <div class="main-content">
-    <div class="form-height">
-      <form class="auth-form" [formGroup]="registerForm">
-        <div>
-          <mat-form-field class="full-width form-inputs">
-            <label for="email" class="auth-label">Email</label>
-            <input
-              id="email"
-              class="auth-input"
-              matInput
-              [errorStateMatcher]="matcher"
-              formControlName="email"
-            />
-            <mat-error *ngIf="registerForm.controls.email.hasError('email') && !registerForm.controls.email.hasError('required')">
-              Please enter a valid email address
-            </mat-error>
-            <mat-error *ngIf="registerForm.controls.email.hasError('required')">
-              Email is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field class="full-width">
-            <label for="password" class="auth-label">Password</label>
-            <input
-              id="password"
-              matInput
-              type="password"
-              class="auth-input"
-              [errorStateMatcher]="matcher"
-              formControlName="password"
-            />
-            <mat-error *ngIf="registerForm.controls.password.hasError('required')">
-              Password is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
-        </div>
-      </form>
-    </div>
-    <!--<p>{{message}}</p>-->
-    <div class="form-buttons register-form-buttons">
-      <section class="d-flex justify-center">
-        <div>
-          <div class="sign-in-help">
-            <div class="d-flex sign-with-google">
-              <div class="circle">
-                <strong>
-                  <img src="../../../assets/public/images/gmail.jpg" alt="G">
-                </strong>
-              </div>
-              <div class="sign-in-tool">
-                <label>
-                  Register In with google
-                </label>
-              </div>
-            </div>
-
-            <div class="d-flex">
-              <div class="circle">
-                <strong>
-                  <img src="../../../assets/public/images/fb.png" alt="f">
-                </strong>
-              </div>
-              <div class="sign-in-tool">
-                <label>
-                  Register In with facebook
-                </label>
-              </div>
-            </div>
+    <form class="auth-form" [formGroup]="registerForm">
+      <div class="form-height">
+          <div>
+            <mat-form-field class="full-width form-inputs">
+              <label for="email" class="auth-label">Email</label>
+              <input
+                id="email"
+                class="auth-input"
+                matInput
+                [(ngModel)]="payload.email"
+                [errorStateMatcher]="matcher"
+                formControlName="email"
+              />
+              <mat-error *ngIf="registerForm.controls.email.hasError('email') && !registerForm.controls.email.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="registerForm.controls.email.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
           </div>
-
+          <div>
+            <mat-form-field class="full-width">
+              <label for="password" class="auth-label">Password</label>
+              <input
+                id="password"
+                matInput
+                type="password"
+                class="auth-input"
+                [(ngModel)]="payload.password"
+                [errorStateMatcher]="matcher"
+                formControlName="password"
+              />
+              <mat-error *ngIf="registerForm.controls.password.hasError('required')">
+                Password is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        <div class="error-message" *ngIf="error.show">
+          {{ error.message }}
         </div>
-      </section>
-      <section class="auth-btn">
-        <button (click)="register()" *ngIf="!authService.isLoggedIn" class="btn-submit">Register</button>
-      </section>
+      </div>
+      <div class="form-buttons register-form-buttons">
+        <section class="d-flex justify-center">
+          <div>
+            <div class="sign-in-help">
+              <div class="d-flex sign-with-google">
+                <div class="circle">
+                  <strong>
+                    <img src="../../../assets/public/images/gmail.jpg" alt="G">
+                  </strong>
+                </div>
+                <div class="sign-in-tool">
+                  <label>
+                    Register In with google
+                  </label>
+                </div>
+              </div>
 
-      <section class="form-footer">
-        Already a member ?
-        <a routerLink="/" class="auth-url">
-          Login
-        </a>
-      </section>
-    </div>
+              <div class="d-flex">
+                <div class="circle">
+                  <strong>
+                    <img src="../../../assets/public/images/fb.png" alt="f">
+                  </strong>
+                </div>
+                <div class="sign-in-tool">
+                  <label>
+                    Register In with facebook
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <section class="auth-btn">
+          <button (click)="register()" *ngIf="!authService.isLoggedIn" class="btn-submit">Register</button>
+        </section>
+
+        <section class="form-footer">
+          Already a member ?
+          <a routerLink="/" class="auth-url">
+            Login
+          </a>
+        </section>
+      </div>
+    </form>
   </div>
 </section>

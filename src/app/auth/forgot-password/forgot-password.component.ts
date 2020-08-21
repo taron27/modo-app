@@ -13,6 +13,13 @@ export class ForgotPasswordComponent implements OnInit {
 
   forgotPasswordForm: FormGroup;
   matcher = new Validator();
+  payload = {
+    email: ''
+  };
+  error = {
+    show: false,
+    message: ''
+  };
 
   constructor(public authService: AuthService, public router: Router) {
     this.forgotPasswordForm = new FormGroup({
@@ -26,7 +33,13 @@ export class ForgotPasswordComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  forgotPassword(): void {
-    this.router.navigate(['/']);
+  async forgotPassword(): Promise<void> {
+    try {
+      await this.authService.forgotPass(this.payload.email);
+      this.router.navigate(['/']);
+    } catch (e) {
+      this.error.show = true;
+      this.error.message = e.message;
+    }
   }
 }

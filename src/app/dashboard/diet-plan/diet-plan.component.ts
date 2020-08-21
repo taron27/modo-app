@@ -6,7 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogOverviewComponent } from './dialog-overview/dialog-overview.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { HostListener } from '@angular/core'
+import { HostListener } from '@angular/core';
 import {
   trigger,
   style,

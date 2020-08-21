@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Validator } from '../../validator';
+import { ProfileService } from '../../dashboard/diet-info/shared/profile.service';
 
 @Component({
   selector: 'app-login',
@@ -14,8 +15,16 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   matcher = new Validator();
   message: string;
+  payload = {
+    email: '',
+    password: '',
+  };
+  error = {
+    show: false,
+    message: ''
+  };
 
-  constructor(public authService: AuthService, public router: Router) {
+  constructor(public authService: AuthService, public router: Router, public profileService: ProfileService) {
     this.setMessage();
   }
 
@@ -35,17 +44,33 @@ export class LoginComponent implements OnInit {
     this.message = 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out');
   }
 
-  login(): void {
-    this.message = 'Trying to log in ...';
+  async login(): Promise<void> {
 
-    this.authService.login().subscribe(() => {
-      this.setMessage();
-      if (this.authService.isLoggedIn) {
+    if (this.loginForm.status !== 'VALID') {
+      return;
+    }
+
+    const { email, password } = this.payload;
+    const user = {
+      email: email.toLowerCase(),
+      password
+    };
+
+    try {
+      const res = await this.authService.login(user);
+      await this.profileService.setupProfile(user.email);
+
+      if (res.user) {
         const redirectUrl = '/user-info';
-
-        // Redirect the user
         this.router.navigate([redirectUrl]);
+      } else {
+        this.error.message = 'Incorrect login or password';
+        this.error.show = true;
       }
-    });
+    } catch (err) {
+      this.error.message = err.message;
+      this.error.show = true;
+    }
   }
+
 }

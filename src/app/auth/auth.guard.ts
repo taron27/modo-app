@@ -18,7 +18,8 @@ export class AuthGuard implements CanActivate {
   }
 
   checkLogin(url: string): true|UrlTree {
-    if (this.authService.isLoggedIn) { return true; }
+    const isLoggedIn = window.localStorage.getItem('isLoggedIn');
+    if (isLoggedIn === 'true') { return true; }
 
     // Store the attempted URL for redirecting
     this.authService.redirectUrl = url;
